@@ -13,11 +13,11 @@ const EventsSection = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-[#d60000] font-bold text-[32px] text-center mb-4"
+            className="text-[#d60000] font-bold text-[32px] text-center mb-4 uppercase"
           >
             Spot Events
           </motion.h2>
-          <p className="text-zinc-500 max-w-2xl mx-auto">
+          <p className="text-gray-600 max-w-2xl mx-auto">
             Experience high-energy participation and showcase your skills in our exciting spot competitions.
           </p>
         </div>
@@ -36,11 +36,11 @@ const EventsSection = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-[#d60000] font-bold text-[32px] text-center mb-4"
+            className="text-[#d60000] font-bold text-[32px] text-center mb-4 uppercase"
           >
             Cultural Events
           </motion.h2>
-          <p className="text-zinc-500 max-w-2xl mx-auto">
+          <p className="text-gray-600 max-w-2xl mx-auto">
             Celebrate creativity, performance and stage excellence with our grand cultural showcases.
           </p>
         </div>

@@ -87,48 +87,42 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
                     {event.description}
                   </p>
 
-                  {/* Coordinator Card */}
-                  <div className="bg-white border border-[#e5e5e5] rounded-[10px] p-6 relative overflow-hidden group shadow-sm">
-                    <div className="absolute top-0 left-0 w-1 h-full bg-[#d60000]" />
+                  {/* Coordinator Cards */}
+                  <div className="space-y-4">
                     <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-[#d60000] mb-4">
-                      Event Coordinator
+                      Event Coordinators
                     </h4>
                     
-                    <div className="flex flex-col sm:flex-row items-center gap-4">
-                      <div className="w-16 h-16 rounded-full p-[2px] bg-[#d60000] shrink-0">
-                        <div className="w-full h-full rounded-full overflow-hidden bg-gray-100 flex items-center justify-center relative">
-                          {event.coordinatorPhoto ? (
-                            <img 
-                              src={event.coordinatorPhoto} 
-                              alt={event.coordinator}
-                              className="w-full h-full object-cover"
-                              onError={(e) => {
-                                (e.target as HTMLImageElement).src = '';
-                                (e.target as HTMLImageElement).style.display = 'none';
-                              }}
-                            />
-                          ) : null}
-                          <User className="w-8 h-8 text-gray-400 absolute" />
-                        </div>
-                      </div>
-                      
-                      <div className="flex-1 text-center sm:text-left">
-                        <div className="text-xl font-bold text-[#222] uppercase tracking-tight">
-                          {event.coordinator}
-                        </div>
-                        <div className="text-xs text-gray-500 font-bold uppercase tracking-widest mt-1">
-                          Dept: {event.coordinatorDept || 'CSE'}
-                        </div>
-                      </div>
+                    {event.coordinators.map((coordinator, index) => (
+                      <div key={index} className="bg-white border border-[#e5e5e5] rounded-[10px] p-6 relative overflow-hidden group shadow-sm">
+                        <div className="absolute top-0 left-0 w-1 h-full bg-[#d60000]" />
+                        
+                        <div className="flex flex-col sm:flex-row items-center gap-4">
+                          <div className="w-16 h-16 rounded-full p-[2px] bg-[#d60000] shrink-0">
+                            <div className="w-full h-full rounded-full overflow-hidden bg-gray-100 flex items-center justify-center relative">
+                              <User className="w-8 h-8 text-gray-400 absolute" />
+                            </div>
+                          </div>
+                          
+                          <div className="flex-1 text-center sm:text-left">
+                            <div className="text-xl font-bold text-[#222] uppercase tracking-tight">
+                              {coordinator.name}
+                            </div>
+                            <div className="text-xs text-gray-500 font-bold uppercase tracking-widest mt-1">
+                              Dept: {coordinator.dept}
+                            </div>
+                          </div>
 
-                      <a 
-                        href={`tel:${event.contact}`}
-                        className="flex items-center gap-2 bg-[#d60000] text-white px-4 py-2 rounded-lg font-black text-xs uppercase hover:bg-[#b30000] transition-colors w-full sm:w-auto justify-center"
-                      >
-                        <Phone className="w-4 h-4" />
-                        Call Now
-                      </a>
-                    </div>
+                          <a 
+                            href={`tel:${coordinator.phone}`}
+                            className="flex items-center gap-2 bg-[#d60000] text-white px-4 py-2 rounded-lg font-black text-xs uppercase hover:bg-[#b30000] transition-colors w-full sm:w-auto justify-center"
+                          >
+                            <Phone className="w-4 h-4" />
+                            Call Now
+                          </a>
+                        </div>
+                      </div>
+                    ))}
                   </div>
 
                   {/* Action Button */}
