@@ -13,7 +13,7 @@ const EventsSection = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-black text-yellow-400 mb-4 tracking-tight"
+            className="text-[#d60000] font-bold text-[32px] text-center mb-4"
           >
             Spot Events
           </motion.h2>
@@ -36,7 +36,7 @@ const EventsSection = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-black text-yellow-400 mb-4 tracking-tight"
+            className="text-[#d60000] font-bold text-[32px] text-center mb-4"
           >
             Cultural Events
           </motion.h2>

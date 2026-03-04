@@ -212,21 +212,18 @@ const Registration = () => {
   };
 
   return (
-    <section id="register" className="py-24 bg-black/50 relative overflow-hidden">
-      {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-yellow-400/5 blur-[120px] rounded-full pointer-events-none" />
-
+    <section id="register" className="py-24 bg-white relative overflow-hidden">
       <div className="max-w-4xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-black text-yellow-400 mb-4 tracking-tight"
+            className="text-[#d60000] font-bold text-[32px] text-center mb-4 uppercase"
           >
             Register for AVENSIS 2K26
           </motion.h2>
-          <p className="text-zinc-500">
+          <p className="text-gray-600">
             Join the celebration! Fill out the form below to secure your spot in the most awaited fest of the year.
           </p>
         </div>
@@ -236,12 +233,12 @@ const Registration = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           onSubmit={handleSubmit}
-          className="bg-white/5 backdrop-blur-xl p-8 md:p-12 rounded-[2rem] border border-zinc-800 space-y-8 shadow-2xl"
+          className="bg-white p-8 md:p-12 rounded-[10px] border border-[#e5e5e5] space-y-8 shadow-[0_4px_10px_rgba(0,0,0,0.08)]"
         >
           <div className="grid md:grid-cols-2 gap-8">
             {/* Name */}
             <div className="space-y-2">
-              <label className="block text-sm font-bold text-zinc-400 uppercase tracking-widest">Full Name</label>
+              <label className="block text-sm font-bold text-gray-700 uppercase tracking-widest">Full Name</label>
               <input
                 required
                 type="text"
@@ -249,13 +246,13 @@ const Registration = () => {
                 value={formData.fullName}
                 onChange={handleInputChange}
                 placeholder="Enter your full name"
-                className="w-full p-4 rounded-xl bg-black/50 border border-zinc-800 text-white focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 outline-none transition-all placeholder:text-zinc-700"
+                className="w-full p-4 rounded-[6px] bg-white border border-[#ccc] text-[#222] focus:border-[#d60000] focus:ring-1 focus:ring-[#d60000] outline-none transition-all placeholder:text-gray-400"
               />
             </div>
 
             {/* Roll Number */}
             <div className="space-y-2">
-              <label className="block text-sm font-bold text-zinc-400 uppercase tracking-widest">Roll Number</label>
+              <label className="block text-sm font-bold text-gray-700 uppercase tracking-widest">Roll Number</label>
               <input
                 required
                 type="text"
@@ -263,13 +260,13 @@ const Registration = () => {
                 value={formData.rollNumber}
                 onChange={handleInputChange}
                 placeholder="Enter your roll number"
-                className="w-full p-4 rounded-xl bg-black/50 border border-zinc-800 text-white focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 outline-none transition-all placeholder:text-zinc-700"
+                className="w-full p-4 rounded-[6px] bg-white border border-[#ccc] text-[#222] focus:border-[#d60000] focus:ring-1 focus:ring-[#d60000] outline-none transition-all placeholder:text-gray-400"
               />
             </div>
 
             {/* Mobile Number */}
             <div className="space-y-2">
-              <label className="block text-sm font-bold text-zinc-400 uppercase tracking-widest">Mobile Number</label>
+              <label className="block text-sm font-bold text-gray-700 uppercase tracking-widest">Mobile Number</label>
               <input
                 required
                 type="tel"
@@ -277,13 +274,13 @@ const Registration = () => {
                 value={formData.mobile}
                 onChange={handleInputChange}
                 placeholder="Enter your mobile number"
-                className="w-full p-4 rounded-xl bg-black/50 border border-zinc-800 text-white focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 outline-none transition-all placeholder:text-zinc-700"
+                className="w-full p-4 rounded-[6px] bg-white border border-[#ccc] text-[#222] focus:border-[#d60000] focus:ring-1 focus:ring-[#d60000] outline-none transition-all placeholder:text-gray-400"
               />
             </div>
 
             {/* Email ID */}
             <div className="space-y-2">
-              <label className="block text-sm font-bold text-zinc-400 uppercase tracking-widest">Email ID</label>
+              <label className="block text-sm font-bold text-gray-700 uppercase tracking-widest">Email ID</label>
               <input
                 required
                 type="email"
@@ -291,75 +288,75 @@ const Registration = () => {
                 value={formData.email}
                 onChange={handleInputChange}
                 placeholder="Enter your email address"
-                className="w-full p-4 rounded-xl bg-black/50 border border-zinc-800 text-white focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 outline-none transition-all placeholder:text-zinc-700"
+                className="w-full p-4 rounded-[6px] bg-white border border-[#ccc] text-[#222] focus:border-[#d60000] focus:ring-1 focus:ring-[#d60000] outline-none transition-all placeholder:text-gray-400"
               />
             </div>
 
             {/* Department */}
             <div className="space-y-2">
-              <label className="block text-sm font-bold text-zinc-400 uppercase tracking-widest">Department</label>
+              <label className="block text-sm font-bold text-gray-700 uppercase tracking-widest">Department</label>
               <select 
                 name="department"
                 value={formData.department}
                 onChange={handleInputChange}
-                className="w-full p-4 rounded-xl bg-black/50 border border-zinc-800 text-white focus:border-yellow-400 outline-none transition-all appearance-none cursor-pointer"
+                className="w-full p-4 rounded-[6px] bg-white border border-[#ccc] text-[#222] focus:border-[#d60000] outline-none transition-all appearance-none cursor-pointer"
               >
-                <option className="bg-zinc-900" value="BTECH">BTECH</option>
-                <option className="bg-zinc-900" value="DIPLOMA">DIPLOMA</option>
-                <option className="bg-zinc-900" value="PHARMACY">PHARMACY</option>
-                <option className="bg-zinc-900" value="MCA">MCA</option>
-                <option className="bg-zinc-900" value="MBA">MBA</option>
-                <option className="bg-zinc-900" value="DEGREE">DEGREE</option>
+                <option className="bg-white text-[#222]" value="BTECH">BTECH</option>
+                <option className="bg-white text-[#222]" value="DIPLOMA">DIPLOMA</option>
+                <option className="bg-white text-[#222]" value="PHARMACY">PHARMACY</option>
+                <option className="bg-white text-[#222]" value="MCA">MCA</option>
+                <option className="bg-white text-[#222]" value="MBA">MBA</option>
+                <option className="bg-white text-[#222]" value="DEGREE">DEGREE</option>
               </select>
             </div>
 
             {/* Branch */}
             <div className="space-y-2">
-              <label className="block text-sm font-bold text-zinc-400 uppercase tracking-widest">Branch</label>
+              <label className="block text-sm font-bold text-gray-700 uppercase tracking-widest">Branch</label>
               <select 
                 name="branch"
                 value={formData.branch}
                 onChange={handleInputChange}
-                className="w-full p-4 rounded-xl bg-black/50 border border-zinc-800 text-white focus:border-yellow-400 outline-none transition-all appearance-none cursor-pointer"
+                className="w-full p-4 rounded-[6px] bg-white border border-[#ccc] text-[#222] focus:border-[#d60000] outline-none transition-all appearance-none cursor-pointer"
               >
-                <option className="bg-zinc-900" value="CSE">CSE</option>
-                <option className="bg-zinc-900" value="CSM">CSM</option>
-                <option className="bg-zinc-900" value="CSD">CSD</option>
-                <option className="bg-zinc-900" value="EEE">EEE</option>
-                <option className="bg-zinc-900" value="ECE">ECE</option>
-                <option className="bg-zinc-900" value="MECH">MECH</option>
-                <option className="bg-zinc-900" value="B PHARMA">B PHARMA</option>
-                <option className="bg-zinc-900" value="PHARMA-D">PHARMA-D</option>
+                <option className="bg-white text-[#222]" value="CSE">CSE</option>
+                <option className="bg-white text-[#222]" value="CSM">CSM</option>
+                <option className="bg-white text-[#222]" value="CSD">CSD</option>
+                <option className="bg-white text-[#222]" value="EEE">EEE</option>
+                <option className="bg-white text-[#222]" value="ECE">ECE</option>
+                <option className="bg-white text-[#222]" value="MECH">MECH</option>
+                <option className="bg-white text-[#222]" value="B PHARMA">B PHARMA</option>
+                <option className="bg-white text-[#222]" value="PHARMA-D">PHARMA-D</option>
               </select>
             </div>
 
             {/* Section */}
             <div className="space-y-2 md:col-span-2">
-              <label className="block text-sm font-bold text-zinc-400 uppercase tracking-widest">Section</label>
+              <label className="block text-sm font-bold text-gray-700 uppercase tracking-widest">Section</label>
               <select 
                 name="section"
                 value={formData.section}
                 onChange={handleInputChange}
-                className="w-full p-4 rounded-xl bg-black/50 border border-zinc-800 text-white focus:border-yellow-400 outline-none transition-all appearance-none cursor-pointer"
+                className="w-full p-4 rounded-[6px] bg-white border border-[#ccc] text-[#222] focus:border-[#d60000] outline-none transition-all appearance-none cursor-pointer"
               >
-                <option className="bg-zinc-900" value="A">A</option>
-                <option className="bg-zinc-900" value="B">B</option>
-                <option className="bg-zinc-900" value="C">C</option>
-                <option className="bg-zinc-900" value="D">D</option>
-                <option className="bg-zinc-900" value="E">E</option>
-                <option className="bg-zinc-900" value="F">F</option>
+                <option className="bg-white text-[#222]" value="A">A</option>
+                <option className="bg-white text-[#222]" value="B">B</option>
+                <option className="bg-white text-[#222]" value="C">C</option>
+                <option className="bg-white text-[#222]" value="D">D</option>
+                <option className="bg-white text-[#222]" value="E">E</option>
+                <option className="bg-white text-[#222]" value="F">F</option>
               </select>
             </div>
           </div>
 
           {/* Events Selection */}
           <div className="space-y-6">
-            <label className="block text-sm font-bold text-zinc-400 uppercase tracking-widest">Select Events</label>
+            <label className="block text-sm font-bold text-gray-700 uppercase tracking-widest">Select Events</label>
 
-            <div className="grid md:grid-cols-2 gap-8 p-6 bg-black/30 rounded-2xl border border-zinc-800/50">
+            <div className="grid md:grid-cols-2 gap-8 p-6 bg-gray-50 rounded-[10px] border border-[#e5e5e5]">
               {/* Spot Events */}
               <div className="space-y-4">
-                <h3 className="text-yellow-400 font-black text-sm uppercase tracking-widest border-b border-yellow-400/20 pb-2">Spot Events</h3>
+                <h3 className="text-[#d60000] font-bold text-sm uppercase tracking-widest border-b border-[#e5e5e5] pb-2">Spot Events</h3>
                 <div className="space-y-3">
                   {SPOT_EVENTS.map((event) => (
                     <label key={event.id} className="flex items-center gap-3 group cursor-pointer">
@@ -368,13 +365,13 @@ const Registration = () => {
                           type="checkbox"
                           checked={formData.selectedEvents.includes(event.name)}
                           onChange={() => handleEventToggle(event.name)}
-                          className="peer w-5 h-5 appearance-none border border-zinc-700 rounded bg-zinc-900 checked:bg-yellow-400 checked:border-yellow-400 transition-all cursor-pointer"
+                          className="peer w-5 h-5 appearance-none border border-[#ccc] rounded bg-white checked:bg-[#d60000] checked:border-[#d60000] transition-all cursor-pointer"
                         />
-                        <svg className="absolute w-3 h-3 text-black opacity-0 peer-checked:opacity-100 transition-opacity pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="4">
+                        <svg className="absolute w-3 h-3 text-white opacity-0 peer-checked:opacity-100 transition-opacity pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="4">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                         </svg>
                       </div>
-                      <span className="text-zinc-400 group-hover:text-zinc-200 transition-colors text-sm">{event.name}</span>
+                      <span className="text-gray-600 group-hover:text-[#222] transition-colors text-sm">{event.name}</span>
                     </label>
                   ))}
                 </div>
@@ -382,7 +379,7 @@ const Registration = () => {
 
               {/* Cultural Events */}
               <div className="space-y-4">
-                <h3 className="text-yellow-400 font-black text-sm uppercase tracking-widest border-b border-yellow-400/20 pb-2">Cultural Events</h3>
+                <h3 className="text-[#d60000] font-bold text-sm uppercase tracking-widest border-b border-[#e5e5e5] pb-2">Cultural Events</h3>
                 <div className="space-y-3">
                   {CULTURAL_EVENTS.map((event) => (
                     <label key={event.id} className="flex items-center gap-3 group cursor-pointer">
@@ -391,13 +388,13 @@ const Registration = () => {
                           type="checkbox"
                           checked={formData.selectedEvents.includes(event.name)}
                           onChange={() => handleEventToggle(event.name)}
-                          className="peer w-5 h-5 appearance-none border border-zinc-700 rounded bg-zinc-900 checked:bg-yellow-400 checked:border-yellow-400 transition-all cursor-pointer"
+                          className="peer w-5 h-5 appearance-none border border-[#ccc] rounded bg-white checked:bg-[#d60000] checked:border-[#d60000] transition-all cursor-pointer"
                         />
-                        <svg className="absolute w-3 h-3 text-black opacity-0 peer-checked:opacity-100 transition-opacity pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="4">
+                        <svg className="absolute w-3 h-3 text-white opacity-0 peer-checked:opacity-100 transition-opacity pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="4">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                         </svg>
                       </div>
-                      <span className="text-zinc-400 group-hover:text-zinc-200 transition-colors text-sm">{event.name}</span>
+                      <span className="text-gray-600 group-hover:text-[#222] transition-colors text-sm">{event.name}</span>
                     </label>
                   ))}
                 </div>
@@ -410,11 +407,11 @@ const Registration = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className={`px-12 py-4 bg-yellow-400 hover:bg-yellow-500 text-black font-black uppercase tracking-widest rounded-full transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(250,204,21,0.4)] active:scale-95 ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
+              className={`px-12 py-4 bg-[#d60000] hover:bg-[#b30000] text-white font-bold uppercase tracking-widest rounded-[6px] transition-all hover:shadow-[0_4px_10px_rgba(214,0,0,0.3)] active:scale-95 ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
             >
               {isSubmitting ? 'Submitting...' : 'Submit Registration'}
             </button>
-            <p className="mt-4 text-zinc-600 text-[10px] uppercase font-bold tracking-widest">
+            <p className="mt-4 text-gray-500 text-[10px] uppercase font-bold tracking-widest">
               By submitting, you agree to the fest guidelines and code of conduct.
             </p>
           </div>
@@ -428,35 +425,31 @@ const Registration = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/90 flex items-center justify-center z-[100] p-6 backdrop-blur-md"
+            className="fixed inset-0 bg-black/50 flex items-center justify-center z-[100] p-6 backdrop-blur-sm"
           >
             <motion.div 
               initial={{ scale: 0.8, y: 50, opacity: 0 }}
               animate={{ scale: 1, y: 0, opacity: 1 }}
               exit={{ scale: 0.8, y: 50, opacity: 0 }}
-              className="bg-gradient-to-br from-zinc-900 via-black to-zinc-900 border border-yellow-400/30 p-8 md:p-12 rounded-[2.5rem] text-center shadow-[0_0_100px_rgba(250,204,21,0.2)] max-w-lg w-full relative overflow-hidden"
+              className="bg-white border border-[#e5e5e5] p-8 md:p-12 rounded-[10px] text-center shadow-2xl max-w-lg w-full relative overflow-hidden"
             >
-              {/* Decorative Elements */}
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent" />
-              <div className="absolute -top-24 -right-24 w-48 h-48 bg-yellow-400/10 blur-[60px] rounded-full" />
-              
               <button 
                 onClick={closeSuccess}
-                className="absolute top-6 right-6 text-zinc-500 hover:text-white transition-colors"
+                className="absolute top-6 right-6 text-gray-500 hover:text-[#d60000] transition-colors"
               >
                 <X className="w-6 h-6" />
               </button>
 
               <div className="flex justify-center mb-6">
-                <div className="w-20 h-20 bg-yellow-400/10 rounded-full flex items-center justify-center border border-yellow-400/20">
-                  <CheckCircle2 className="w-10 h-10 text-yellow-400" />
+                <div className="w-20 h-20 bg-green-50 rounded-full flex items-center justify-center border border-green-100">
+                  <CheckCircle2 className="w-10 h-10 text-green-500" />
                 </div>
               </div>
               
-              <h2 className="text-3xl md:text-4xl font-black text-yellow-400 mb-4 tracking-tight">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#222] mb-4 tracking-tight">
                 REGISTRATION SUCCESSFUL!
               </h2>
-              <p className="text-zinc-300 mb-8 font-medium">
+              <p className="text-gray-600 mb-8 font-medium">
                 Your registration has been recorded successfully.
                 Please check your details at the event venue using your Roll Number.
               </p>
@@ -465,7 +458,7 @@ const Registration = () => {
                 <div className="flex flex-col gap-3">
                   <button
                     onClick={downloadReceipt}
-                    className="flex items-center justify-center gap-2 w-full py-4 bg-white text-black font-black uppercase tracking-widest rounded-xl hover:scale-[1.02] transition-all active:scale-95"
+                    className="flex items-center justify-center gap-2 w-full py-4 bg-[#d60000] text-white font-bold uppercase tracking-widest rounded-[6px] hover:bg-[#b30000] transition-all"
                   >
                     <Download className="w-5 h-5" />
                     Download Receipt
@@ -473,13 +466,13 @@ const Registration = () => {
                   
                   <button
                     onClick={closeSuccess}
-                    className="w-full py-4 bg-zinc-800 text-white font-bold uppercase tracking-widest rounded-xl hover:bg-zinc-700 transition-all"
+                    className="w-full py-4 bg-gray-100 text-[#222] font-bold uppercase tracking-widest rounded-[6px] hover:bg-gray-200 transition-all"
                   >
                     Close
                   </button>
                 </div>
 
-                <p className="text-[10px] text-zinc-500 uppercase font-bold tracking-widest mt-4">
+                <p className="text-[10px] text-gray-500 uppercase font-bold tracking-widest mt-4">
                   Please save your receipt for event entry verification.
                 </p>
               </div>

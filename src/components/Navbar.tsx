@@ -25,29 +25,27 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-300 ${
-        isScrolled ? 'bg-black/70 backdrop-blur-lg py-4 border-b border-red-900/40 shadow-xl' : 'bg-black/70 backdrop-blur-lg py-6'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-300 bg-[#d60000] h-[70px] flex items-center shadow-md`}
     >
-      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        <a href="#home" className="text-2xl font-bold tracking-widest text-[#ffd700]">
+      <div className="w-full max-w-7xl mx-auto px-6 flex justify-between items-center">
+        <a href="#home" className="text-2xl font-bold tracking-widest text-white">
           AVENSIS 2K26
         </a>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-2">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="text-sm font-medium text-zinc-300 hover:text-[#ffd700] transition-all hover:drop-shadow-[0_0_10px_rgba(255,215,0,0.6)]"
+              className="text-sm font-medium text-white hover:bg-[#b30000] px-4 py-2 rounded transition-all"
             >
               {link.name}
             </a>
           ))}
           <a
             href="#register"
-            className="px-6 py-2.5 bg-[#b11217] hover:bg-[#ffd700] hover:text-black text-sm font-bold rounded-full transition-all"
+            className="ml-4 px-6 py-2 bg-white text-[#d60000] hover:bg-gray-100 text-sm font-bold rounded-md transition-all"
           >
             Register
           </a>
@@ -67,14 +65,14 @@ const Navbar = () => {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="md:hidden absolute top-full left-0 right-0 bg-zinc-900 border-b border-zinc-800 p-6 flex flex-col gap-4"
+          className="md:hidden absolute top-full left-0 right-0 bg-[#d60000] border-t border-[#b30000] p-6 flex flex-col gap-2 shadow-xl"
         >
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
               onClick={() => setIsMenuOpen(false)}
-              className="text-lg font-medium text-zinc-300 hover:text-[#ffd700] transition-all hover:drop-shadow-[0_0_8px_rgba(255,215,0,0.4)]"
+              className="text-lg font-medium text-white hover:bg-[#b30000] px-4 py-2 rounded transition-all"
             >
               {link.name}
             </a>
@@ -82,7 +80,7 @@ const Navbar = () => {
           <a
             href="#register"
             onClick={() => setIsMenuOpen(false)}
-            className="w-full py-3 bg-[#b11217] text-center text-white font-bold rounded-xl hover:bg-[#ffd700] hover:text-black transition-all"
+            className="w-full mt-4 py-3 bg-white text-center text-[#d60000] font-bold rounded-md hover:bg-gray-100 transition-all"
           >
             Register Now
           </a>
