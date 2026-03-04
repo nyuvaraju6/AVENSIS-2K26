@@ -14,7 +14,7 @@ import Footer from './components/Footer';
 import CursorGlow from './components/CursorGlow';
 import CinematicIntro from './components/CinematicIntro';
 import Admin from './components/Admin';
-
+import Convenors from "./components/Convenors";
 const RevealSection = ({ children }: { children: React.ReactNode }) => (
   <motion.section
     initial={{ opacity: 0, y: 100 }}
