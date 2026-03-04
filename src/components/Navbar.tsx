@@ -16,11 +16,13 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Home', href: '#home' },
+    { name: 'Poster', href: 'https://drive.google.com/uc?export=view&id=1BqJ4KQgjGukilj2WZFk5q8HM4qbofO6y', isExternal: true },
     { name: 'Events', href: '#events' },
     { name: 'Patrons', href: '#patrons' },
-    { name: 'Schedule', href: '#schedule' },
     { name: 'Convenors', href: '#convenors' },
+    { name: 'Faculty', href: '#faculty' },
     { name: 'Team', href: '#team' },
+    { name: 'Schedule', href: '#schedule' },
   ];
 
   return (
@@ -38,6 +40,8 @@ const Navbar = () => {
             <a
               key={link.name}
               href={link.href}
+              target={link.isExternal ? '_blank' : undefined}
+              rel={link.isExternal ? 'noopener noreferrer' : undefined}
               className="text-sm font-medium text-white hover:bg-[#b30000] px-4 py-2 rounded transition-all"
             >
               {link.name}
@@ -71,6 +75,8 @@ const Navbar = () => {
             <a
               key={link.name}
               href={link.href}
+              target={link.isExternal ? '_blank' : undefined}
+              rel={link.isExternal ? 'noopener noreferrer' : undefined}
               onClick={() => setIsMenuOpen(false)}
               className="text-lg font-medium text-white hover:bg-[#b30000] px-4 py-2 rounded transition-all"
             >
