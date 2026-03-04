@@ -17,15 +17,16 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Home', href: '#home' },
     { name: 'Events', href: '#events' },
+    { name: 'Patrons', href: '#patrons' },
     { name: 'Schedule', href: '#schedule' },
-    { name: 'Register', href: '#register' },
+    { name: 'Convenors', href: '#convenors' },
     { name: 'Team', href: '#team' },
   ];
 
   return (
     <nav
-      className={`sticky top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-black/80 backdrop-blur-md py-4 border-b border-red-900/40 shadow-xl' : 'bg-black/40 backdrop-blur-sm py-6'
+      className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-300 ${
+        isScrolled ? 'bg-black/70 backdrop-blur-lg py-4 border-b border-red-900/40 shadow-xl' : 'bg-black/70 backdrop-blur-lg py-6'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
@@ -39,7 +40,7 @@ const Navbar = () => {
             <a
               key={link.name}
               href={link.href}
-              className="text-sm font-medium text-zinc-300 hover:text-[#ffd700] transition-colors"
+              className="text-sm font-medium text-zinc-300 hover:text-[#ffd700] transition-all hover:drop-shadow-[0_0_10px_rgba(255,215,0,0.6)]"
             >
               {link.name}
             </a>
@@ -73,7 +74,7 @@ const Navbar = () => {
               key={link.name}
               href={link.href}
               onClick={() => setIsMenuOpen(false)}
-              className="text-lg font-medium text-zinc-300 hover:text-yellow-400"
+              className="text-lg font-medium text-zinc-300 hover:text-[#ffd700] transition-all hover:drop-shadow-[0_0_8px_rgba(255,215,0,0.4)]"
             >
               {link.name}
             </a>
@@ -81,7 +82,7 @@ const Navbar = () => {
           <a
             href="#register"
             onClick={() => setIsMenuOpen(false)}
-            className="w-full py-3 bg-yellow-400 text-center text-black font-bold rounded-xl"
+            className="w-full py-3 bg-[#b11217] text-center text-white font-bold rounded-xl hover:bg-[#ffd700] hover:text-black transition-all"
           >
             Register Now
           </a>

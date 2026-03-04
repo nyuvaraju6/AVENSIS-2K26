@@ -8,39 +8,54 @@ export interface Event {
   contact: string;
   category: 'spot' | 'cultural';
   icon?: string;
+  coordinatorDept?: string;
+  coordinatorPhoto?: string;
+  banner?: string;
 }
 
 export const SPOT_EVENTS: Event[] = [
   {
     id: 'auto-expo',
     name: 'Auto Expo',
-    description: 'A grand showcase of modified cars and superbikes. Witness the engineering marvels and aesthetic masterpieces.',
-    coordinator: 'Rahul Sharma',
-    contact: '+91 98765 43210',
+    description: 'Showcase modified cars, superbikes and engineering creativity. Witness the engineering marvels and aesthetic masterpieces.',
+    coordinator: 'MD. RIYAN',
+    contact: '9885078279',
+    coordinatorDept: 'CSE',
+    coordinatorPhoto: '/images/coordinators/md-riyan.jpg',
+    banner: 'https://picsum.photos/seed/autoexpo/800/400',
     category: 'spot'
   },
   {
     id: 'fashion-show',
     name: 'Fashion Show',
     description: 'Walk the ramp and showcase your style. A platform where creativity meets elegance and attitude.',
-    coordinator: 'Sneha Kapoor',
-    contact: '+91 87654 32109',
+    coordinator: 'P. CHATHURYA',
+    contact: '7386902863',
+    coordinatorDept: 'MCA',
+    coordinatorPhoto: '/images/coordinators/p-chathurya.jpg',
+    banner: 'https://picsum.photos/seed/fashionshow/800/400',
     category: 'spot'
   },
   {
     id: 'ramp-walk',
     name: 'Ramp Walk',
     description: 'Individual spotlight on the runway. Show off your confidence and charisma in this solo fashion event.',
-    coordinator: 'Sneha Kapoor',
-    contact: '+91 87654 32109',
+    coordinator: 'P. CHATHURYA',
+    contact: '7386902863',
+    coordinatorDept: 'MCA',
+    coordinatorPhoto: '/images/coordinators/p-chathurya.jpg',
+    banner: 'https://picsum.photos/seed/rampwalk/800/400',
     category: 'spot'
   },
   {
     id: 'treasure-hunt',
     name: 'Treasure Hunt',
     description: 'Solve riddles, decode clues, and race against time to find the hidden treasure across the campus.',
-    coordinator: 'Amit Verma',
-    contact: '+91 76543 21098',
+    coordinator: 'N. ESWAR',
+    contact: '9390524975',
+    coordinatorDept: 'EEE',
+    coordinatorPhoto: '/images/coordinators/n-eswar.jpg',
+    banner: 'https://picsum.photos/seed/treasurehunt/800/400',
     category: 'spot'
   },
   {
@@ -49,6 +64,7 @@ export const SPOT_EVENTS: Event[] = [
     description: 'Unleash your wit and humor. Create the most relatable and viral memes on the given spot theme.',
     coordinator: 'Priya Das',
     contact: '+91 65432 10987',
+    coordinatorDept: 'CSE',
     category: 'spot'
   },
   {
@@ -57,6 +73,7 @@ export const SPOT_EVENTS: Event[] = [
     description: 'Capture the essence of Avensis through your lens. Best shots that tell a story win big.',
     coordinator: 'Vikram Singh',
     contact: '+91 54321 09876',
+    coordinatorDept: 'ECE',
     category: 'spot'
   },
   {
@@ -65,6 +82,7 @@ export const SPOT_EVENTS: Event[] = [
     description: 'Create engaging Instagram reels featuring our college theme. Show your editing skills and creativity.',
     coordinator: 'Ananya Roy',
     contact: '+91 43210 98765',
+    coordinatorDept: 'CSE',
     category: 'spot'
   },
   {
@@ -73,6 +91,7 @@ export const SPOT_EVENTS: Event[] = [
     description: 'The ultimate battleground for gamers. Squad up and fight for the chicken dinner or booyah!',
     coordinator: 'Karan Malhotra',
     contact: '+91 32109 87654',
+    coordinatorDept: 'CSE',
     category: 'spot'
   },
   {
@@ -81,6 +100,7 @@ export const SPOT_EVENTS: Event[] = [
     description: 'Flex those muscles and show your dedication to fitness. Judged on symmetry, mass, and definition.',
     coordinator: 'Arjun Reddy',
     contact: '+91 21098 76543',
+    coordinatorDept: 'MECH',
     category: 'spot'
   }
 ];
@@ -92,6 +112,7 @@ export const CULTURAL_EVENTS: Event[] = [
     description: 'Let your voice resonate. Solo and group performances across classical, pop, and rock genres.',
     coordinator: 'Megha Iyer',
     contact: '+91 10987 65432',
+    coordinatorDept: 'CSE',
     category: 'cultural'
   },
   {
@@ -100,6 +121,7 @@ export const CULTURAL_EVENTS: Event[] = [
     description: 'Express through movement. High-energy performances in hip-hop, contemporary, and folk styles.',
     coordinator: 'Siddharth Jain',
     contact: '+91 09876 54321',
+    coordinatorDept: 'ECE',
     category: 'cultural'
   },
   {
@@ -108,6 +130,7 @@ export const CULTURAL_EVENTS: Event[] = [
     description: 'Bring stories to life on stage. A platform for theatrical excellence and powerful storytelling.',
     coordinator: 'Tanvi Shah',
     contact: '+91 99887 76655',
+    coordinatorDept: 'CSE',
     category: 'cultural'
   },
   {
@@ -116,6 +139,7 @@ export const CULTURAL_EVENTS: Event[] = [
     description: 'The grand finale! Dance the night away with a celebrity DJ and live musical performances.',
     coordinator: 'Fest Committee',
     contact: 'avensis@college.edu',
+    coordinatorDept: 'ALL',
     category: 'cultural'
   }
 ];
@@ -182,6 +206,61 @@ export const ATTRACTIONS: Attraction[] = [
     description: 'Meet and greet our friendly Bear and Mickey mascots roaming around the campus to spread joy and cheer.',
     image: 'https://picsum.photos/seed/mascots/600/400'
   }
+];
+
+export interface StudentCoordinator {
+  id: number;
+  name: string;
+  phone: string;
+  committee: string;
+  dept: string;
+  photo?: string;
+}
+
+export interface OverallCoordinator {
+  id: number;
+  name: string;
+  phone: string;
+  dept: string;
+  photo?: string;
+}
+
+export const OVERALL_COORDINATORS: OverallCoordinator[] = [
+  { id: 1, name: 'T. MAHESH REDDY', phone: '9849699082', dept: 'MECH', photo: "/images/overall-coordinators/mahesh.jpg" },
+  { id: 2, name: 'B. VAMSHI NAIDU', phone: '8897814413', dept: 'CSMD', photo: "/images/overall-coordinators/vamshi.jpg" },
+  { id: 3, name: 'P. TEJ VARDHAN', phone: '9581378269', dept: 'CSE', photo: "/images/overall-coordinators/tej.jpg" },
+  { id: 4, name: 'K. LAHARI', phone: '6301990861', dept: 'ECE', photo: "/images/overall-coordinators/lahari.jpg" },
+  { id: 5, name: 'G. LASHMIKANTH', phone: '9100737580', dept: 'MCA', photo: "/images/overall-coordinators/lakshmikanth.jpg" },
+  { id: 6, name: 'K. SURESH', phone: '8790898562', dept: 'EEE', photo: "/images/overall-coordinators/suresh.jpg" },
+  { id: 7, name: 'K. JANARDHANA', phone: '9398583074', dept: 'MBA', photo: "/images/overall-coordinators/janardhana.jpg" },
+  { id: 8, name: 'L. TILAK KUMAR', phone: '9959349744', dept: 'B. PHARMA', photo: "/images/overall-coordinators/tilak.jpg" },
+  { id: 9, name: 'G. SATISH', phone: '8121917925', dept: 'PHARMA D', photo: "/images/overall-coordinators/satish.jpg" },
+  { id: 10, name: 'M. VENKATESH', phone: '8778829839', dept: 'DEGREE', photo: "/images/overall-coordinators/venkatesh.jpg" },
+  { id: 11, name: 'P. BHARATH KALYAN', phone: '6305965291', dept: 'DIPLOMA', photo: "/images/overall-coordinators/bharath.jpg" },
+];
+
+export const STUDENT_COORDINATORS: StudentCoordinator[] = [
+  { id: 1, name: 'MD. RIYAN', phone: '9885078279', committee: 'AUTO EXPO', dept: 'CSE', photo: "/images/coordinators/md-riyan.jpg" },
+  { id: 2, name: 'R. MADHAN', phone: '7396457282', committee: 'STUDENT COORDINATOR', dept: 'MECH', photo: "/images/coordinators/r-madhan.jpg" },
+  { id: 3, name: 'M. RAVINDRA', phone: '8179133543', committee: 'CULTURALS', dept: 'MECH', photo: "/images/coordinators/m-ravindra.jpg" },
+  { id: 4, name: 'S. GANESH', phone: '7670921130', committee: 'STUDENT COORDINATOR', dept: 'CSMD', photo: "/images/coordinators/s-ganesh.jpg" },
+  { id: 5, name: 'K. HARIKA', phone: '6303393385', committee: 'PROMOTIONS', dept: 'ECE', photo: "/images/coordinators/k-harika.jpg" },
+  { id: 6, name: 'B. BHUVANESWARI', phone: '6304386043', committee: 'STUDENT COORDINATOR', dept: 'B. PHARMA', photo: "/images/coordinators/b-bhuvaneswari.jpg" },
+  { id: 7, name: 'P. CHANDU', phone: '9652199440', committee: 'STALLS', dept: 'CSMD', photo: "/images/coordinators/p-chandu.jpg" },
+  { id: 8, name: 'N. ESWAR', phone: '9390524975', committee: 'STUDENT COORDINATOR', dept: 'EEE', photo: "/images/coordinators/n-eswar.jpg" },
+  { id: 9, name: 'G. BEAULA', phone: '7842709982', committee: 'STAGE & DECORATION', dept: 'EEE', photo: "/images/coordinators/g-beaula.jpg" },
+  { id: 10, name: 'B. SRIJA', phone: '8688963070', committee: 'STUDENT COORDINATOR', dept: 'B. PHARMA', photo: "/images/coordinators/b-srija.jpg" },
+  { id: 11, name: 'K. NAVYA', phone: '9676083204', committee: 'ADVERTISEMENT COMPETITION', dept: 'PHARMA D', photo: "/images/coordinators/k-navya.jpg" },
+  { id: 12, name: 'K. SAKETH', phone: '9948046481', committee: 'STUDENT COORDINATOR', dept: 'ECE', photo: "/images/coordinators/k-saketh.jpg" },
+  { id: 13, name: 'CH. SAMANTH', phone: '8712209988', committee: 'SPONSORS', dept: 'DIPLOMA', photo: "/images/coordinators/ch-samanth.jpg" },
+  { id: 14, name: 'B. SOWMYA', phone: '9059045594', committee: 'STUDENT COORDINATOR', dept: 'CSE', photo: "/images/coordinators/b-sowmya.jpg" },
+  { id: 15, name: 'T. LOKESH', phone: '7032574352', committee: 'STUDENT COORDINATOR', dept: 'MBA', photo: "/images/coordinators/t-lokesh.jpg" },
+  { id: 16, name: 'P. CHATHURYA', phone: '7386902863', committee: 'FASHION SHOW', dept: 'MCA', photo: "/images/coordinators/p-chathurya.jpg" },
+  { id: 17, name: 'A. GOWRI', phone: '9381572054', committee: 'STUDENT COORDINATOR', dept: 'DIPLOMA', photo: "/images/coordinators/a-gowri.jpg" },
+  { id: 18, name: 'B. RAVISANKAR', phone: '9703612177', committee: 'E-SPORTS', dept: 'DEGREE', photo: "/images/coordinators/b-ravisankar.jpg" },
+  { id: 19, name: 'B. VENKATESH', phone: '7995703042', committee: 'STUDENT COORDINATOR', dept: 'DEGREE', photo: "/images/coordinators/b-venkatesh.jpg" },
+  { id: 20, name: 'B. GEETHIKA', phone: '8341696916', committee: 'DIGITAL MEDIA', dept: 'CSE', photo: "/images/coordinators/b-geethika.jpg" },
+  { id: 21, name: 'Y. SAI PRIYA', phone: '7396518452', committee: 'STUDENT COORDINATOR', dept: 'PHARM D', photo: "/images/coordinators/y-sai-priya.jpg" },
 ];
 
 export const TEAM_MEMBERS: TeamMember[] = [

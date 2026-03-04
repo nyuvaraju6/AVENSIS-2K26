@@ -309,6 +309,7 @@ const Registration = () => {
                 <option className="bg-zinc-900" value="PHARMACY">PHARMACY</option>
                 <option className="bg-zinc-900" value="MCA">MCA</option>
                 <option className="bg-zinc-900" value="MBA">MBA</option>
+                <option className="bg-zinc-900" value="DEGREE">DEGREE</option>
               </select>
             </div>
 
@@ -327,6 +328,8 @@ const Registration = () => {
                 <option className="bg-zinc-900" value="EEE">EEE</option>
                 <option className="bg-zinc-900" value="ECE">ECE</option>
                 <option className="bg-zinc-900" value="MECH">MECH</option>
+                <option className="bg-zinc-900" value="B PHARMA">B PHARMA</option>
+                <option className="bg-zinc-900" value="PHARMA-D">PHARMA-D</option>
               </select>
             </div>
 

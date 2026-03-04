@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -54,39 +54,9 @@ const Home = () => (
 );
 
 export default function App() {
-  const audioRef = useRef<HTMLAudioElement>(null);
-  const [started, setStarted] = useState(false);
   const [showIntro, setShowIntro] = useState(true);
   const location = useLocation();
   const isAdmin = location.pathname === '/admin';
-
-  useEffect(() => {
-    const startMusic = () => {
-      if (!started && audioRef.current && !showIntro && !isAdmin) {
-        audioRef.current.volume = 0.4;
-        audioRef.current.play().catch(() => {});
-        setStarted(true);
-      }
-    };
-
-    window.addEventListener("click", startMusic);
-    return () => window.removeEventListener("click", startMusic);
-  }, [started, showIntro, isAdmin]);
-
-  useEffect(() => {
-    const savedTime = localStorage.getItem("musicTime");
-    if (savedTime && audioRef.current) {
-      audioRef.current.currentTime = parseFloat(savedTime);
-    }
-
-    const interval = setInterval(() => {
-      if (audioRef.current && !audioRef.current.paused) {
-        localStorage.setItem("musicTime", audioRef.current.currentTime.toString());
-      }
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <div className="min-h-screen bg-[radial-gradient(circle_at_top,#1a1f2e,#0a0f1c_60%)] text-white selection:bg-[#ffd700] selection:text-black overflow-x-hidden">
@@ -96,19 +66,12 @@ export default function App() {
         )}
       </AnimatePresence>
 
-      <audio
-        ref={audioRef}
-        src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
-        loop
-        preload="auto"
-      />
-      
       {(isAdmin || !showIntro) && (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="relative"
+          className={`relative ${!isAdmin ? 'pt-[80px]' : ''}`}
         >
           <CursorGlow />
           {!isAdmin && (
