@@ -23,11 +23,11 @@ const Convenors = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-[#d60000] font-bold text-[32px] text-center mb-4 uppercase"
+            className="text-[#d60000] font-bold text-[40px] text-center mb-4 uppercase tracking-wider"
           >
-            Convenors
+            CONVENORS
           </motion.h2>
-          <div className="w-24 h-1 bg-[#d60000] mx-auto" />
+          <div className="w-24 h-1.5 bg-[#d60000] mx-auto rounded-full" />
         </div>
 
         <div className="space-y-12">
@@ -36,15 +36,15 @@ const Convenors = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-white border border-[#e5e5e5] p-8 md:p-12 rounded-[10px] shadow-[0_4px_10px_rgba(0,0,0,0.08)] hover:shadow-[0_6px_18px_rgba(0,0,0,0.15)] transition-all duration-300"
+            className="bg-white p-8 md:p-12 rounded-xl border-l-4 border-l-[#d60000] shadow-md hover:shadow-lg transition-all duration-300"
           >
             <h3 className="text-2xl font-bold text-[#d60000] mb-8 text-center tracking-widest uppercase">
-              Convenors
+              CONVENORS
             </h3>
             
             <ul className="space-y-4 text-center">
               {convenors.map((person, index) => (
-                <li key={index} className="text-lg md:text-xl text-[#222] font-medium py-2 border-b border-[#e5e5e5] last:border-0">
+                <li key={index} className="text-lg md:text-xl text-gray-800 font-medium py-2 border-b border-gray-100 last:border-0">
                   {person}
                 </li>
               ))}
@@ -57,15 +57,15 @@ const Convenors = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="bg-white border border-[#e5e5e5] p-8 md:p-12 rounded-[10px] shadow-[0_4px_10px_rgba(0,0,0,0.08)] hover:shadow-[0_6px_18px_rgba(0,0,0,0.15)] transition-all duration-300"
+            className="bg-white p-8 md:p-12 rounded-xl border-l-4 border-l-[#d60000] shadow-md hover:shadow-lg transition-all duration-300"
           >
             <h3 className="text-2xl font-bold text-[#d60000] mb-8 text-center tracking-widest uppercase">
-              Co-Convenors
+              CO-CONVENORS
             </h3>
             
             <ul className="space-y-4 text-center">
               {coConvenors.map((person, index) => (
-                <li key={index} className="text-lg md:text-xl text-[#222] font-medium py-2 border-b border-[#e5e5e5] last:border-0">
+                <li key={index} className="text-lg md:text-xl text-gray-800 font-medium py-2 border-b border-gray-100 last:border-0">
                   {person}
                 </li>
               ))}

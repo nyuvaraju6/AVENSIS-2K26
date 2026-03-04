@@ -27,7 +27,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-300 bg-[#d60000] h-[70px] flex items-center shadow-md`}
+      className={`sticky top-0 z-[9999] transition-all duration-300 bg-[#d60000] h-[70px] flex items-center shadow-md`}
     >
       <div className="w-full max-w-7xl mx-auto px-6 flex justify-between items-center">
         <a href="#home" className="text-2xl font-bold tracking-widest text-white">

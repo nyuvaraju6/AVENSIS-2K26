@@ -2,17 +2,21 @@ import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
 import EventsSection from './components/EventsSection';
 import Schedule from './components/Schedule';
+import Patrons from './components/Patrons';
 import Convenors from './components/Convenors';
+import FacultyCoordinators from './components/FacultyCoordinators';
 import SpecialAttractions from './components/SpecialAttractions';
 import Registration from './components/Registration';
 import Team from './components/Team';
 import Location from './components/Location';
 import Footer from './components/Footer';
 import Admin from './components/Admin';
+import ScrollToTop from './components/ScrollToTop';
 
 const RevealSection = ({ children }: { children: React.ReactNode }) => (
   <motion.section
@@ -35,10 +39,16 @@ const Home = () => (
       <EventsSection />
     </RevealSection>
     <RevealSection>
+      <Patrons />
+    </RevealSection>
+    <RevealSection>
       <Schedule />
     </RevealSection>
     <RevealSection>
       <Convenors />
+    </RevealSection>
+    <RevealSection>
+      <FacultyCoordinators />
     </RevealSection>
     <RevealSection>
       <SpecialAttractions />
@@ -68,18 +78,9 @@ export default function App() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className={`relative ${!isAdmin ? 'pt-[70px]' : ''}`}
+        className="relative"
       >
-        {!isAdmin && (
-          <div className="w-full bg-white shadow-[0_4px_20px_rgba(0,0,0,0.08)] border-b border-gray-200 relative z-[60]">
-            <img
-              src="https://drive.google.com/uc?export=view&id=1qwqfPIdUacuuonzyjBNXA6MPAwLcGsoA"
-              alt="Avanthi Group of Colleges"
-              className="w-full h-auto object-cover"
-              onError={(e) => { e.currentTarget.style.display = 'none'; }}
-            />
-          </div>
-        )}
+        {!isAdmin && <Header />}
         {!isAdmin && <Navbar />}
         
         <Routes>
@@ -88,6 +89,7 @@ export default function App() {
         </Routes>
 
         {!isAdmin && <Footer />}
+        <ScrollToTop />
       </motion.div>
     </div>
   );

@@ -13,7 +13,7 @@ const Registration = () => {
     mobile: '',
     email: '',
     department: 'BTECH',
-    branch: 'CSE',
+    branch: 'NONE',
     section: 'A',
     selectedEvents: [] as string[]
   });
@@ -169,23 +169,32 @@ const Registration = () => {
     appendField("entry.1115180722", formData.branch);
     appendField("entry.1592132195", formData.section);
 
+    const spotEvents = [
+      "Auto Expo",
+      "Fashion Show",
+      "Ramp Walk",
+      "Treasure Hunt",
+      "Meme Creation",
+      "Spot Photography",
+      "Reels Making",
+      "E-Sports (BGMI/Free Fire)",
+      "Body Building"
+    ];
+
+    const culturalEvents = [
+      "Singing Competition",
+      "Dance Competition",
+      "Skits & Drama",
+      "DJ Night / Pro Night"
+    ];
+
     formData.selectedEvents.forEach((event) => {
-      if (
-        [
-          "Auto Expo",
-          "Fashion Show",
-          "Ramp Walk",
-          "Treasure Hunt",
-          "Meme Creation",
-          "Spot Photography",
-          "Reels Making",
-          "E-Sports (BGMI/Free Fire)",
-          "Body Building",
-        ].includes(event)
-      ) {
-        appendField("entry.1996962031", event);
-      } else {
-        appendField("entry.538765734", event);
+      if (spotEvents.includes(event)) {
+        appendField("entry.945003127", event);
+      }
+
+      if (culturalEvents.includes(event)) {
+        appendField("entry.850313794", event);
       }
     });
 
@@ -205,7 +214,7 @@ const Registration = () => {
       mobile: "",
       email: "",
       department: "BTECH",
-      branch: "CSE",
+      branch: "NONE",
       section: "A",
       selectedEvents: [],
     });
@@ -219,7 +228,7 @@ const Registration = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-[#d60000] font-bold text-[32px] text-center mb-4 uppercase"
+            className="text-[#d60000] font-bold text-[40px] text-center mb-4 uppercase tracking-wider"
           >
             Register for AVENSIS 2K26
           </motion.h2>
@@ -233,12 +242,12 @@ const Registration = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           onSubmit={handleSubmit}
-          className="bg-white p-8 md:p-12 rounded-[10px] border border-[#e5e5e5] space-y-8 shadow-[0_4px_10px_rgba(0,0,0,0.08)]"
+          className="bg-white p-8 md:p-12 rounded-xl border-l-4 border-l-[#d60000] shadow-md space-y-8"
         >
           <div className="grid md:grid-cols-2 gap-8">
             {/* Name */}
             <div className="space-y-2">
-              <label className="block text-sm font-bold text-gray-700 uppercase tracking-widest">Full Name</label>
+              <label className="block text-sm font-bold text-[#d60000] uppercase tracking-widest">Full Name</label>
               <input
                 required
                 type="text"
@@ -246,13 +255,13 @@ const Registration = () => {
                 value={formData.fullName}
                 onChange={handleInputChange}
                 placeholder="Enter your full name"
-                className="w-full p-4 rounded-[6px] bg-white border border-[#ccc] text-[#222] focus:border-[#d60000] focus:ring-1 focus:ring-[#d60000] outline-none transition-all placeholder:text-gray-400"
+                className="w-full p-4 rounded-xl bg-white border border-gray-200 text-gray-900 focus:border-[#d60000] focus:ring-1 focus:ring-[#d60000] outline-none transition-all placeholder:text-gray-400"
               />
             </div>
 
             {/* Roll Number */}
             <div className="space-y-2">
-              <label className="block text-sm font-bold text-gray-700 uppercase tracking-widest">Roll Number</label>
+              <label className="block text-sm font-bold text-[#d60000] uppercase tracking-widest">Roll Number</label>
               <input
                 required
                 type="text"
@@ -260,13 +269,13 @@ const Registration = () => {
                 value={formData.rollNumber}
                 onChange={handleInputChange}
                 placeholder="Enter your roll number"
-                className="w-full p-4 rounded-[6px] bg-white border border-[#ccc] text-[#222] focus:border-[#d60000] focus:ring-1 focus:ring-[#d60000] outline-none transition-all placeholder:text-gray-400"
+                className="w-full p-4 rounded-xl bg-white border border-gray-200 text-gray-900 focus:border-[#d60000] focus:ring-1 focus:ring-[#d60000] outline-none transition-all placeholder:text-gray-400"
               />
             </div>
 
             {/* Mobile Number */}
             <div className="space-y-2">
-              <label className="block text-sm font-bold text-gray-700 uppercase tracking-widest">Mobile Number</label>
+              <label className="block text-sm font-bold text-[#d60000] uppercase tracking-widest">Mobile Number</label>
               <input
                 required
                 type="tel"
@@ -274,13 +283,13 @@ const Registration = () => {
                 value={formData.mobile}
                 onChange={handleInputChange}
                 placeholder="Enter your mobile number"
-                className="w-full p-4 rounded-[6px] bg-white border border-[#ccc] text-[#222] focus:border-[#d60000] focus:ring-1 focus:ring-[#d60000] outline-none transition-all placeholder:text-gray-400"
+                className="w-full p-4 rounded-xl bg-white border border-gray-200 text-gray-900 focus:border-[#d60000] focus:ring-1 focus:ring-[#d60000] outline-none transition-all placeholder:text-gray-400"
               />
             </div>
 
             {/* Email ID */}
             <div className="space-y-2">
-              <label className="block text-sm font-bold text-gray-700 uppercase tracking-widest">Email ID</label>
+              <label className="block text-sm font-bold text-[#d60000] uppercase tracking-widest">Email ID</label>
               <input
                 required
                 type="email"
@@ -288,75 +297,76 @@ const Registration = () => {
                 value={formData.email}
                 onChange={handleInputChange}
                 placeholder="Enter your email address"
-                className="w-full p-4 rounded-[6px] bg-white border border-[#ccc] text-[#222] focus:border-[#d60000] focus:ring-1 focus:ring-[#d60000] outline-none transition-all placeholder:text-gray-400"
+                className="w-full p-4 rounded-xl bg-white border border-gray-200 text-gray-900 focus:border-[#d60000] focus:ring-1 focus:ring-[#d60000] outline-none transition-all placeholder:text-gray-400"
               />
             </div>
 
             {/* Department */}
             <div className="space-y-2">
-              <label className="block text-sm font-bold text-gray-700 uppercase tracking-widest">Department</label>
+              <label className="block text-sm font-bold text-[#d60000] uppercase tracking-widest">Department</label>
               <select 
                 name="department"
                 value={formData.department}
                 onChange={handleInputChange}
-                className="w-full p-4 rounded-[6px] bg-white border border-[#ccc] text-[#222] focus:border-[#d60000] outline-none transition-all appearance-none cursor-pointer"
+                className="w-full p-4 rounded-xl bg-white border border-gray-200 text-gray-900 focus:border-[#d60000] outline-none transition-all appearance-none cursor-pointer"
               >
-                <option className="bg-white text-[#222]" value="BTECH">BTECH</option>
-                <option className="bg-white text-[#222]" value="DIPLOMA">DIPLOMA</option>
-                <option className="bg-white text-[#222]" value="PHARMACY">PHARMACY</option>
-                <option className="bg-white text-[#222]" value="MCA">MCA</option>
-                <option className="bg-white text-[#222]" value="MBA">MBA</option>
-                <option className="bg-white text-[#222]" value="DEGREE">DEGREE</option>
+                <option value="BTECH">BTECH</option>
+                <option value="DIPLOMA">DIPLOMA</option>
+                <option value="PHARMACY">PHARMACY</option>
+                <option value="MCA">MCA</option>
+                <option value="MBA">MBA</option>
+                <option value="DEGREE">DEGREE</option>
               </select>
             </div>
 
             {/* Branch */}
             <div className="space-y-2">
-              <label className="block text-sm font-bold text-gray-700 uppercase tracking-widest">Branch</label>
+              <label className="block text-sm font-bold text-[#d60000] uppercase tracking-widest">Branch</label>
               <select 
                 name="branch"
                 value={formData.branch}
                 onChange={handleInputChange}
-                className="w-full p-4 rounded-[6px] bg-white border border-[#ccc] text-[#222] focus:border-[#d60000] outline-none transition-all appearance-none cursor-pointer"
+                className="w-full p-4 rounded-xl bg-white border border-gray-200 text-gray-900 focus:border-[#d60000] outline-none transition-all appearance-none cursor-pointer"
               >
-                <option className="bg-white text-[#222]" value="CSE">CSE</option>
-                <option className="bg-white text-[#222]" value="CSM">CSM</option>
-                <option className="bg-white text-[#222]" value="CSD">CSD</option>
-                <option className="bg-white text-[#222]" value="EEE">EEE</option>
-                <option className="bg-white text-[#222]" value="ECE">ECE</option>
-                <option className="bg-white text-[#222]" value="MECH">MECH</option>
-                <option className="bg-white text-[#222]" value="B PHARMA">B PHARMA</option>
-                <option className="bg-white text-[#222]" value="PHARMA-D">PHARMA-D</option>
+                <option value="NONE">NONE</option>
+                <option value="CSE">CSE</option>
+                <option value="CSM">CSM</option>
+                <option value="CSD">CSD</option>
+                <option value="EEE">EEE</option>
+                <option value="ECE">ECE</option>
+                <option value="MECH">MECH</option>
+                <option value="B PHARMA">B PHARMA</option>
+                <option value="PHARMA-D">PHARMA-D</option>
               </select>
             </div>
 
             {/* Section */}
             <div className="space-y-2 md:col-span-2">
-              <label className="block text-sm font-bold text-gray-700 uppercase tracking-widest">Section</label>
+              <label className="block text-sm font-bold text-[#d60000] uppercase tracking-widest">Section</label>
               <select 
                 name="section"
                 value={formData.section}
                 onChange={handleInputChange}
-                className="w-full p-4 rounded-[6px] bg-white border border-[#ccc] text-[#222] focus:border-[#d60000] outline-none transition-all appearance-none cursor-pointer"
+                className="w-full p-4 rounded-xl bg-white border border-gray-200 text-gray-900 focus:border-[#d60000] outline-none transition-all appearance-none cursor-pointer"
               >
-                <option className="bg-white text-[#222]" value="A">A</option>
-                <option className="bg-white text-[#222]" value="B">B</option>
-                <option className="bg-white text-[#222]" value="C">C</option>
-                <option className="bg-white text-[#222]" value="D">D</option>
-                <option className="bg-white text-[#222]" value="E">E</option>
-                <option className="bg-white text-[#222]" value="F">F</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+                <option value="E">E</option>
+                <option value="F">F</option>
               </select>
             </div>
           </div>
 
           {/* Events Selection */}
           <div className="space-y-6">
-            <label className="block text-sm font-bold text-gray-700 uppercase tracking-widest">Select Events</label>
+            <label className="block text-sm font-bold text-[#d60000] uppercase tracking-widest">Select Events</label>
 
-            <div className="grid md:grid-cols-2 gap-8 p-6 bg-gray-50 rounded-[10px] border border-[#e5e5e5]">
+            <div className="grid md:grid-cols-2 gap-8 p-6 bg-gray-50 rounded-xl border border-gray-100">
               {/* Spot Events */}
               <div className="space-y-4">
-                <h3 className="text-[#d60000] font-bold text-sm uppercase tracking-widest border-b border-[#e5e5e5] pb-2">Spot Events</h3>
+                <h3 className="text-[#d60000] font-bold text-sm uppercase tracking-widest border-b border-gray-200 pb-2">Spot Events</h3>
                 <div className="space-y-3">
                   {SPOT_EVENTS.map((event) => (
                     <label key={event.id} className="flex items-center gap-3 group cursor-pointer">
@@ -365,13 +375,13 @@ const Registration = () => {
                           type="checkbox"
                           checked={formData.selectedEvents.includes(event.name)}
                           onChange={() => handleEventToggle(event.name)}
-                          className="peer w-5 h-5 appearance-none border border-[#ccc] rounded bg-white checked:bg-[#d60000] checked:border-[#d60000] transition-all cursor-pointer"
+                          className="peer w-5 h-5 appearance-none border border-gray-300 rounded bg-white checked:bg-[#d60000] checked:border-[#d60000] transition-all cursor-pointer"
                         />
                         <svg className="absolute w-3 h-3 text-white opacity-0 peer-checked:opacity-100 transition-opacity pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="4">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                         </svg>
                       </div>
-                      <span className="text-gray-600 group-hover:text-[#222] transition-colors text-sm">{event.name}</span>
+                      <span className="text-gray-600 group-hover:text-[#d60000] transition-colors text-sm">{event.name}</span>
                     </label>
                   ))}
                 </div>
@@ -379,7 +389,7 @@ const Registration = () => {
 
               {/* Cultural Events */}
               <div className="space-y-4">
-                <h3 className="text-[#d60000] font-bold text-sm uppercase tracking-widest border-b border-[#e5e5e5] pb-2">Cultural Events</h3>
+                <h3 className="text-[#d60000] font-bold text-sm uppercase tracking-widest border-b border-gray-200 pb-2">Cultural Events</h3>
                 <div className="space-y-3">
                   {CULTURAL_EVENTS.map((event) => (
                     <label key={event.id} className="flex items-center gap-3 group cursor-pointer">
@@ -388,13 +398,13 @@ const Registration = () => {
                           type="checkbox"
                           checked={formData.selectedEvents.includes(event.name)}
                           onChange={() => handleEventToggle(event.name)}
-                          className="peer w-5 h-5 appearance-none border border-[#ccc] rounded bg-white checked:bg-[#d60000] checked:border-[#d60000] transition-all cursor-pointer"
+                          className="peer w-5 h-5 appearance-none border border-gray-300 rounded bg-white checked:bg-[#d60000] checked:border-[#d60000] transition-all cursor-pointer"
                         />
                         <svg className="absolute w-3 h-3 text-white opacity-0 peer-checked:opacity-100 transition-opacity pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="4">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                         </svg>
                       </div>
-                      <span className="text-gray-600 group-hover:text-[#222] transition-colors text-sm">{event.name}</span>
+                      <span className="text-gray-600 group-hover:text-[#d60000] transition-colors text-sm">{event.name}</span>
                     </label>
                   ))}
                 </div>
@@ -407,35 +417,35 @@ const Registration = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className={`px-12 py-4 bg-[#d60000] hover:bg-[#b30000] text-white font-bold uppercase tracking-widest rounded-[6px] transition-all hover:shadow-[0_4px_10px_rgba(214,0,0,0.3)] active:scale-95 ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
+              className={`px-12 py-4 bg-[#d60000] hover:bg-[#b80000] text-white font-bold uppercase tracking-widest rounded-xl transition-all shadow-md hover:shadow-lg active:scale-95 ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
             >
               {isSubmitting ? 'Submitting...' : 'Submit Registration'}
             </button>
-            <p className="mt-4 text-gray-500 text-[10px] uppercase font-bold tracking-widest">
+            <p className="mt-4 text-gray-400 text-[10px] uppercase font-bold tracking-widest">
               By submitting, you agree to the fest guidelines and code of conduct.
             </p>
           </div>
         </motion.form>
       </div>
 
-      {/* Cinematic Success Popup */}
+      {/* Success Popup */}
       <AnimatePresence>
         {showSuccess && (
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 flex items-center justify-center z-[100] p-6 backdrop-blur-sm"
+            className="fixed inset-0 bg-black/60 flex items-center justify-center z-[100] p-6 backdrop-blur-sm"
           >
             <motion.div 
               initial={{ scale: 0.8, y: 50, opacity: 0 }}
               animate={{ scale: 1, y: 0, opacity: 1 }}
               exit={{ scale: 0.8, y: 50, opacity: 0 }}
-              className="bg-white border border-[#e5e5e5] p-8 md:p-12 rounded-[10px] text-center shadow-2xl max-w-lg w-full relative overflow-hidden"
+              className="bg-white p-8 md:p-12 rounded-xl text-center shadow-2xl max-w-lg w-full relative overflow-hidden border-t-8 border-[#d60000]"
             >
               <button 
                 onClick={closeSuccess}
-                className="absolute top-6 right-6 text-gray-500 hover:text-[#d60000] transition-colors"
+                className="absolute top-6 right-6 text-gray-400 hover:text-[#d60000] transition-colors"
               >
                 <X className="w-6 h-6" />
               </button>
@@ -446,7 +456,7 @@ const Registration = () => {
                 </div>
               </div>
               
-              <h2 className="text-3xl md:text-4xl font-bold text-[#222] mb-4 tracking-tight">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 tracking-tight">
                 REGISTRATION SUCCESSFUL!
               </h2>
               <p className="text-gray-600 mb-8 font-medium">
@@ -458,7 +468,7 @@ const Registration = () => {
                 <div className="flex flex-col gap-3">
                   <button
                     onClick={downloadReceipt}
-                    className="flex items-center justify-center gap-2 w-full py-4 bg-[#d60000] text-white font-bold uppercase tracking-widest rounded-[6px] hover:bg-[#b30000] transition-all"
+                    className="flex items-center justify-center gap-2 w-full py-4 bg-[#d60000] text-white font-bold uppercase tracking-widest rounded-xl hover:bg-[#b80000] transition-all shadow-md"
                   >
                     <Download className="w-5 h-5" />
                     Download Receipt
@@ -466,13 +476,13 @@ const Registration = () => {
                   
                   <button
                     onClick={closeSuccess}
-                    className="w-full py-4 bg-gray-100 text-[#222] font-bold uppercase tracking-widest rounded-[6px] hover:bg-gray-200 transition-all"
+                    className="w-full py-4 bg-gray-100 text-gray-700 font-bold uppercase tracking-widest rounded-xl hover:bg-gray-200 transition-all"
                   >
                     Close
                   </button>
                 </div>
 
-                <p className="text-[10px] text-gray-500 uppercase font-bold tracking-widest mt-4">
+                <p className="text-[10px] text-gray-400 uppercase font-bold tracking-widest mt-4">
                   Please save your receipt for event entry verification.
                 </p>
               </div>
