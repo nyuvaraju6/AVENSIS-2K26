@@ -56,11 +56,11 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
-              className="relative w-full max-w-lg bg-white border border-[#e5e5e5] rounded-[10px] overflow-hidden shadow-2xl"
+              className="relative w-full max-w-lg bg-[#111] border border-[#ffd700]/20 rounded-[10px] overflow-hidden shadow-2xl"
             >
               <button 
                 onClick={() => setIsModalOpen(false)}
-                className="absolute top-4 right-4 z-10 p-2 rounded-full bg-white/80 text-[#222] hover:text-[#d60000] transition-colors"
+                className="absolute top-4 right-4 z-10 p-2 rounded-full bg-black/50 text-white hover:text-[#ffd700] transition-colors"
               >
                 <X className="w-6 h-6" />
               </button>
@@ -75,7 +75,7 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
                     className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#111] via-[#111]/40 to-transparent" />
                   <div className="absolute bottom-4 left-6">
                     <h2 className="text-3xl font-black text-white tracking-tighter uppercase">
                       {event.name}
@@ -84,39 +84,39 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
                 </div>
 
                 <div className="p-8 space-y-8">
-                  <p className="text-gray-700 leading-relaxed">
+                  <p className="text-gray-300 leading-relaxed">
                     {event.description}
                   </p>
 
                   {/* Coordinator Cards */}
                   <div className="space-y-4">
-                    <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-[#d60000] mb-4">
+                    <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-[#ffd700] mb-4">
                       Event Coordinators
                     </h4>
                     
                     {event.coordinators.map((coordinator, index) => (
-                      <div key={index} className="bg-white border border-[#e5e5e5] rounded-[10px] p-6 relative overflow-hidden group shadow-sm">
-                        <div className="absolute top-0 left-0 w-1 h-full bg-[#d60000]" />
+                      <div key={index} className="bg-[#1a1a1a] border border-[#ffd700]/30 rounded-[10px] p-6 relative overflow-hidden group shadow-lg">
+                        <div className="absolute top-0 left-0 w-1 h-full bg-[#ffd700]" />
                         
                         <div className="flex flex-col sm:flex-row items-center gap-4">
-                          <div className="w-16 h-16 rounded-full p-[2px] bg-[#d60000] shrink-0">
-                            <div className="w-full h-full rounded-full overflow-hidden bg-gray-100 flex items-center justify-center relative">
-                              <User className="w-8 h-8 text-gray-400 absolute" />
+                          <div className="w-16 h-16 rounded-full p-[2px] bg-[#ffd700] shrink-0">
+                            <div className="w-full h-full rounded-full overflow-hidden bg-[#222] flex items-center justify-center relative">
+                              <User className="w-8 h-8 text-gray-600 absolute" />
                             </div>
                           </div>
                           
                           <div className="flex-1 text-center sm:text-left">
-                            <div className="text-xl font-bold text-[#222] uppercase tracking-tight">
+                            <div className="text-xl font-bold text-white uppercase tracking-tight">
                               {coordinator.name}
                             </div>
-                            <div className="text-xs text-gray-500 font-bold uppercase tracking-widest mt-1">
+                            <div className="text-xs text-[#ffd700] font-bold uppercase tracking-widest mt-1">
                               Dept: {coordinator.dept}
                             </div>
                           </div>
 
                           <a 
                             href={`tel:${coordinator.phone}`}
-                            className="flex items-center gap-2 bg-[#d60000] text-white px-4 py-2 rounded-lg font-black text-xs uppercase hover:bg-[#b30000] transition-colors w-full sm:w-auto justify-center"
+                            className="flex items-center gap-2 bg-[#ffd700] text-black px-4 py-2 rounded-lg font-black text-xs uppercase hover:bg-white transition-colors w-full sm:w-auto justify-center"
                           >
                             <Phone className="w-4 h-4" />
                             Call Now
@@ -130,7 +130,7 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
                   <a 
                     href="#register"
                     onClick={() => setIsModalOpen(false)}
-                    className="flex items-center justify-center gap-3 w-full py-3 bg-[#d60000] text-white font-black uppercase tracking-[0.2em] rounded-[6px] hover:bg-[#b30000] transition-all transform hover:-translate-y-1"
+                    className="flex items-center justify-center gap-3 w-full py-3 bg-[#d60000] text-white font-black uppercase tracking-[0.2em] rounded-[6px] hover:bg-[#b30000] transition-all transform hover:-translate-y-1 shadow-[0_0_15px_rgba(214,0,0,0.3)]"
                   >
                     Register Now
                     <ExternalLink className="w-5 h-5" />

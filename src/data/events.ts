@@ -21,98 +21,190 @@ export const SPOT_EVENTS: Event[] = [
     id: 'stand-up-comedy',
     name: 'Stand-Up Comedy',
     description: 'Make the audience roar with laughter with your wit and humor. A platform for the funniest minds.',
-    coordinators: [],
+    coordinators: [
+      { name: "MD. RIYAN", phone: "9885078279", dept: "CSE" },
+      { name: "T. MAHESH REDDY", phone: "9849699082", dept: "MECH" }
+    ],
     category: 'spot'
   },
   {
     id: 'auto-expo',
     name: 'Auto Expo',
     description: 'Showcase modified cars, superbikes and engineering creativity. Witness the engineering marvels.',
-    coordinators: [],
+    coordinators: [
+      { name: "MD. RIYAN", phone: "9885078279", dept: "CSE" },
+      { name: "R. MADHAN", phone: "7396457282", dept: "MECH" }
+    ],
     category: 'spot'
   },
   {
     id: 'fashion-show',
     name: 'Fashion Show',
     description: 'Walk the ramp and showcase your style. A platform where creativity meets elegance.',
-    coordinators: [],
+    coordinators: [
+      { name: "P. CHATHURYA", phone: "7386902863", dept: "MCA" },
+      { name: "A. GOWRI", phone: "9381572054", dept: "DIPLOMA" }
+    ],
     category: 'spot'
   },
   {
     id: 'ramp-walk',
     name: 'Ramp Walk',
     description: 'Individual spotlight on the runway. Show off your confidence and charisma.',
-    coordinators: [],
+    coordinators: [
+      { name: "P. CHATHURYA", phone: "7386902863", dept: "MCA" },
+      { name: "A. GOWRI", phone: "9381572054", dept: "DIPLOMA" }
+    ],
     category: 'spot'
   },
   {
     id: 'treasure-hunt',
     name: 'Treasure Hunt',
     description: 'Solve riddles, decode clues, and race against time to find the hidden treasure.',
-    coordinators: [],
+    coordinators: [
+      { name: "P. CHANDU", phone: "9652199440", dept: "CSMD" },
+      { name: "N. ESWAR", phone: "9390524975", dept: "EEE" }
+    ],
     category: 'spot'
   },
   {
     id: 'meme-creation',
     name: 'Meme Creation',
     description: 'Unleash your wit and humor. Create the most relatable and viral memes.',
-    coordinators: [],
+    coordinators: [
+      { name: "B. GEETHIKA", phone: "8341696916", dept: "CSE" },
+      { name: "Y. SAI PRIYA", phone: "7396518452", dept: "PHARM D" }
+    ],
     category: 'spot'
   },
   {
     id: 'reels-making',
     name: 'Reels Making (Instagram Story Challenge)',
     description: 'Create engaging Instagram reels featuring our college theme. Show your editing skills.',
-    coordinators: [],
+    coordinators: [
+      { name: "B. GEETHIKA", phone: "8341696916", dept: "CSE" },
+      { name: "Y. SAI PRIYA", phone: "7396518452", dept: "PHARM D" }
+    ],
     category: 'spot'
   },
   {
     id: 'spot-photography',
     name: 'Spot Photography',
     description: 'Capture the essence of Avensis through your lens. Best shots win big.',
-    coordinators: [],
+    coordinators: [
+      { name: "B. GEETHIKA", phone: "8341696916", dept: "CSE" },
+      { name: "Y. SAI PRIYA", phone: "7396518452", dept: "PHARM D" }
+    ],
     category: 'spot'
   },
   {
     id: 'instrumental-music',
     name: 'Instrumental Music',
     description: 'Showcase your talent on musical instruments. Let the melodies speak.',
-    coordinators: [],
+    coordinators: [
+      { name: "M. RAVINDRA", phone: "8179133543", dept: "MECH" },
+      { name: "S. GANESH", phone: "7670921130", dept: "CSMD" }
+    ],
     category: 'spot'
   },
   {
     id: 'e-sports',
     name: 'E-Sports (BGMI / Free Fire)',
     description: 'The ultimate battleground for gamers. Squad up and fight for victory.',
-    coordinators: [],
+    coordinators: [
+      { name: "B. RAVISANKAR", phone: "9703612177", dept: "DEGREE" },
+      { name: "B. VENKATESH", phone: "7995703042", dept: "DEGREE" }
+    ],
     category: 'spot'
   },
   {
     id: 'body-building',
     name: 'Body Building',
     description: 'Flex those muscles and show your dedication to fitness. Judged on symmetry and mass.',
-    coordinators: [],
+    coordinators: [
+      { name: "M. RAVINDRA", phone: "8179133543", dept: "MECH" },
+      { name: "S. GANESH", phone: "7670921130", dept: "CSMD" }
+    ],
     category: 'spot'
   },
   {
     id: 'balloon-burst',
     name: 'Balloon Burst Game',
     description: 'A fun and energetic game of bursting balloons. Quick reflexes win.',
-    coordinators: [],
+    coordinators: [
+      { name: "P. CHANDU", phone: "9652199440", dept: "CSMD" },
+      { name: "N. ESWAR", phone: "9390524975", dept: "EEE" }
+    ],
     category: 'spot'
   },
   {
     id: 'advertisement-comp',
     name: 'Advertisement Competition',
     description: 'Pitch your ideas and create compelling advertisements for products.',
-    coordinators: [],
+    coordinators: [
+      { name: "K. NAVYA", phone: "9676083204", dept: "PHARMA D" },
+      { name: "K. SAKETH", phone: "9948046481", dept: "ECE" }
+    ],
     category: 'spot'
   },
   {
     id: 'clay-modelling',
     name: 'Clay Modelling & Best Out of Waste',
     description: 'Unleash your creativity with clay and recycled materials to create art.',
-    coordinators: [],
+    coordinators: [
+      { name: "G. BEAULA", phone: "7842709982", dept: "EEE" },
+      { name: "B. SRIJA", phone: "8688963070", dept: "B PHARMA" }
+    ],
+    category: 'spot'
+  },
+  {
+    id: 'promotions',
+    name: 'Promotions',
+    description: 'Spreading the word and building the hype for AVENSIS 2K26 across the region.',
+    coordinators: [
+      { name: "K. HARIKA", phone: "6303393385", dept: "ECE" },
+      { name: "B. BHUVANESWARI", phone: "6304386043", dept: "B PHARMA" }
+    ],
+    category: 'spot'
+  },
+  {
+    id: 'stalls',
+    name: 'Stalls',
+    description: 'Managing the vibrant marketplace and food stalls that fuel the fest energy.',
+    coordinators: [
+      { name: "P. CHANDU", phone: "9652199440", dept: "CSMD" },
+      { name: "N. ESWAR", phone: "9390524975", dept: "EEE" }
+    ],
+    category: 'spot'
+  },
+  {
+    id: 'stage-decoration',
+    name: 'Stage & Decoration',
+    description: 'Transforming the campus into a visual masterpiece with creative themes and decor.',
+    coordinators: [
+      { name: "G. BEAULA", phone: "7842709982", dept: "EEE" },
+      { name: "B. SRIJA", phone: "8688963070", dept: "B PHARMA" }
+    ],
+    category: 'spot'
+  },
+  {
+    id: 'sponsors',
+    name: 'Sponsors',
+    description: 'Building partnerships with leading brands to make AVENSIS 2K26 a grand success.',
+    coordinators: [
+      { name: "CH. SAMANTH", phone: "8712209988", dept: "DIPLOMA" },
+      { name: "B. SOWMYA", phone: "9059045594", dept: "CSE" }
+    ],
+    category: 'spot'
+  },
+  {
+    id: 'digital-media',
+    name: 'Digital Media',
+    description: 'Capturing and sharing the magic of AVENSIS through professional digital content.',
+    coordinators: [
+      { name: "B. GEETHIKA", phone: "8341696916", dept: "CSE" },
+      { name: "Y. SAI PRIYA", phone: "7396518452", dept: "PHARM D" }
+    ],
     category: 'spot'
   }
 ];
@@ -122,49 +214,70 @@ export const CULTURAL_EVENTS: Event[] = [
     id: 'solo-singing',
     name: 'Solo Singing',
     description: 'Let your voice resonate. Showcase your vocal talent in this solo performance.',
-    coordinators: [],
+    coordinators: [
+      { name: "M. RAVINDRA", phone: "8179133543", dept: "MECH" },
+      { name: "S. GANESH", phone: "7670921130", dept: "CSMD" }
+    ],
     category: 'cultural'
   },
   {
     id: 'solo-dance',
     name: 'Solo Dance',
     description: 'Express through movement. High-energy solo performances in any style.',
-    coordinators: [],
+    coordinators: [
+      { name: "M. RAVINDRA", phone: "8179133543", dept: "MECH" },
+      { name: "S. GANESH", phone: "7670921130", dept: "CSMD" }
+    ],
     category: 'cultural'
   },
   {
     id: 'group-dance',
     name: 'Group Dance',
     description: 'Synchronized group performances that set the stage on fire.',
-    coordinators: [],
+    coordinators: [
+      { name: "M. RAVINDRA", phone: "8179133543", dept: "MECH" },
+      { name: "S. GANESH", phone: "7670921130", dept: "CSMD" }
+    ],
     category: 'cultural'
   },
   {
     id: 'duet-dance',
     name: 'Duet Dance',
     description: 'A synchronized dance performance by two. Show your chemistry and rhythm.',
-    coordinators: [],
+    coordinators: [
+      { name: "M. RAVINDRA", phone: "8179133543", dept: "MECH" },
+      { name: "S. GANESH", phone: "7670921130", dept: "CSMD" }
+    ],
     category: 'cultural'
   },
   {
     id: 'flashmob',
     name: 'Flashmob',
     description: 'Surprise the crowd with a spontaneous and energetic group dance.',
-    coordinators: [],
+    coordinators: [
+      { name: "M. RAVINDRA", phone: "8179133543", dept: "MECH" },
+      { name: "S. GANESH", phone: "7670921130", dept: "CSMD" }
+    ],
     category: 'cultural'
   },
   {
     id: 'group-singing',
     name: 'Group Singing',
     description: 'Harmonious group vocal performances across various genres.',
-    coordinators: [],
+    coordinators: [
+      { name: "M. RAVINDRA", phone: "8179133543", dept: "MECH" },
+      { name: "S. GANESH", phone: "7670921130", dept: "CSMD" }
+    ],
     category: 'cultural'
   },
   {
     id: 'skits-drama',
     name: 'Skits & Drama',
     description: 'Bring stories to life on stage. A platform for theatrical excellence.',
-    coordinators: [],
+    coordinators: [
+      { name: "M. RAVINDRA", phone: "8179133543", dept: "MECH" },
+      { name: "S. GANESH", phone: "7670921130", dept: "CSMD" }
+    ],
     category: 'cultural'
   }
 ];
