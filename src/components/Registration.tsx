@@ -12,6 +12,7 @@ const Registration = () => {
     rollNumber: '',
     mobile: '',
     email: '',
+    year: '',
     department: 'BTECH',
     branch: 'NONE',
     section: 'A',
@@ -79,23 +80,24 @@ const Registration = () => {
     doc.text(`Department: ${formData.department}`, 20, 105);
     doc.text(`Branch: ${formData.branch}`, 20, 115);
     doc.text(`Section: ${formData.section}`, 20, 125);
+    doc.text(`Year: ${formData.year}`, 20, 135);
 
     // Highlighted Reference
     doc.setFontSize(16);
     doc.setTextColor(220, 38, 38); // Red
     doc.setFont('helvetica', 'bold');
-    doc.text(`Reference: ${formData.rollNumber}`, 20, 140);
+    doc.text(`Reference: ${formData.rollNumber}`, 20, 150);
 
     doc.setTextColor(0, 0, 0);
     doc.setFontSize(14);
-    doc.text("Selected Events", 20, 165);
-    doc.line(20, 167, 190, 167);
+    doc.text("Selected Events", 20, 175);
+    doc.line(20, 177, 190, 177);
     
     doc.setFontSize(10);
     doc.setFont('helvetica', 'normal');
     const eventsText = formData.selectedEvents.length > 0 ? formData.selectedEvents.join(", ") : "No events selected";
     const splitEvents = doc.splitTextToSize(eventsText, 170);
-    doc.text(splitEvents, 20, 175);
+    doc.text(splitEvents, 20, 185);
 
     // Professional Timestamp Highlight
     const formattedDate = new Date().toLocaleString("en-IN", {
@@ -107,14 +109,14 @@ const Registration = () => {
     });
 
     doc.setFillColor(0, 0, 0);
-    doc.rect(20, 200, 170, 18, "F");
+    doc.rect(20, 210, 170, 18, "F");
 
     doc.setTextColor(255, 204, 21);
     doc.setFontSize(13);
     doc.text(
       `Generated on: ${formattedDate}`,
       105,
-      212,
+      222,
       { align: "center" }
     );
 
@@ -165,6 +167,7 @@ const Registration = () => {
     appendField("entry.1503436084", formData.rollNumber);
     appendField("entry.2055757344", formData.mobile);
     appendField("entry.1654106422", formData.email);
+    appendField("entry.1703436084", formData.year); // Placeholder entry ID for Year of Study
     appendField("entry.1512251756", formData.department);
     appendField("entry.1115180722", formData.branch);
     appendField("entry.1592132195", formData.section);
@@ -213,6 +216,7 @@ const Registration = () => {
       rollNumber: "",
       mobile: "",
       email: "",
+      year: "",
       department: "BTECH",
       branch: "NONE",
       section: "A",
@@ -299,6 +303,24 @@ const Registration = () => {
                 placeholder="Enter your email address"
                 className="w-full p-4 rounded-xl bg-white border border-gray-200 text-gray-900 focus:border-[#d60000] focus:ring-1 focus:ring-[#d60000] outline-none transition-all placeholder:text-gray-400"
               />
+            </div>
+
+            {/* Year of Study */}
+            <div className="space-y-2">
+              <label className="block text-sm font-bold text-[#d60000] uppercase tracking-widest">Year of Study</label>
+              <select 
+                required
+                name="year"
+                value={formData.year}
+                onChange={handleInputChange}
+                className="w-full p-4 rounded-xl bg-white border border-gray-200 text-gray-900 focus:border-[#d60000] outline-none transition-all appearance-none cursor-pointer"
+              >
+                <option value="" disabled>Select Year</option>
+                <option value="1 Year">1 Year</option>
+                <option value="2 Year">2 Year</option>
+                <option value="3 Year">3 Year</option>
+                <option value="4 Year">4 Year</option>
+              </select>
             </div>
 
             {/* Department */}
