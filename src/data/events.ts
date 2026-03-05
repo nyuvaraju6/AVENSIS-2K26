@@ -177,25 +177,34 @@ export interface ScheduleItem {
 export interface DaySchedule {
   day: string;
   date: string;
+  title?: string;
   items: ScheduleItem[];
 }
 
 export const SCHEDULE: DaySchedule[] = [
   {
     day: 'Day 1',
-    date: '13/03/2026',
+    date: '13th March 2026',
+    title: 'Inauguration & Cultural Extravaganza',
     items: [
-      { time: '9:00 AM – 10:00 AM', event: 'Culturals' },
-      { time: '10:00 AM – 12:00 PM', event: 'Inauguration' },
-      { time: '3:30 PM – 5:00 PM', event: 'Bike Expo' },
+      { time: '09:00 AM – 10:00 AM', event: 'Culturals Competitions' },
+      { time: '10:00 AM – 12:00 PM', event: 'Inaugural Ceremony (Lighting the Lamp, Chief Guest Speech)' },
+      { time: '12:00 PM – 01:00 PM', event: 'Culturals Competitions' },
+      { time: '01:00 PM – 03:00 PM', event: 'Event Competitions' },
+      { time: '03:00 PM – 05:00 PM', event: 'Celebrity / Singer Performance' },
+      { time: '05:00 PM – 06:00 PM', event: 'Fashion Show / Body Building Show' },
     ]
   },
   {
     day: 'Day 2',
-    date: '14/03/2026',
+    date: '14th March 2026',
     items: [
-      { time: '9:00 AM – 12:00 PM', event: 'Culturals' },
-      { time: '5:00 PM – 6:00 PM', event: 'Car Expo' },
+      { time: '09:00 AM – 11:30 AM', event: 'Event Competitions' },
+      { time: '11:30 AM – 03:00 PM', event: 'Culturals Competitions' },
+      { time: '03:00 PM – 04:30 PM', event: 'Valedictory Function – Prize Distribution & Felicitation' },
+      { time: '04:30 PM – 05:30 PM', event: 'Singer Performance' },
+      { time: '05:30 PM – 06:30 PM', event: 'Live Band Performance' },
+      { time: '06:30 PM – 06:45 PM onwards', event: 'Vote of Thanks & Closing Ceremony' },
     ]
   }
 ];

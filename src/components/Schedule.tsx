@@ -27,9 +27,14 @@ const Schedule = () => {
               viewport={{ once: true }}
               className="bg-white border-t border-r border-b border-[#e5e5e5] border-l-4 border-l-[#d60000] rounded-[10px] p-8 shadow-[0_4px_10px_rgba(0,0,0,0.08)] hover:shadow-[0_6px_18px_rgba(0,0,0,0.15)] transition-all"
             >
-              <h3 className="text-2xl font-bold text-[#222] mb-6 flex items-center gap-4">
+              <h3 className="text-2xl font-bold text-[#222] mb-2 flex items-center gap-4">
                 {day.day} <span className="text-gray-500 text-sm font-medium">— {day.date}</span>
               </h3>
+              {day.title && (
+                <p className="text-[#d60000] font-bold text-lg mb-6 uppercase tracking-tight">
+                  {day.title}
+                </p>
+              )}
               <div className="space-y-4">
                 {day.items.map((item, i) => (
                   <div key={i} className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 py-3 border-b border-[#e5e5e5] last:border-0">
