@@ -372,7 +372,7 @@ export const OVERALL_COORDINATORS: OverallCoordinator[] = [
   { id: 7, name: 'K. JANARDHANA', phone: '9398583074', dept: 'MBA', committee: 'Student Overall Co-ordinator', image: "/k-janardhana.jpeg" },
   { id: 8, name: 'L. TILAK KUMAR', phone: '9959349744', dept: 'B. PHARMA', committee: 'Student Overall Co-ordinator', image: "/l-tilak-kumar.jpeg" },
   { id: 9, name: 'G. SATISH', phone: '8121917925', dept: 'PHARMA D', committee: 'Student Overall Co-ordinator', image: "/g-satish.jpeg" },
-  { id: 10, name: 'M. VENKATESH', phone: '8778829839', dept: 'DEGREE', committee: 'Student Overall Co-ordinator', image: "/m-venktesh.jpeg" },
+  { id: 10, name: 'M. VENKATESH', phone: '8778829839', dept: 'DEGREE', committee: 'Student Overall Co-ordinator', image: "https://drive.google.com/uc?export=view&id=1TolnaTSe3v-dVKOTg6GArvjRF2JKLFVR" },
   { id: 11, name: 'P. BHARATH KALYAN', phone: '6305965291', dept: 'DIPLOMA', committee: 'Student Overall Co-ordinator', image: "/p-bharath-kalyan.jpeg" },
 ];
 
