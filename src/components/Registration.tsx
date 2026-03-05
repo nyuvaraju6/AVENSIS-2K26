@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion } from 'motion/react';
 import { SPOT_EVENTS, CULTURAL_EVENTS } from '../data/events';
 import jsPDF from 'jspdf';
-import { Download, CheckCircle2, X } from 'lucide-react';
 
 const Registration = () => {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showSuccess, setShowSuccess] = useState(false);
   const [formData, setFormData] = useState({
     fullName: '',
     rollNumber: '',
@@ -132,68 +129,6 @@ const Registration = () => {
     doc.save(`AVENSIS_Registration_${formData.rollNumber}.pdf`);
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    if (!formData.rollNumber.trim()) {
-      alert("Roll Number is required.");
-      return;
-    }
-
-    setIsSubmitting(true);
-
-    const formURL =
-      "https://docs.google.com/forms/d/e/1FAIpQLSdZUwKJ0vKNE012nZiA9O0_S1nhoTM_y-kueXJw5eaRBntZaw/formResponse";
-
-    const formDataToSend = new FormData();
-    formDataToSend.append("entry.2006313935", formData.fullName);
-    formDataToSend.append("entry.1503436084", formData.rollNumber);
-    formDataToSend.append("entry.2055757344", formData.mobile);
-    formDataToSend.append("entry.1654106422", formData.email);
-    formDataToSend.append("entry.835340413", formData.year);
-    formDataToSend.append("entry.1512251756", formData.department);
-    formDataToSend.append("entry.1115180722", formData.branch);
-
-    formData.selectedEvents.forEach((event) => {
-      if (SPOT_EVENTS.some(e => e.name === event)) {
-        formDataToSend.append("entry.945003127", event);
-      }
-
-      if (CULTURAL_EVENTS.some(e => e.name === event)) {
-        formDataToSend.append("entry.850313794", event);
-      }
-    });
-
-    try {
-      await fetch(formURL, {
-        method: "POST",
-        mode: "no-cors",
-        body: formDataToSend
-      });
-      setShowSuccess(true);
-    } catch (error) {
-      console.error("Submission error:", error);
-      alert("Registration failed. Please try again.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  const closeSuccess = () => {
-    setShowSuccess(false);
-    setFormData({
-      fullName: "",
-      rollNumber: "",
-      mobile: "",
-      email: "",
-      year: "",
-      department: "BTECH",
-      branch: "NONE",
-      section: "A",
-      selectedEvents: [],
-    });
-  };
-
   return (
     <section id="register" className="py-24 bg-white relative overflow-hidden">
       <div className="max-w-4xl mx-auto px-6 relative z-10">
@@ -211,11 +146,10 @@ const Registration = () => {
           </p>
         </div>
 
-        <motion.form
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          onSubmit={handleSubmit}
+        <form
+          action="https://docs.google.com/forms/d/e/1FAIpQLSdZUwKJ0vKNE012nZiA9O0_S1nhoTM_y-kueXJw5eaRBntZaw/formResponse"
+          method="POST"
+          target="_blank"
           className="bg-white p-8 md:p-12 rounded-xl border-l-4 border-l-[#d60000] shadow-md space-y-8"
         >
           <div className="grid md:grid-cols-2 gap-8">
@@ -225,7 +159,7 @@ const Registration = () => {
               <input
                 required
                 type="text"
-                name="fullName"
+                name="entry.2006313935"
                 value={formData.fullName}
                 onChange={handleInputChange}
                 placeholder="Enter your full name"
@@ -239,7 +173,7 @@ const Registration = () => {
               <input
                 required
                 type="text"
-                name="rollNumber"
+                name="entry.1503436084"
                 value={formData.rollNumber}
                 onChange={handleInputChange}
                 placeholder="Enter your roll number"
@@ -253,7 +187,7 @@ const Registration = () => {
               <input
                 required
                 type="tel"
-                name="mobile"
+                name="entry.2055757344"
                 value={formData.mobile}
                 onChange={handleInputChange}
                 placeholder="Enter your mobile number"
@@ -267,7 +201,7 @@ const Registration = () => {
               <input
                 required
                 type="email"
-                name="email"
+                name="entry.1654106422"
                 value={formData.email}
                 onChange={handleInputChange}
                 placeholder="Enter your email address"
@@ -280,7 +214,7 @@ const Registration = () => {
               <label className="block text-sm font-bold text-[#d60000] uppercase tracking-widest">Year of Study</label>
               <select 
                 required
-                name="year"
+                name="entry.835340413"
                 value={formData.year}
                 onChange={handleInputChange}
                 className="w-full p-4 rounded-xl bg-white border border-gray-200 text-gray-900 focus:border-[#d60000] outline-none transition-all appearance-none cursor-pointer"
@@ -297,7 +231,7 @@ const Registration = () => {
             <div className="space-y-2">
               <label className="block text-sm font-bold text-[#d60000] uppercase tracking-widest">Department</label>
               <select 
-                name="department"
+                name="entry.1512251756"
                 value={formData.department}
                 onChange={handleInputChange}
                 className="w-full p-4 rounded-xl bg-white border border-gray-200 text-gray-900 focus:border-[#d60000] outline-none transition-all appearance-none cursor-pointer"
@@ -315,7 +249,7 @@ const Registration = () => {
             <div className="space-y-2">
               <label className="block text-sm font-bold text-[#d60000] uppercase tracking-widest">Branch</label>
               <select 
-                name="branch"
+                name="entry.1115180722"
                 value={formData.branch}
                 onChange={handleInputChange}
                 className="w-full p-4 rounded-xl bg-white border border-gray-200 text-gray-900 focus:border-[#d60000] outline-none transition-all appearance-none cursor-pointer"
@@ -365,6 +299,8 @@ const Registration = () => {
                       <div className="relative flex items-center justify-center">
                         <input
                           type="checkbox"
+                          name="entry.945003127"
+                          value={event.name}
                           checked={formData.selectedEvents.includes(event.name)}
                           onChange={() => handleEventToggle(event.name)}
                           className="peer w-5 h-5 appearance-none border border-gray-300 rounded bg-white checked:bg-[#d60000] checked:border-[#d60000] transition-all cursor-pointer"
@@ -388,6 +324,8 @@ const Registration = () => {
                       <div className="relative flex items-center justify-center">
                         <input
                           type="checkbox"
+                          name="entry.850313794"
+                          value={event.name}
                           checked={formData.selectedEvents.includes(event.name)}
                           onChange={() => handleEventToggle(event.name)}
                           className="peer w-5 h-5 appearance-none border border-gray-300 rounded bg-white checked:bg-[#d60000] checked:border-[#d60000] transition-all cursor-pointer"
@@ -408,80 +346,16 @@ const Registration = () => {
           <div className="text-center pt-8">
             <button
               type="submit"
-              disabled={isSubmitting}
-              className={`px-12 py-4 bg-[#d60000] hover:bg-[#b80000] text-white font-bold uppercase tracking-widest rounded-xl transition-all shadow-md hover:shadow-lg active:scale-95 ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
+              className="px-12 py-4 bg-[#d60000] hover:bg-[#b80000] text-white font-bold uppercase tracking-widest rounded-xl transition-all shadow-md hover:shadow-lg active:scale-95"
             >
-              {isSubmitting ? 'Submitting...' : 'Submit Registration'}
+              Submit Registration
             </button>
             <p className="mt-4 text-gray-400 text-[10px] uppercase font-bold tracking-widest">
               By submitting, you agree to the fest guidelines and code of conduct.
             </p>
           </div>
-        </motion.form>
+        </form>
       </div>
-
-      {/* Success Popup */}
-      <AnimatePresence>
-        {showSuccess && (
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/60 flex items-center justify-center z-[100] p-6 backdrop-blur-sm"
-          >
-            <motion.div 
-              initial={{ scale: 0.8, y: 50, opacity: 0 }}
-              animate={{ scale: 1, y: 0, opacity: 1 }}
-              exit={{ scale: 0.8, y: 50, opacity: 0 }}
-              className="bg-white p-8 md:p-12 rounded-xl text-center shadow-2xl max-w-lg w-full relative overflow-hidden border-t-8 border-[#d60000]"
-            >
-              <button 
-                onClick={closeSuccess}
-                className="absolute top-6 right-6 text-gray-400 hover:text-[#d60000] transition-colors"
-              >
-                <X className="w-6 h-6" />
-              </button>
-
-              <div className="flex justify-center mb-6">
-                <div className="w-20 h-20 bg-green-50 rounded-full flex items-center justify-center border border-green-100">
-                  <CheckCircle2 className="w-10 h-10 text-green-500" />
-                </div>
-              </div>
-              
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 tracking-tight">
-                REGISTRATION SUCCESSFUL!
-              </h2>
-              <p className="text-gray-600 mb-8 font-medium">
-                Your registration has been recorded successfully.
-                Please check your details at the event venue using your Roll Number.
-              </p>
-
-              <div className="space-y-6">
-                <div className="flex flex-col gap-3">
-                  <button
-                    onClick={downloadReceipt}
-                    className="flex items-center justify-center gap-2 w-full py-4 bg-[#d60000] text-white font-bold uppercase tracking-widest rounded-xl hover:bg-[#b80000] transition-all shadow-md"
-                  >
-                    <Download className="w-5 h-5" />
-                    Download Receipt
-                  </button>
-                  
-                  <button
-                    onClick={closeSuccess}
-                    className="w-full py-4 bg-gray-100 text-gray-700 font-bold uppercase tracking-widest rounded-xl hover:bg-gray-200 transition-all"
-                  >
-                    Close
-                  </button>
-                </div>
-
-                <p className="text-[10px] text-gray-400 uppercase font-bold tracking-widest mt-4">
-                  Please save your receipt for event entry verification.
-                </p>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </section>
   );
 };
