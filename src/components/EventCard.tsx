@@ -90,33 +90,32 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
 
                   {/* Coordinator Cards */}
                   <div className="space-y-4">
-                    <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-[#ffd700] mb-4">
+                    <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-[#d60000] mb-4">
                       Event Coordinators
                     </h4>
                     
                     {event.coordinators.map((coordinator, index) => (
-                      <div key={index} className="bg-[#1a1a1a] border border-[#ffd700]/30 rounded-[10px] p-6 relative overflow-hidden group shadow-lg">
-                        <div className="absolute top-0 left-0 w-1 h-full bg-[#ffd700]" />
+                      <div key={index} className="bg-white border-t border-r border-b border-[#e5e5e5] border-l-4 border-l-[#d60000] rounded-[10px] p-6 shadow-md relative overflow-hidden group">
                         
                         <div className="flex flex-col sm:flex-row items-center gap-4">
-                          <div className="w-16 h-16 rounded-full p-[2px] bg-[#ffd700] shrink-0">
-                            <div className="w-full h-full rounded-full overflow-hidden bg-[#222] flex items-center justify-center relative">
-                              <User className="w-8 h-8 text-gray-600 absolute" />
+                          <div className="w-16 h-16 rounded-full border-2 border-red-600 shrink-0 flex items-center justify-center bg-white">
+                            <div className="w-full h-full rounded-full overflow-hidden flex items-center justify-center relative">
+                              <User className="w-8 h-8 text-gray-400 absolute" />
                             </div>
                           </div>
                           
                           <div className="flex-1 text-center sm:text-left">
-                            <div className="text-xl font-bold text-white uppercase tracking-tight">
+                            <div className="text-xl font-bold text-gray-800 uppercase tracking-tight">
                               {coordinator.name}
                             </div>
-                            <div className="text-xs text-[#ffd700] font-bold uppercase tracking-widest mt-1">
+                            <div className="text-xs text-[#d60000] font-bold uppercase tracking-widest mt-1">
                               Dept: {coordinator.dept}
                             </div>
                           </div>
 
                           <a 
                             href={`tel:${coordinator.phone}`}
-                            className="flex items-center gap-2 bg-[#ffd700] text-black px-4 py-2 rounded-lg font-black text-xs uppercase hover:bg-white transition-colors w-full sm:w-auto justify-center"
+                            className="flex items-center gap-2 bg-[#d60000] text-white px-4 py-2 rounded-lg font-black text-xs uppercase hover:bg-red-700 transition-colors w-full sm:w-auto justify-center"
                           >
                             <Phone className="w-4 h-4" />
                             Call Now

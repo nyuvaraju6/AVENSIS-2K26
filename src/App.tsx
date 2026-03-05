@@ -7,9 +7,6 @@ import Hero from './components/Hero';
 import About from './components/About';
 import EventsSection from './components/EventsSection';
 import Schedule from './components/Schedule';
-import Patrons from './components/Patrons';
-import Convenors from './components/Convenors';
-import FacultyCoordinators from './components/FacultyCoordinators';
 import SpecialAttractions from './components/SpecialAttractions';
 import Registration from './components/Registration';
 import Team from './components/Team';
@@ -39,16 +36,7 @@ const Home = () => (
       <EventsSection />
     </RevealSection>
     <RevealSection>
-      <Patrons />
-    </RevealSection>
-    <RevealSection>
       <Schedule />
-    </RevealSection>
-    <RevealSection>
-      <Convenors />
-    </RevealSection>
-    <RevealSection>
-      <FacultyCoordinators />
     </RevealSection>
     <RevealSection>
       <SpecialAttractions />

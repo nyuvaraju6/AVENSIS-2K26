@@ -7,17 +7,13 @@ const Header = () => {
     <header className="w-full bg-white border-t-[6px] border-[#d60000]">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-6 py-3">
         
-        {/* Left Logo (Cropped from banner) */}
+        {/* Left Logo */}
         <div className="flex items-center">
-          <div className="w-16 h-16 md:w-20 md:h-20 overflow-hidden flex items-center justify-center">
-            <img 
-              src={bannerUrl}
-              className="max-w-none h-16 md:h-20 object-contain"
-              style={{ objectPosition: '1% 50%', width: 'auto' }}
-              alt="Avanthi Logo"
-              referrerPolicy="no-referrer"
-            />
-          </div>
+          <img 
+            src="/avanthi-logo.png"
+            alt="Avanthi Logo"
+            className="h-16 md:h-20 object-contain"
+          />
         </div>
 
         {/* Center Title (Desktop) */}
