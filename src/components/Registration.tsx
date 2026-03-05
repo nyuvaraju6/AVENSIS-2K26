@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { CheckCircle2 } from 'lucide-react';
 import { motion } from 'motion/react';
 import { SPOT_EVENTS, CULTURAL_EVENTS } from '../data/events';
 import jsPDF from 'jspdf';
 
 const Registration = () => {
+  const [showSuccessPopup, setShowSuccessPopup] = useState(false);
   const [formData, setFormData] = useState({
     fullName: '',
     rollNumber: '',
@@ -45,7 +47,7 @@ const Registration = () => {
     });
   };
 
-  const downloadReceipt = () => {
+  const generateReceipt = () => {
     const doc = new jsPDF();
 
     // ===== RED HEADER BACKGROUND =====
@@ -142,6 +144,24 @@ const Registration = () => {
     doc.save(`AVENSIS_Registration_${formData.rollNumber}.pdf`);
   };
 
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const formUrl =
+      "https://docs.google.com/forms/d/e/1FAIpQLSdZUwKJ0vKNE012nZiA9O0_S1nhoTM_y-kueXJw5eaRBntZaw/formResponse";
+
+    const formData = new FormData(e.currentTarget);
+
+    await fetch(formUrl, {
+      method: "POST",
+      mode: "no-cors",
+      body: formData
+    });
+
+    setShowSuccessPopup(true);
+    generateReceipt();
+  };
+
   return (
     <section id="register" className="py-24 bg-white relative overflow-hidden">
       <div className="max-w-4xl mx-auto px-6 relative z-10">
@@ -160,11 +180,40 @@ const Registration = () => {
         </div>
 
         <form
-          action="https://docs.google.com/forms/d/e/1FAIpQLSdZUwKJ0vKNE012nZiA9O0_S1nhoTM_y-kueXJw5eaRBntZaw/formResponse"
-          method="POST"
-          target="_blank"
+          onSubmit={handleSubmit}
           className="bg-white p-8 md:p-12 rounded-xl border-l-4 border-l-[#d60000] shadow-md space-y-8"
         >
+          {showSuccessPopup && (
+            <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-6">
+              <div className="bg-white p-8 rounded-2xl max-w-sm w-full text-center space-y-4">
+                <div className="text-[#d60000] flex justify-center">
+                  <CheckCircle2 size={48} />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">Registration Successful</h3>
+                <p className="text-gray-600">Your response has been recorded.</p>
+                <button
+                  onClick={() => {
+                    generateReceipt();
+                    setShowSuccessPopup(false);
+                    setFormData({
+                      fullName: '',
+                      rollNumber: '',
+                      mobile: '',
+                      email: '',
+                      year: '',
+                      department: 'BTECH',
+                      branch: 'NONE',
+                      section: 'A',
+                      selectedEvents: [] as string[]
+                    });
+                  }}
+                  className="w-full py-3 bg-[#d60000] text-white font-bold rounded-xl hover:bg-[#b80000] transition-colors"
+                >
+                  Download your receipt
+                </button>
+              </div>
+            </div>
+          )}
           <div className="grid md:grid-cols-2 gap-8">
             {/* Name */}
             <div className="space-y-2">
