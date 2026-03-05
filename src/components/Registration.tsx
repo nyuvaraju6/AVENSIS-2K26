@@ -18,7 +18,20 @@ const Registration = () => {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    
+    // Mapping of Google Form entry IDs to state keys
+    const mapping: { [key: string]: string } = {
+      'entry.2006313935': 'fullName',
+      'entry.1503436084': 'rollNumber',
+      'entry.2055757344': 'mobile',
+      'entry.1654106422': 'email',
+      'entry.835340413': 'year',
+      'entry.1512251756': 'department',
+      'entry.1115180722': 'branch',
+    };
+    
+    const key = mapping[name] || name;
+    setFormData(prev => ({ ...prev, [key]: value }));
   };
 
   const handleEventToggle = (eventName: string) => {
