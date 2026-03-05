@@ -27,7 +27,7 @@ const Team = () => {
             "The visionaries orchestrating the grand symphony of Avensis 2K26."
           </motion.p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {OVERALL_COORDINATORS.map((coordinator, index) => (
               <motion.div
                 key={coordinator.id}
@@ -48,12 +48,12 @@ const Team = () => {
                 className="group relative bg-white p-8 rounded-[10px] text-center border-t border-r border-b border-[#e5e5e5] border-l-4 border-l-[#d60000] shadow-[0_4px_10px_rgba(0,0,0,0.08)] hover:shadow-[0_6px_18px_rgba(0,0,0,0.15)] transition-all duration-300 overflow-hidden"
               >
                 {/* Profile Photo */}
-                <div className="relative w-32 h-32 mx-auto mb-6">
-                  <div className="w-full h-full rounded-full overflow-hidden border-4 border-red-600 bg-white flex items-center justify-center shadow-md">
+                <div className="relative w-32 h-32 mx-auto mb-6 flex items-center justify-center">
+                  <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-red-600 bg-white shadow-md flex items-center justify-center shrink-0">
                     <img
                       src={coordinator.image || "/default-avatar.png"}
                       alt={coordinator.name}
-                      className="w-28 h-28 rounded-full border-4 border-red-600 object-cover mx-auto"
+                      className="w-full h-full object-cover"
                       onError={(e) => {
                         (e.target as HTMLImageElement).src = "/default-avatar.png";
                       }}
