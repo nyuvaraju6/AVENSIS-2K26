@@ -132,7 +132,7 @@ const Registration = () => {
     doc.save(`AVENSIS_Registration_${formData.rollNumber}.pdf`);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!formData.rollNumber.trim()) {
@@ -145,43 +145,38 @@ const Registration = () => {
     const formURL =
       "https://docs.google.com/forms/d/e/1FAIpQLSdZUwKJ0vKNE012nZiA9O0_S1nhoTM_y-kueXJw5eaRBntZaw/formResponse";
 
-    const form = document.createElement("form");
-    form.method = "POST";
-    form.action = formURL;
-    form.target = "_blank";
-
-    const appendField = (name: string, value: string) => {
-      const input = document.createElement("input");
-      input.type = "hidden";
-      input.name = name;
-      input.value = value;
-      form.appendChild(input);
-    };
-
-    appendField("entry.2006313935", formData.fullName);
-    appendField("entry.1503436084", formData.rollNumber);
-    appendField("entry.2055757344", formData.mobile);
-    appendField("entry.1654106422", formData.email);
-    appendField("entry.835340413", formData.year);
-    appendField("entry.1512251756", formData.department);
-    appendField("entry.1115180722", formData.branch);
+    const formDataToSend = new FormData();
+    formDataToSend.append("entry.2006313935", formData.fullName);
+    formDataToSend.append("entry.1503436084", formData.rollNumber);
+    formDataToSend.append("entry.2055757344", formData.mobile);
+    formDataToSend.append("entry.1654106422", formData.email);
+    formDataToSend.append("entry.835340413", formData.year);
+    formDataToSend.append("entry.1512251756", formData.department);
+    formDataToSend.append("entry.1115180722", formData.branch);
 
     formData.selectedEvents.forEach((event) => {
       if (SPOT_EVENTS.some(e => e.name === event)) {
-        appendField("entry.945003127", event);
+        formDataToSend.append("entry.945003127", event);
       }
 
       if (CULTURAL_EVENTS.some(e => e.name === event)) {
-        appendField("entry.850313794", event);
+        formDataToSend.append("entry.850313794", event);
       }
     });
 
-    document.body.appendChild(form);
-    form.submit();
-    document.body.removeChild(form);
-
-    setShowSuccess(true);
-    setIsSubmitting(false);
+    try {
+      await fetch(formURL, {
+        method: "POST",
+        mode: "no-cors",
+        body: formDataToSend
+      });
+      setShowSuccess(true);
+    } catch (error) {
+      console.error("Submission error:", error);
+      alert("Registration failed. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const closeSuccess = () => {
