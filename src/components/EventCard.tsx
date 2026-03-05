@@ -73,6 +73,7 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
                     src={event.banner || `https://picsum.photos/seed/${event.id}/800/400`} 
                     alt={event.name}
                     className="w-full h-full object-cover"
+                    referrerPolicy="no-referrer"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
                   <div className="absolute bottom-4 left-6">

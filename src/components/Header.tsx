@@ -15,6 +15,7 @@ const Header = () => {
               className="max-w-none h-16 md:h-20 object-contain"
               style={{ objectPosition: '1% 50%', width: 'auto' }}
               alt="Avanthi Logo"
+              referrerPolicy="no-referrer"
             />
           </div>
         </div>
@@ -46,6 +47,7 @@ const Header = () => {
               className="max-w-none h-14 object-contain" 
               style={{ objectPosition: '85% 50%', width: 'auto' }}
               alt="AVEV Logo"
+              referrerPolicy="no-referrer"
             />
           </div>
           {/* AICTE/NAAC area */}
@@ -55,6 +57,7 @@ const Header = () => {
               className="max-w-none h-14 object-contain" 
               style={{ objectPosition: '75% 50%', width: 'auto' }}
               alt="Institutional Logo"
+              referrerPolicy="no-referrer"
             />
           </div>
         </div>

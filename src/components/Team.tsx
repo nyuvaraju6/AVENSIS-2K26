@@ -54,6 +54,7 @@ const Team = () => {
                       src={coordinator.image || "/default-avatar.png"}
                       alt={coordinator.name}
                       className="w-full h-full object-cover"
+                      referrerPolicy="no-referrer"
                       onError={(e) => {
                         (e.target as HTMLImageElement).src = "/default-avatar.png";
                       }}
