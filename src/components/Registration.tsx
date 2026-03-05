@@ -47,6 +47,23 @@ const Registration = () => {
     });
   };
 
+  const handleClosePopup = () => {
+    setShowSuccessPopup(false);
+    const form = document.getElementById("registration-form") as HTMLFormElement;
+    if (form) form.reset();
+    setFormData({
+      fullName: '',
+      rollNumber: '',
+      mobile: '',
+      email: '',
+      year: '',
+      department: 'BTECH',
+      branch: 'NONE',
+      section: 'A',
+      selectedEvents: [] as string[]
+    });
+  };
+
   const generateReceipt = () => {
     const doc = new jsPDF();
 
@@ -180,6 +197,7 @@ const Registration = () => {
         </div>
 
         <form
+          id="registration-form"
           onSubmit={handleSubmit}
           className="bg-white p-8 md:p-12 rounded-xl border-l-4 border-l-[#d60000] shadow-md space-y-8"
         >
@@ -195,6 +213,8 @@ const Registration = () => {
                   onClick={() => {
                     generateReceipt();
                     setShowSuccessPopup(false);
+                    const form = document.getElementById("registration-form") as HTMLFormElement;
+                    if (form) form.reset();
                     setFormData({
                       fullName: '',
                       rollNumber: '',
@@ -210,6 +230,12 @@ const Registration = () => {
                   className="w-full py-3 bg-[#d60000] text-white font-bold rounded-xl hover:bg-[#b80000] transition-colors"
                 >
                   Download your receipt
+                </button>
+                <button
+                  onClick={handleClosePopup}
+                  className="mt-3 w-full bg-gray-200 text-black py-2 rounded-lg hover:bg-gray-300"
+                >
+                  Close
                 </button>
               </div>
             </div>
