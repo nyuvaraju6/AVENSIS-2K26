@@ -313,7 +313,7 @@ export interface LeadershipProfile {
 
 export const CHIEF_PATRONS: LeadershipProfile[] = [
   { id: 1, name: "Sri M. Srinivasa Rao", role: "Former State Minister – AP", dept: "Founder Chairman, Avanthi Group of Colleges", image: "/patrons/sri-m-srinivas-rao.jpeg" },
-  { id: 2, name: "Smt. M. Gnaneswari", role: "President", dept: "Avanthi Educational Society", image: "/patrons/gnaneswari.jpg" }
+  { id: 2, name: "Smt. M. Gnaneswari", role: "President", dept: "Avanthi Educational Society", image: "/patrons/smt-m-gnaneswari.jpeg" }
 ];
 
 export const CO_PATRONS: LeadershipProfile[] = [
