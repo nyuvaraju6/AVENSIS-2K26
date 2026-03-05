@@ -18,140 +18,153 @@ export interface Event {
 
 export const SPOT_EVENTS: Event[] = [
   {
+    id: 'stand-up-comedy',
+    name: 'Stand-Up Comedy',
+    description: 'Make the audience roar with laughter with your wit and humor. A platform for the funniest minds.',
+    coordinators: [],
+    category: 'spot'
+  },
+  {
     id: 'auto-expo',
     name: 'Auto Expo',
-    description: 'Showcase modified cars, superbikes and engineering creativity. Witness the engineering marvels and aesthetic masterpieces.',
-    coordinators: [
-      { name: "MD. RIYAN", phone: "9885078279", dept: "CSE" },
-      { name: "R. MADHAN", phone: "7396457282", dept: "MECH" }
-    ],
-    banner: 'https://picsum.photos/seed/autoexpo/800/400',
+    description: 'Showcase modified cars, superbikes and engineering creativity. Witness the engineering marvels.',
+    coordinators: [],
     category: 'spot'
   },
   {
     id: 'fashion-show',
     name: 'Fashion Show',
-    description: 'Walk the ramp and showcase your style. A platform where creativity meets elegance and attitude.',
-    coordinators: [
-      { name: "P. CHATHURYA", phone: "7386902863", dept: "MCA" },
-      { name: "A. GOWRI", phone: "9381572054", dept: "DIPLOMA" }
-    ],
-    banner: 'https://picsum.photos/seed/fashionshow/800/400',
+    description: 'Walk the ramp and showcase your style. A platform where creativity meets elegance.',
+    coordinators: [],
     category: 'spot'
   },
   {
     id: 'ramp-walk',
     name: 'Ramp Walk',
-    description: 'Individual spotlight on the runway. Show off your confidence and charisma in this solo fashion event.',
-    coordinators: [
-      { name: "P. CHATHURYA", phone: "7386902863", dept: "MCA" },
-      { name: "A. GOWRI", phone: "9381572054", dept: "DIPLOMA" }
-    ],
-    banner: 'https://picsum.photos/seed/rampwalk/800/400',
+    description: 'Individual spotlight on the runway. Show off your confidence and charisma.',
+    coordinators: [],
     category: 'spot'
   },
   {
     id: 'treasure-hunt',
     name: 'Treasure Hunt',
-    description: 'Solve riddles, decode clues, and race against time to find the hidden treasure across the campus.',
-    coordinators: [
-      { name: "N. ESWAR", phone: "9390524975", dept: "EEE" },
-      { name: "P. CHANDU", phone: "9652199440", dept: "CSMD" }
-    ],
-    banner: 'https://picsum.photos/seed/treasurehunt/800/400',
+    description: 'Solve riddles, decode clues, and race against time to find the hidden treasure.',
+    coordinators: [],
     category: 'spot'
   },
   {
     id: 'meme-creation',
     name: 'Meme Creation',
-    description: 'Unleash your wit and humor. Create the most relatable and viral memes on the given spot theme.',
-    coordinators: [
-      { name: "B. GEETHIKA", phone: "8341696916", dept: "CSE" },
-      { name: "Y. SAI PRIYA", phone: "7396518452", dept: "PHARM D" }
-    ],
+    description: 'Unleash your wit and humor. Create the most relatable and viral memes.',
+    coordinators: [],
+    category: 'spot'
+  },
+  {
+    id: 'reels-making',
+    name: 'Reels Making (Instagram Story Challenge)',
+    description: 'Create engaging Instagram reels featuring our college theme. Show your editing skills.',
+    coordinators: [],
     category: 'spot'
   },
   {
     id: 'spot-photography',
     name: 'Spot Photography',
-    description: 'Capture the essence of Avensis through your lens. Best shots that tell a story win big.',
-    coordinators: [
-      { name: "B. GEETHIKA", phone: "8341696916", dept: "CSE" },
-      { name: "Y. SAI PRIYA", phone: "7396518452", dept: "PHARM D" }
-    ],
+    description: 'Capture the essence of Avensis through your lens. Best shots win big.',
+    coordinators: [],
     category: 'spot'
   },
   {
-    id: 'reels-making',
-    name: 'Reels Making',
-    description: 'Create engaging Instagram reels featuring our college theme. Show your editing skills and creativity.',
-    coordinators: [
-      { name: "B. GEETHIKA", phone: "8341696916", dept: "CSE" },
-      { name: "Y. SAI PRIYA", phone: "7396518452", dept: "PHARM D" }
-    ],
+    id: 'instrumental-music',
+    name: 'Instrumental Music',
+    description: 'Showcase your talent on musical instruments. Let the melodies speak.',
+    coordinators: [],
     category: 'spot'
   },
   {
     id: 'e-sports',
-    name: 'E-Sports (BGMI/Free Fire)',
-    description: 'The ultimate battleground for gamers. Squad up and fight for the chicken dinner or booyah!',
-    coordinators: [
-      { name: "B. RAVISANKAR", phone: "9703612177", dept: "DEGREE" },
-      { name: "B. VENKATESH", phone: "7995703042", dept: "DEGREE" }
-    ],
+    name: 'E-Sports (BGMI / Free Fire)',
+    description: 'The ultimate battleground for gamers. Squad up and fight for victory.',
+    coordinators: [],
     category: 'spot'
   },
   {
     id: 'body-building',
     name: 'Body Building',
-    description: 'Flex those muscles and show your dedication to fitness. Judged on symmetry, mass, and definition.',
-    coordinators: [
-      { name: "MD. RIYAN", phone: "9885078279", dept: "CSE" },
-      { name: "R. MADHAN", phone: "7396457282", dept: "MECH" }
-    ],
+    description: 'Flex those muscles and show your dedication to fitness. Judged on symmetry and mass.',
+    coordinators: [],
+    category: 'spot'
+  },
+  {
+    id: 'balloon-burst',
+    name: 'Balloon Burst Game',
+    description: 'A fun and energetic game of bursting balloons. Quick reflexes win.',
+    coordinators: [],
+    category: 'spot'
+  },
+  {
+    id: 'advertisement-comp',
+    name: 'Advertisement Competition',
+    description: 'Pitch your ideas and create compelling advertisements for products.',
+    coordinators: [],
+    category: 'spot'
+  },
+  {
+    id: 'clay-modelling',
+    name: 'Clay Modelling & Best Out of Waste',
+    description: 'Unleash your creativity with clay and recycled materials to create art.',
+    coordinators: [],
     category: 'spot'
   }
 ];
 
 export const CULTURAL_EVENTS: Event[] = [
   {
-    id: 'singing',
-    name: 'Singing Competition',
-    description: 'Let your voice resonate. Solo and group performances across classical, pop, and rock genres.',
-    coordinators: [
-      { name: "M. RAVINDRA", phone: "8179133543", dept: "MECH" },
-      { name: "S. GANESH", phone: "7670921130", dept: "CSMD" }
-    ],
+    id: 'solo-singing',
+    name: 'Solo Singing',
+    description: 'Let your voice resonate. Showcase your vocal talent in this solo performance.',
+    coordinators: [],
     category: 'cultural'
   },
   {
-    id: 'dance',
-    name: 'Dance Competition',
-    description: 'Express through movement. High-energy performances in hip-hop, contemporary, and folk styles.',
-    coordinators: [
-      { name: "M. RAVINDRA", phone: "8179133543", dept: "MECH" },
-      { name: "S. GANESH", phone: "7670921130", dept: "CSMD" }
-    ],
+    id: 'solo-dance',
+    name: 'Solo Dance',
+    description: 'Express through movement. High-energy solo performances in any style.',
+    coordinators: [],
+    category: 'cultural'
+  },
+  {
+    id: 'group-dance',
+    name: 'Group Dance',
+    description: 'Synchronized group performances that set the stage on fire.',
+    coordinators: [],
+    category: 'cultural'
+  },
+  {
+    id: 'duet-dance',
+    name: 'Duet Dance',
+    description: 'A synchronized dance performance by two. Show your chemistry and rhythm.',
+    coordinators: [],
+    category: 'cultural'
+  },
+  {
+    id: 'flashmob',
+    name: 'Flashmob',
+    description: 'Surprise the crowd with a spontaneous and energetic group dance.',
+    coordinators: [],
+    category: 'cultural'
+  },
+  {
+    id: 'group-singing',
+    name: 'Group Singing',
+    description: 'Harmonious group vocal performances across various genres.',
+    coordinators: [],
     category: 'cultural'
   },
   {
     id: 'skits-drama',
     name: 'Skits & Drama',
-    description: 'Bring stories to life on stage. A platform for theatrical excellence and powerful storytelling.',
-    coordinators: [
-      { name: "M. RAVINDRA", phone: "8179133543", dept: "MECH" },
-      { name: "S. GANESH", phone: "7670921130", dept: "CSMD" }
-    ],
-    category: 'cultural'
-  },
-  {
-    id: 'pro-night',
-    name: 'DJ Night / Pro Night',
-    description: 'The grand finale! Dance the night away with a celebrity DJ and live musical performances.',
-    coordinators: [
-      { name: "M. RAVINDRA", phone: "8179133543", dept: "MECH" },
-      { name: "S. GANESH", phone: "7670921130", dept: "CSMD" }
-    ],
+    description: 'Bring stories to life on stage. A platform for theatrical excellence.',
+    coordinators: [],
     category: 'cultural'
   }
 ];
@@ -175,7 +188,6 @@ export const SCHEDULE: DaySchedule[] = [
       { time: '9:00 AM – 10:00 AM', event: 'Culturals' },
       { time: '10:00 AM – 12:00 PM', event: 'Inauguration' },
       { time: '3:30 PM – 5:00 PM', event: 'Bike Expo' },
-      { time: '6:30 PM – 9:30 PM', event: 'Pro Night' },
     ]
   },
   {
@@ -184,7 +196,6 @@ export const SCHEDULE: DaySchedule[] = [
     items: [
       { time: '9:00 AM – 12:00 PM', event: 'Culturals' },
       { time: '5:00 PM – 6:00 PM', event: 'Car Expo' },
-      { time: '6:00 PM – 9:30 PM', event: 'DJ Night' },
     ]
   }
 ];

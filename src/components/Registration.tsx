@@ -173,22 +173,30 @@ const Registration = () => {
     appendField("entry.1592132195", formData.section);
 
     const spotEvents = [
+      "Stand-Up Comedy",
       "Auto Expo",
       "Fashion Show",
       "Ramp Walk",
       "Treasure Hunt",
       "Meme Creation",
+      "Reels Making (Instagram Story Challenge)",
       "Spot Photography",
-      "Reels Making",
-      "E-Sports (BGMI/Free Fire)",
-      "Body Building"
+      "Instrumental Music",
+      "E-Sports (BGMI / Free Fire)",
+      "Body Building",
+      "Balloon Burst Game",
+      "Advertisement Competition",
+      "Clay Modelling & Best Out of Waste"
     ];
 
     const culturalEvents = [
-      "Singing Competition",
-      "Dance Competition",
-      "Skits & Drama",
-      "DJ Night / Pro Night"
+      "Solo Singing",
+      "Solo Dance",
+      "Group Dance",
+      "Duet Dance",
+      "Flashmob",
+      "Group Singing",
+      "Skits & Drama"
     ];
 
     formData.selectedEvents.forEach((event) => {
