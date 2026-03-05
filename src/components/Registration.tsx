@@ -145,15 +145,10 @@ const Registration = () => {
     const formURL =
       "https://docs.google.com/forms/d/e/1FAIpQLSdZUwKJ0vKNE012nZiA9O0_S1nhoTM_y-kueXJw5eaRBntZaw/formResponse";
 
-    const iframe = document.createElement("iframe");
-    iframe.name = "hidden_iframe";
-    iframe.style.display = "none";
-    document.body.appendChild(iframe);
-
     const form = document.createElement("form");
     form.method = "POST";
     form.action = formURL;
-    form.target = "hidden_iframe";
+    form.target = "_blank";
 
     const appendField = (name: string, value: string) => {
       const input = document.createElement("input");
@@ -167,44 +162,16 @@ const Registration = () => {
     appendField("entry.1503436084", formData.rollNumber);
     appendField("entry.2055757344", formData.mobile);
     appendField("entry.1654106422", formData.email);
-    appendField("entry.1703436084", formData.year); // Placeholder entry ID for Year of Study
+    appendField("entry.835340413", formData.year);
     appendField("entry.1512251756", formData.department);
     appendField("entry.1115180722", formData.branch);
-    appendField("entry.1592132195", formData.section);
-
-    const spotEvents = [
-      "Stand-Up Comedy",
-      "Auto Expo",
-      "Fashion Show",
-      "Ramp Walk",
-      "Treasure Hunt",
-      "Meme Creation",
-      "Reels Making (Instagram Story Challenge)",
-      "Spot Photography",
-      "Instrumental Music",
-      "E-Sports (BGMI / Free Fire)",
-      "Body Building",
-      "Balloon Burst Game",
-      "Advertisement Competition",
-      "Clay Modelling & Best Out of Waste"
-    ];
-
-    const culturalEvents = [
-      "Solo Singing",
-      "Solo Dance",
-      "Group Dance",
-      "Duet Dance",
-      "Flashmob",
-      "Group Singing",
-      "Skits & Drama"
-    ];
 
     formData.selectedEvents.forEach((event) => {
-      if (spotEvents.includes(event)) {
+      if (SPOT_EVENTS.some(e => e.name === event)) {
         appendField("entry.945003127", event);
       }
 
-      if (culturalEvents.includes(event)) {
+      if (CULTURAL_EVENTS.some(e => e.name === event)) {
         appendField("entry.850313794", event);
       }
     });

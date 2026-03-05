@@ -156,56 +156,6 @@ export const SPOT_EVENTS: Event[] = [
       { name: "B. SRIJA", phone: "8688963070", dept: "B PHARMA" }
     ],
     category: 'spot'
-  },
-  {
-    id: 'promotions',
-    name: 'Promotions',
-    description: 'Spreading the word and building the hype for AVENSIS 2K26 across the region.',
-    coordinators: [
-      { name: "K. HARIKA", phone: "6303393385", dept: "ECE" },
-      { name: "B. BHUVANESWARI", phone: "6304386043", dept: "B PHARMA" }
-    ],
-    category: 'spot'
-  },
-  {
-    id: 'stalls',
-    name: 'Stalls',
-    description: 'Managing the vibrant marketplace and food stalls that fuel the fest energy.',
-    coordinators: [
-      { name: "P. CHANDU", phone: "9652199440", dept: "CSMD" },
-      { name: "N. ESWAR", phone: "9390524975", dept: "EEE" }
-    ],
-    category: 'spot'
-  },
-  {
-    id: 'stage-decoration',
-    name: 'Stage & Decoration',
-    description: 'Transforming the campus into a visual masterpiece with creative themes and decor.',
-    coordinators: [
-      { name: "G. BEAULA", phone: "7842709982", dept: "EEE" },
-      { name: "B. SRIJA", phone: "8688963070", dept: "B PHARMA" }
-    ],
-    category: 'spot'
-  },
-  {
-    id: 'sponsors',
-    name: 'Sponsors',
-    description: 'Building partnerships with leading brands to make AVENSIS 2K26 a grand success.',
-    coordinators: [
-      { name: "CH. SAMANTH", phone: "8712209988", dept: "DIPLOMA" },
-      { name: "B. SOWMYA", phone: "9059045594", dept: "CSE" }
-    ],
-    category: 'spot'
-  },
-  {
-    id: 'digital-media',
-    name: 'Digital Media',
-    description: 'Capturing and sharing the magic of AVENSIS through professional digital content.',
-    coordinators: [
-      { name: "B. GEETHIKA", phone: "8341696916", dept: "CSE" },
-      { name: "Y. SAI PRIYA", phone: "7396518452", dept: "PHARM D" }
-    ],
-    category: 'spot'
   }
 ];
 
