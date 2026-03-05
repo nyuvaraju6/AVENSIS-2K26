@@ -50,16 +50,14 @@ const Team = () => {
                 {/* Profile Photo */}
                 <div className="relative w-32 h-32 mx-auto mb-6">
                   <div className="w-full h-full rounded-full overflow-hidden border-4 border-red-600 bg-white flex items-center justify-center shadow-md">
-                    {coordinator.image && (
-                      <img
-                        src={coordinator.image}
-                        alt={coordinator.name}
-                        className="w-28 h-28 rounded-full border-4 border-red-600 object-cover mx-auto"
-                        onError={(e) => {
-                          (e.target as HTMLImageElement).style.opacity = '0';
-                        }}
-                      />
-                    )}
+                    <img
+                      src={coordinator.image || "/default-avatar.png"}
+                      alt={coordinator.name}
+                      className="w-28 h-28 rounded-full border-4 border-red-600 object-cover mx-auto"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).src = "/default-avatar.png";
+                      }}
+                    />
                   </div>
                 </div>
 
