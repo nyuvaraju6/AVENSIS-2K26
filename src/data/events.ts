@@ -220,59 +220,27 @@ export const ATTRACTIONS: Attraction[] = [
   }
 ];
 
-export interface StudentCoordinator {
-  id: number;
-  name: string;
-  phone: string;
-  committee: string;
-  dept: string;
-  photo?: string;
-}
-
 export interface OverallCoordinator {
   id: number;
   name: string;
   phone: string;
   dept: string;
-  photo?: string;
+  committee: string;
+  image?: string;
 }
 
 export const OVERALL_COORDINATORS: OverallCoordinator[] = [
-  { id: 1, name: 'T. MAHESH REDDY', phone: '9849699082', dept: 'MECH', photo: "/images/overall-coordinators/mahesh.jpg" },
-  { id: 2, name: 'B. VAMSHI NAIDU', phone: '8897814413', dept: 'CSMD', photo: "/images/overall-coordinators/vamshi.jpg" },
-  { id: 3, name: 'P. TEJ VARDHAN', phone: '9581378269', dept: 'CSE', photo: "/images/overall-coordinators/tej.jpg" },
-  { id: 4, name: 'K. LAHARI', phone: '6301990861', dept: 'ECE', photo: "/images/overall-coordinators/lahari.jpg" },
-  { id: 5, name: 'G. LASHMIKANTH', phone: '9100737580', dept: 'MCA', photo: "/images/overall-coordinators/lakshmikanth.jpg" },
-  { id: 6, name: 'K. SURESH', phone: '8790898562', dept: 'EEE', photo: "/images/overall-coordinators/suresh.jpg" },
-  { id: 7, name: 'K. JANARDHANA', phone: '9398583074', dept: 'MBA', photo: "/images/overall-coordinators/janardhana.jpg" },
-  { id: 8, name: 'L. TILAK KUMAR', phone: '9959349744', dept: 'B. PHARMA', photo: "/images/overall-coordinators/tilak.jpg" },
-  { id: 9, name: 'G. SATISH', phone: '8121917925', dept: 'PHARMA D', photo: "/images/overall-coordinators/satish.jpg" },
-  { id: 10, name: 'M. VENKATESH', phone: '8778829839', dept: 'DEGREE', photo: "/images/overall-coordinators/venkatesh.jpg" },
-  { id: 11, name: 'P. BHARATH KALYAN', phone: '6305965291', dept: 'DIPLOMA', photo: "/images/overall-coordinators/bharath.jpg" },
-];
-
-export const STUDENT_COORDINATORS: StudentCoordinator[] = [
-  { id: 1, name: 'MD. RIYAN', phone: '9885078279', committee: 'AUTO EXPO', dept: 'CSE', photo: "/images/coordinators/md-riyan.jpg" },
-  { id: 2, name: 'R. MADHAN', phone: '7396457282', committee: 'STUDENT COORDINATOR', dept: 'MECH', photo: "/images/coordinators/r-madhan.jpg" },
-  { id: 3, name: 'M. RAVINDRA', phone: '8179133543', committee: 'CULTURALS', dept: 'MECH', photo: "/images/coordinators/m-ravindra.jpg" },
-  { id: 4, name: 'S. GANESH', phone: '7670921130', committee: 'STUDENT COORDINATOR', dept: 'CSMD', photo: "/images/coordinators/s-ganesh.jpg" },
-  { id: 5, name: 'K. HARIKA', phone: '6303393385', committee: 'PROMOTIONS', dept: 'ECE', photo: "/images/coordinators/k-harika.jpg" },
-  { id: 6, name: 'B. BHUVANESWARI', phone: '6304386043', committee: 'STUDENT COORDINATOR', dept: 'B. PHARMA', photo: "/images/coordinators/b-bhuvaneswari.jpg" },
-  { id: 7, name: 'P. CHANDU', phone: '9652199440', committee: 'STALLS', dept: 'CSMD', photo: "/images/coordinators/p-chandu.jpg" },
-  { id: 8, name: 'N. ESWAR', phone: '9390524975', committee: 'STUDENT COORDINATOR', dept: 'EEE', photo: "/images/coordinators/n-eswar.jpg" },
-  { id: 9, name: 'G. BEAULA', phone: '7842709982', committee: 'STAGE & DECORATION', dept: 'EEE', photo: "/images/coordinators/g-beaula.jpg" },
-  { id: 10, name: 'B. SRIJA', phone: '8688963070', committee: 'STUDENT COORDINATOR', dept: 'B. PHARMA', photo: "/images/coordinators/b-srija.jpg" },
-  { id: 11, name: 'K. NAVYA', phone: '9676083204', committee: 'ADVERTISEMENT COMPETITION', dept: 'PHARMA D', photo: "/images/coordinators/k-navya.jpg" },
-  { id: 12, name: 'K. SAKETH', phone: '9948046481', committee: 'STUDENT COORDINATOR', dept: 'ECE', photo: "/images/coordinators/k-saketh.jpg" },
-  { id: 13, name: 'CH. SAMANTH', phone: '8712209988', committee: 'SPONSORS', dept: 'DIPLOMA', photo: "/images/coordinators/ch-samanth.jpg" },
-  { id: 14, name: 'B. SOWMYA', phone: '9059045594', committee: 'STUDENT COORDINATOR', dept: 'CSE', photo: "/images/coordinators/b-sowmya.jpg" },
-  { id: 15, name: 'T. LOKESH', phone: '7032574352', committee: 'STUDENT COORDINATOR', dept: 'MBA', photo: "/images/coordinators/t-lokesh.jpg" },
-  { id: 16, name: 'P. CHATHURYA', phone: '7386902863', committee: 'FASHION SHOW', dept: 'MCA', photo: "/images/coordinators/p-chathurya.jpg" },
-  { id: 17, name: 'A. GOWRI', phone: '9381572054', committee: 'STUDENT COORDINATOR', dept: 'DIPLOMA', photo: "/images/coordinators/a-gowri.jpg" },
-  { id: 18, name: 'B. RAVISANKAR', phone: '9703612177', committee: 'E-SPORTS', dept: 'DEGREE', photo: "/images/coordinators/b-ravisankar.jpg" },
-  { id: 19, name: 'B. VENKATESH', phone: '7995703042', committee: 'STUDENT COORDINATOR', dept: 'DEGREE', photo: "/images/coordinators/b-venkatesh.jpg" },
-  { id: 20, name: 'B. GEETHIKA', phone: '8341696916', committee: 'DIGITAL MEDIA', dept: 'CSE', photo: "/images/coordinators/b-geethika.jpg" },
-  { id: 21, name: 'Y. SAI PRIYA', phone: '7396518452', committee: 'STUDENT COORDINATOR', dept: 'PHARM D', photo: "/images/coordinators/y-sai-priya.jpg" },
+  { id: 1, name: 'T. MAHESH REDDY', phone: '9849699082', dept: 'MECH', committee: 'Student Overall Co-ordinator', image: "/coordinators/T.MAHESH REDDY.jpeg" },
+  { id: 2, name: 'B. VAMSHI NAIDU', phone: '8897814413', dept: 'CSMD', committee: 'Student Overall Co-ordinator', image: "/coordinators/B.VAMSHI NAIDU.jpeg" },
+  { id: 3, name: 'P. TEJ VARDHAN', phone: '9581378269', dept: 'CSE', committee: 'Student Overall Co-ordinator', image: "/coordinators/P.TEJ VARDHAN.jpeg" },
+  { id: 4, name: 'K. LAHARI', phone: '6301990861', dept: 'ECE', committee: 'Student Overall Co-ordinator', image: "/coordinators/K.LAHARI.jpeg" },
+  { id: 5, name: 'G. LASHMIKANTH', phone: '9100737580', dept: 'MCA', committee: 'Student Overall Co-ordinator', image: "/coordinators/G.LASHMIKANTH.jpeg" },
+  { id: 6, name: 'K. SURESH', phone: '8790898562', dept: 'EEE', committee: 'Student Overall Co-ordinator', image: "/coordinators/K.SURESH.jpeg" },
+  { id: 7, name: 'K. JANARDHANA', phone: '9398583074', dept: 'MBA', committee: 'Student Overall Co-ordinator', image: "/coordinators/K.JANARDHANA.jpeg" },
+  { id: 8, name: 'L. TILAK KUMAR', phone: '9959349744', dept: 'B. PHARMA', committee: 'Student Overall Co-ordinator', image: "/coordinators/l-tilak-kumar.jpg" },
+  { id: 9, name: 'G. SATISH', phone: '8121917925', dept: 'PHARMA D', committee: 'Student Overall Co-ordinator', image: "/coordinators/G.SATISH.jpeg" },
+  { id: 10, name: 'M. VENKATESH', phone: '8778829839', dept: 'DEGREE', committee: 'Student Overall Co-ordinator', image: "/coordinators/M.VENKTESH.jpeg" },
+  { id: 11, name: 'P. BHARATH KALYAN', phone: '6305965291', dept: 'DIPLOMA', committee: 'Student Overall Co-ordinator', image: "/coordinators/P.BHARATH KALYAN.jpeg" },
 ];
 
 export const TEAM_MEMBERS: TeamMember[] = [

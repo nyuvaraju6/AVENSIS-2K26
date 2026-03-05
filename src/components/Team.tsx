@@ -1,22 +1,14 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { STUDENT_COORDINATORS, OVERALL_COORDINATORS } from '../data/events';
-import { Search, Phone, User, Briefcase, GraduationCap } from 'lucide-react';
+import React from 'react';
+import { motion } from 'motion/react';
+import { OVERALL_COORDINATORS } from '../data/events';
+import { Phone, User, Briefcase, GraduationCap } from 'lucide-react';
 
 const Team = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const filteredCoordinators = STUDENT_COORDINATORS.filter(c => 
-    c.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    c.committee.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    c.dept.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
   return (
     <section id="team" className="py-32 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Overall Coordinators Section */}
-        <div className="text-center mb-24">
+        <div className="text-center">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -35,7 +27,7 @@ const Team = () => {
             "The visionaries orchestrating the grand symphony of Avensis 2K26."
           </motion.p>
 
-          <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-12 scrollbar-hide md:grid md:grid-cols-3 lg:grid-cols-4 md:overflow-visible md:snap-none -mx-6 px-6 md:mx-0 md:px-0">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {OVERALL_COORDINATORS.map((coordinator, index) => (
               <motion.div
                 key={coordinator.id}
@@ -53,42 +45,38 @@ const Team = () => {
                   duration: 0.8
                 }}
                 viewport={{ once: true }}
-                className="group relative bg-white p-8 rounded-[10px] text-center border-t border-r border-b border-[#e5e5e5] border-l-4 border-l-[#d60000] shadow-[0_4px_10px_rgba(0,0,0,0.08)] hover:shadow-[0_6px_18px_rgba(0,0,0,0.15)] transition-all duration-300 overflow-hidden min-w-[280px] sm:min-w-[320px] md:min-w-0 snap-center"
+                className="group relative bg-white p-8 rounded-[10px] text-center border-t border-r border-b border-[#e5e5e5] border-l-4 border-l-[#d60000] shadow-[0_4px_10px_rgba(0,0,0,0.08)] hover:shadow-[0_6px_18px_rgba(0,0,0,0.15)] transition-all duration-300 overflow-hidden"
               >
-                <div className="relative w-36 h-36 mx-auto mb-8">
-                  <div className="relative w-full h-full rounded-full p-[4px] border-2 border-[#d60000] bg-white">
-                    <div className="w-full h-full rounded-full overflow-hidden bg-gray-100 flex items-center justify-center">
-                      {coordinator.photo ? (
-                        <img
-                          src={coordinator.photo}
-                          alt={coordinator.name}
-                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                          onError={(e) => {
-                            (e.target as HTMLImageElement).src = '';
-                            (e.target as HTMLImageElement).style.display = 'none';
-                          }}
-                        />
-                      ) : null}
-                      <User className="w-12 h-12 text-gray-400 absolute" />
-                    </div>
+                {/* Profile Photo */}
+                <div className="relative w-32 h-32 mx-auto mb-6">
+                  <div className="w-full h-full rounded-full overflow-hidden border-4 border-red-600 bg-white flex items-center justify-center shadow-md">
+                    {coordinator.image && (
+                      <img
+                        src={coordinator.image}
+                        alt={coordinator.name}
+                        className="w-28 h-28 rounded-full border-4 border-red-600 object-cover mx-auto"
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).style.opacity = '0';
+                        }}
+                      />
+                    )}
                   </div>
                 </div>
 
-                <h3 className="text-2xl font-bold mb-4 text-[#222]">
+                {/* Coordinator Info */}
+                <h3 className="text-xl font-bold mb-2 text-[#222] uppercase tracking-tight">
                   {coordinator.name}
                 </h3>
                 
-                <div className="space-y-4">
+                <div className="space-y-2">
                   <a 
                     href={`tel:${coordinator.phone}`}
-                    className="flex items-center justify-center gap-2 text-gray-600 hover:text-[#d60000] transition-colors bg-gray-50 py-2 rounded-lg border border-gray-200"
+                    className="flex items-center justify-center gap-2 text-gray-700 hover:text-[#d60000] transition-colors font-bold tracking-widest"
                   >
-                    <Phone className="w-4 h-4 text-[#d60000]" />
-                    <span className="font-bold tracking-widest">{coordinator.phone}</span>
+                    📞 {coordinator.phone}
                   </a>
                   
-                  <div className="flex items-center justify-center gap-2 text-[#d60000] text-xs font-bold uppercase tracking-[0.2em]">
-                    <GraduationCap className="w-4 h-4" />
+                  <div className="text-gray-500 text-sm font-medium uppercase tracking-wider">
                     {coordinator.dept}
                   </div>
                 </div>
