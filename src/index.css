@@ -8,11 +8,17 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
   
   body {
-    @apply bg-[#0B0B0B] text-white antialiased;
+    @apply bg-[#0B0B0B] text-white antialiased overflow-x-hidden;
   }
+}
+
+#root {
+  background: #0B0B0B;
+  min-height: 100vh;
 }
 
 @layer utilities {
