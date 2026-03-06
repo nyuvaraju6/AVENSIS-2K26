@@ -312,43 +312,44 @@ export interface LeadershipProfile {
 }
 
 export const CHIEF_PATRONS: LeadershipProfile[] = [
-  { id: 1, name: "Sri M. Srinivasa Rao", role: "Former State Minister – AP", dept: "Founder Chairman, Avanthi Group of Colleges", image: "/patrons/sri-m-srinivas-rao.jpeg" },
-  { id: 2, name: "Smt. M. Gnaneswari", role: "President", dept: "Avanthi Educational Society", image: "/patrons/smt-m-gnaneswari.jpeg" }
+  { id: 1, name: "Sri M. Srinivasa Rao", role: "Former State Minister – AP", dept: "Founder Chairman, Avanthi Group of Colleges", image: "/images/faculty/sri-m-srinivasa-rao.jpg" },
+  { id: 2, name: "Smt. M. Gnaneswari", role: "President", dept: "Avanthi Educational Society", image: "/images/faculty/smt-m-gnaneswari.jpg" }
 ];
 
 export const CO_PATRONS: LeadershipProfile[] = [
-  { id: 1, name: "Dr. B. Murali Krishna", role: "Principal", dept: "AIET", image: "/patrons/dr-b-murali-krishna.jpeg" },
-  { id: 2, name: "Dr. A. Chandra Sekhar", role: "Director – HR", dept: "Avanthi Group", image: "/patrons/dr-a-chandra-shekhar.jpeg" },
-  { id: 3, name: "Dr. K. Purna Nagasree", role: "Principal", dept: "AIPS", image: "/patrons/dr-k-purna-nagasree.jpeg" },
-  { id: 4, name: "Mr. P. Rama Krishna", role: "Principal", dept: "Avanthi Degree College", image: "/patrons/mr-p-rama-krishna.jpeg" },
-  { id: 5, name: "Mr. B. Jagadeeshwar Rao", role: "I/C Principal", dept: "Polytechnic College", image: "/patrons/mr-b-jagadeeshwar-rao.jpeg" }
+  { id: 1, name: "Dr. B. Murali Krishna", role: "Principal", dept: "AIET", image: "/images/faculty/dr-b-murali-krishna.jpg" },
+  { id: 2, name: "Dr. A. Chandra Sekhar", role: "Director – HR", dept: "Avanthi Group", image: "/images/faculty/dr-a-chandra-sekhar.jpg" },
+  { id: 3, name: "Dr. K. Purna Nagasree", role: "Principal", dept: "AIPS", image: "/images/faculty/dr-k-purna-nagasree.jpg" },
+  { id: 4, name: "Mr. P. Rama Krishna", role: "Principal", dept: "Avanthi Degree College", image: "/images/faculty/mr-p-rama-krishna.jpg" },
+  { id: 5, name: "Mr. B. Jagadeeshwar Rao", role: "I/C Principal", dept: "Polytechnic College", image: "/images/faculty/mr-b-jagadeeshwar-rao.jpg" }
 ];
 
 export const CONVENORS: LeadershipProfile[] = [
-  { id: 1, name: "Dr. S.H. Shariff", role: "Associate Professor, HOD", dept: "MECH", image: "/convenors/dr-s-h-shariff.jpeg" },
-  { id: 2, name: "Dr. Ch. R. Phani Kumar", role: "Associate Professor", dept: "ECE", image: "/convenors/dr-ch-r-phani-kumar.jpeg" }
+  { id: 1, name: "Dr. S.H. Shariff", role: "Associate Professor, HOD", dept: "MECH", image: "/images/faculty/dr-s-h-shariff.jpg" },
+  { id: 2, name: "Dr. Ch. R. Phani Kumar", role: "Associate Professor", dept: "ECE", image: "/images/faculty/dr-ch-r-phani-kumar.jpg" }
 ];
 
 export const CO_CONVENORS: LeadershipProfile[] = [
-  { id: 1, name: "Dr. Uma Shankar V", role: "Vice Principal", dept: "AIPS", image: "/convenors/dr-uma-shankar-v.jpeg" },
-  { id: 2, name: "Dr. B. V. Swamy", role: "Assistant Professor", dept: "CSE", image: "/convenors/dr-b-v-swamy.jpeg" },
-  { id: 3, name: "Mr. Y. Babji", role: "Assistant Professor", dept: "CSMD", image: "/convenors/mr-y-babji.jpeg" },
-  { id: 4, name: "Mr. A. Seshu", role: "Assistant Professor", dept: "Polytechnic", image: "/convenors/mr-a-seshu.jpeg" },
-  { id: 5, name: "Mr. K. Satayanarayana", role: "Assistant Professor", dept: "Degree", image: "/convenors/mr-k-satyanarayana.jpeg" }
+  { id: 1, name: "Dr. Uma Shankar V", role: "Vice Principal", dept: "AIPS", image: "/images/faculty/dr-uma-shankar-v.jpg" },
+  { id: 2, name: "Dr. B. V. Swamy", role: "Assistant Professor", dept: "CSE", image: "/images/faculty/dr-b-v-swamy.jpg" },
+  { id: 3, name: "Mr. Y. Babji", role: "Assistant Professor", dept: "CSMD", image: "/images/faculty/mr-y-babji.jpg" },
+  { id: 4, name: "Mr. A. Seshu", role: "Assistant Professor", dept: "Polytechnic", image: "/images/faculty/mr-a-seshu.jpg" },
+  { id: 5, name: "Mr. K. Satayanarayana", role: "Assistant Professor", dept: "Degree", image: "/images/faculty/mr-k-satayanarayana.jpg" }
 ];
 
 export const FACULTY_COORDINATORS: LeadershipProfile[] = [
-  { id: 1, name: "G. Chinnayya", role: "Faculty Coordinator", dept: "B&SH", image: "/faculty/g-chinnayya.jpeg" },
-  { id: 2, name: "Mr. Applaraju", role: "Faculty Coordinator", dept: "MCA", image: "/faculty/mr-applaraju.jpeg" },
-  { id: 3, name: "Mr. V. Pradeep Kumar", role: "Faculty Coordinator", dept: "MECH", image: "/faculty/mr-v-pradeep-kumar.jpeg" },
-  { id: 4, name: "Mrs. Sangeetha", role: "Faculty Coordinator", dept: "CSM", image: "/faculty/mrs-sangeetha.jpeg" },
-  { id: 5, name: "Dr. Rushi Naidu", role: "Faculty Coordinator", dept: "Pharmacy", image: "/faculty/dr-rushi-naidu.jpeg" },
-  { id: 6, name: "Mr. K. Satyanarayana", role: "Faculty Coordinator", dept: "Degree", image: "/faculty/mr-k-satyanarayana.jpeg" },
-  { id: 7, name: "Mr. S. Kesava Rao", role: "Faculty Coordinator", dept: "CSE", image: "/faculty/mr-s-kesava-rao.jpeg" },
-  { id: 8, name: "Mrs. Soujanya", role: "Faculty Coordinator", dept: "ECE", image: "/faculty/mrs-soujanya.jpeg" },
-  { id: 9, name: "Mr. Suman Datta", role: "Faculty Coordinator", dept: "MBA", image: "/faculty/mr-suman-datta.jpeg" },
-  { id: 10, name: "Mr. K. A. Swamy", role: "Faculty Coordinator", dept: "Diploma", image: "/faculty/mr-k-a-swamy.jpeg" },
-  { id: 11, name: "Mr. G. Prasanth", role: "Faculty Coordinator", dept: "EEE", image: "/faculty/g-prasanth.jpeg" }
+  { id: 1, name: "Mr. S. Kesava Rao", role: "Faculty Coordinator", dept: "B&SH", image: "/images/faculty/mr-s-kesava-rao.jpg" },
+  { id: 12, name: "MR. K. ANIL", role: "Faculty Coordinator", dept: "CSE", image: "/images/faculty/mr-k-anil.jpg" },
+  { id: 2, name: "Mr. Applaraju", role: "Faculty Coordinator", dept: "MCA", image: "/images/faculty/mr-applaraju.jpg" },
+  { id: 3, name: "Mr. V. Pradeep Kumar", role: "Faculty Coordinator", dept: "MECH", image: "/images/faculty/mr-v-pradeep-kumar.jpg" },
+  { id: 4, name: "Mrs. Sangeetha", role: "Faculty Coordinator", dept: "CSM", image: "/images/faculty/mrs-sangeetha.jpg" },
+  { id: 5, name: "Dr. Rushi Naidu", role: "Faculty Coordinator", dept: "Pharmacy", image: "/images/faculty/dr-rushi-naidu.jpg" },
+  { id: 6, name: "Mr. K. Satyanarayana", role: "Faculty Coordinator", dept: "Degree", image: "/images/faculty/mr-k-satyanarayana.jpg" },
+  { id: 7, name: "G. Chinnayya", role: "Faculty Coordinator", dept: "B4&SH", image: "/images/faculty/g-chinnayya.jpg" },
+  { id: 8, name: "Mrs. Soujanya", role: "Faculty Coordinator", dept: "ECE", image: "/images/faculty/mrs-soujanya.jpg" },
+  { id: 9, name: "Mr. Suman Datta", role: "Faculty Coordinator", dept: "MBA", image: "/images/faculty/mr-suman-datta.jpg" },
+  { id: 10, name: "Mr. K. A. Swamy", role: "Faculty Coordinator", dept: "Diploma", image: "/images/faculty/mr-k-a-swamy.jpg" },
+  { id: 11, name: "Mr. G. Prasanth", role: "Faculty Coordinator", dept: "EEE", image: "/images/faculty/mr-g-prasanth.jpg" }
 ];
 
 export interface OverallCoordinator {
@@ -361,34 +362,34 @@ export interface OverallCoordinator {
 }
 
 export const OVERALL_COORDINATORS: OverallCoordinator[] = [
-  { id: 1, name: 'T. MAHESH REDDY', phone: '9849699082', dept: 'MECH', committee: 'Student Overall Co-ordinator', image: "/t-mahesh-reddy.jpeg" },
-  { id: 2, name: 'B. VAMSHI NAIDU', phone: '8897814413', dept: 'CSMD', committee: 'Student Overall Co-ordinator', image: "/b-vamshi-naidu.jpeg" },
-  { id: 3, name: 'P. TEJ VARDHAN', phone: '9581378269', dept: 'CSE', committee: 'Student Overall Co-ordinator', image: "/p-tej-vardhan.jpeg" },
-  { id: 4, name: 'K. LAHARI', phone: '6301990861', dept: 'ECE', committee: 'Student Overall Co-ordinator', image: "/k-lahari.jpeg" },
-  { id: 5, name: 'G. LASHMIKANTH', phone: '9100737580', dept: 'MCA', committee: 'Student Overall Co-ordinator', image: "/g-lashmikanth.jpeg" },
-  { id: 6, name: 'K. SURESH', phone: '8790898562', dept: 'EEE', committee: 'Student Overall Co-ordinator', image: "/k-suresh.jpeg" },
-  { id: 7, name: 'K. JANARDHANA', phone: '9398583074', dept: 'MBA', committee: 'Student Overall Co-ordinator', image: "/k-janardhana.jpeg" },
-  { id: 8, name: 'L. TILAK KUMAR', phone: '9959349744', dept: 'B. PHARMA', committee: 'Student Overall Co-ordinator', image: "/l-tilak-kumar.jpeg" },
-  { id: 9, name: 'G. SATISH', phone: '8121917925', dept: 'PHARMA D', committee: 'Student Overall Co-ordinator', image: "/g-satish.jpeg" },
-  { id: 10, name: 'M. VENKATESH', phone: '8778829839', dept: 'DEGREE', committee: 'Student Overall Co-ordinator', image: "/m-venktesh.jpeg" },
-  { id: 11, name: 'P. BHARATH KALYAN', phone: '6305965291', dept: 'DIPLOMA', committee: 'Student Overall Co-ordinator', image: "/p-bharath-kalyan.jpeg" },
+  { id: 1, name: 'T. MAHESH REDDY', phone: '9849699082', dept: 'MECH', committee: 'Student Overall Co-ordinator', image: "/images/faculty/t-mahesh-reddy.jpg" },
+  { id: 2, name: 'B. VAMSHI NAIDU', phone: '8897814413', dept: 'CSMD', committee: 'Student Overall Co-ordinator', image: "/images/faculty/b-vamshi-naidu.jpg" },
+  { id: 3, name: 'P. TEJ VARDHAN', phone: '9581378269', dept: 'CSE', committee: 'Student Overall Co-ordinator', image: "/images/faculty/p-tej-vardhan.jpg" },
+  { id: 4, name: 'K. LAHARI', phone: '6301990861', dept: 'ECE', committee: 'Student Overall Co-ordinator', image: "/images/faculty/k-lahari.jpg" },
+  { id: 5, name: 'G. LASHMIKANTH', phone: '9100737580', dept: 'MCA', committee: 'Student Overall Co-ordinator', image: "/images/faculty/g-lashmikanth.jpg" },
+  { id: 6, name: 'K. SURESH', phone: '8790898562', dept: 'EEE', committee: 'Student Overall Co-ordinator', image: "/images/faculty/k-suresh.jpg" },
+  { id: 7, name: 'K. JANARDHANA', phone: '9398583074', dept: 'MBA', committee: 'Student Overall Co-ordinator', image: "/images/faculty/k-janardhana.jpg" },
+  { id: 8, name: 'L. TILAK KUMAR', phone: '9959349744', dept: 'B. PHARMA', committee: 'Student Overall Co-ordinator', image: "/images/faculty/l-tilak-kumar.jpg" },
+  { id: 9, name: 'G. SATISH', phone: '8121917925', dept: 'PHARMA D', committee: 'Student Overall Co-ordinator', image: "/images/faculty/g-satish.jpg" },
+  { id: 10, name: 'M. VENKATESH', phone: '8778829839', dept: 'DEGREE', committee: 'Student Overall Co-ordinator', image: "/images/faculty/m-venkatesh.jpg" },
+  { id: 11, name: 'P. BHARATH KALYAN', phone: '6305965291', dept: 'DIPLOMA', committee: 'Student Overall Co-ordinator', image: "/images/faculty/p-bharath-kalyan.jpg" },
 ];
 
 export const TEAM_MEMBERS: TeamMember[] = [
-  { name: 'T. Mahesh Reddy', role: 'Head Coordinator', dept: 'MECH', image: 'https://picsum.photos/seed/tmr/400/400' },
-  { name: 'B. Sowmya', role: 'Vice Coordinator', dept: 'CSE', image: 'https://picsum.photos/seed/bs/400/400' },
-  { name: 'Md. Riyan', role: 'Vice Coordinator', dept: 'CSE', image: 'https://drive.google.com/thumbnail?id=1zB0dMrHj2_AihLVjFK5JFjlgaxbsX5yv&sz=w1000' },
-  { name: 'P. Tej Vardhan', role: 'Stalls Committee', dept: 'CSE', image: 'https://picsum.photos/seed/ptv/400/400' },
-  { name: 'A. Karthi Kiriti Koushik', role: 'Stalls Committee', dept: 'CSE', image: 'https://picsum.photos/seed/akkk/400/400' },
-  { name: 'S. Ganesh', role: 'Cultural Committee', dept: 'CSMD', image: 'https://picsum.photos/seed/sg/400/400' },
-  { name: 'B. Geethika', role: 'Cultural Committee', dept: 'CSE', image: 'https://picsum.photos/seed/bg/400/400' },
-  { name: 'K. Lahari', role: 'Promotions', dept: 'ECE', image: 'https://picsum.photos/seed/kl/400/400' },
-  { name: 'L. Tilak', role: 'Special Events', dept: 'B.Pharma', image: 'https://picsum.photos/seed/lt/400/400' },
-  { name: 'G. Satish', role: 'Stage & Outdoor Decoration', dept: 'Pharm.D', image: 'https://picsum.photos/seed/gs/400/400' },
-  { name: 'P. Bharath', role: 'Stage & Outdoor Decoration', dept: 'Diploma', image: 'https://picsum.photos/seed/pb/400/400' },
-  { name: 'K. Janardhana', role: 'Sponsors', dept: 'MBA', image: 'https://picsum.photos/seed/kj/400/400' },
-  { name: 'G. Lakshmi Kanth', role: 'Sponsors', dept: 'MCA', image: 'https://picsum.photos/seed/glk/400/400' },
-  { name: 'M. Venkatesh', role: 'E-Sports', dept: 'Degree', image: 'https://picsum.photos/seed/mv/400/400' },
-  { name: 'Rohith', role: 'Digital Media', dept: 'CSE', image: 'https://picsum.photos/seed/r/400/400' },
-  { name: 'Gopal', role: 'Digital Media', dept: 'MECH', image: 'https://picsum.photos/seed/g/400/400' }
+  { name: 'T. Mahesh Reddy', role: 'Head Coordinator', dept: 'MECH', image: '/images/faculty/t-mahesh-reddy.jpg' },
+  { name: 'B. Sowmya', role: 'Vice Coordinator', dept: 'CSE', image: '/images/faculty/b-sowmya.jpg' },
+  { name: 'Md. Riyan', role: 'Vice Coordinator', dept: 'CSE', image: '/images/faculty/md-riyan.jpg' },
+  { name: 'P. Tej Vardhan', role: 'Stalls Committee', dept: 'CSE', image: '/images/faculty/p-tej-vardhan.jpg' },
+  { name: 'A. Karthi Kiriti Koushik', role: 'Stalls Committee', dept: 'CSE', image: '/images/faculty/a-karthi-kiriti-koushik.jpg' },
+  { name: 'S. Ganesh', role: 'Cultural Committee', dept: 'CSMD', image: '/images/faculty/s-ganesh.jpg' },
+  { name: 'B. Geethika', role: 'Cultural Committee', dept: 'CSE', image: '/images/faculty/b-geethika.jpg' },
+  { name: 'K. Lahari', role: 'Promotions', dept: 'ECE', image: '/images/faculty/k-lahari.jpg' },
+  { name: 'L. Tilak', role: 'Special Events', dept: 'B.Pharma', image: '/images/faculty/l-tilak.jpg' },
+  { name: 'G. Satish', role: 'Stage & Outdoor Decoration', dept: 'Pharm.D', image: '/images/faculty/g-satish.jpg' },
+  { name: 'P. Bharath', role: 'Stage & Outdoor Decoration', dept: 'Diploma', image: '/images/faculty/p-bharath.jpg' },
+  { name: 'K. Janardhana', role: 'Sponsors', dept: 'MBA', image: '/images/faculty/k-janardhana.jpg' },
+  { name: 'G. Lakshmi Kanth', role: 'Sponsors', dept: 'MCA', image: '/images/faculty/g-lakshmi-kanth.jpg' },
+  { name: 'M. Venkatesh', role: 'E-Sports', dept: 'Degree', image: '/images/faculty/m-venkatesh.jpg' },
+  { name: 'Rohith', role: 'Digital Media', dept: 'CSE', image: '/images/faculty/rohith.jpg' },
+  { name: 'Gopal', role: 'Digital Media', dept: 'MECH', image: '/images/faculty/gopal.jpg' }
 ];
