@@ -5,7 +5,7 @@ import { SPOT_EVENTS, CULTURAL_EVENTS } from '../data/events';
 
 const EventsSection = () => {
   return (
-    <div id="events" className="space-y-32 py-24">
+    <div id="events" className="space-y-32 py-24 bg-[#0B0B0B]">
       {/* Spot Events */}
       <section className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
@@ -13,11 +13,11 @@ const EventsSection = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-[#d60000] font-bold text-[32px] text-center mb-4 uppercase"
+            className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFD700] to-[#FFC107] font-bold text-[32px] text-center mb-4 uppercase tracking-widest"
           >
             Spot Events
           </motion.h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-400 max-w-2xl mx-auto">
             Experience high-energy participation and showcase your skills in our exciting spot competitions.
           </p>
         </div>
@@ -36,11 +36,11 @@ const EventsSection = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-[#d60000] font-bold text-[32px] text-center mb-4 uppercase"
+            className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFD700] to-[#FFC107] font-bold text-[32px] text-center mb-4 uppercase tracking-widest"
           >
             Cultural Events
           </motion.h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-400 max-w-2xl mx-auto">
             Celebrate creativity, performance and stage excellence with our grand cultural showcases.
           </p>
         </div>

@@ -35,11 +35,11 @@ const TeamCard = ({ member }: { member: LeadershipProfile | OverallCoordinator }
       }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="group relative bg-white p-8 rounded-[10px] text-center border-t border-r border-b border-[#e5e5e5] border-l-4 border-l-[#d60000] shadow-[0_4px_10px_rgba(0,0,0,0.08)] hover:shadow-[0_6px_18px_rgba(0,0,0,0.15)] transition-all duration-300 overflow-hidden h-full flex flex-col"
+      className="group relative bg-[#141414] p-8 rounded-xl text-center border border-[#2A2A2A] transition-all duration-300 hover:border-[#FFD700] hover:shadow-[0_0_20px_rgba(255,215,0,0.1)] overflow-hidden h-full flex flex-col"
     >
       {/* Profile Photo */}
       <div className="relative w-32 h-32 mx-auto mb-6 flex items-center justify-center shrink-0">
-        <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-red-600 bg-white shadow-md flex items-center justify-center shrink-0">
+        <div className="w-32 h-32 rounded-full overflow-hidden border-2 border-[#FFD700] bg-[#0B0B0B] shadow-md flex items-center justify-center shrink-0">
           <img
             src={member.image || "/default-avatar.png"}
             alt={member.name}
@@ -55,11 +55,11 @@ const TeamCard = ({ member }: { member: LeadershipProfile | OverallCoordinator }
       {/* Member Info */}
       <div className="flex-grow flex flex-col justify-between">
         <div>
-          <h3 className="text-xl font-bold mb-2 text-[#222] uppercase tracking-tight">
+          <h3 className="text-xl font-bold mb-2 text-white uppercase tracking-tight">
             {member.name}
           </h3>
           
-          <div className="text-[#d60000] font-bold text-sm uppercase tracking-wider mb-2">
+          <div className="text-[#FFD700] font-bold text-sm uppercase tracking-wider mb-2">
             {role}
           </div>
         </div>
@@ -68,7 +68,7 @@ const TeamCard = ({ member }: { member: LeadershipProfile | OverallCoordinator }
           {isOverallCoordinator && (member as OverallCoordinator).phone && (
             <a 
               href={`tel:${(member as OverallCoordinator).phone}`}
-              className="block text-gray-700 hover:text-[#d60000] transition-colors font-bold tracking-widest"
+              className="block text-gray-400 hover:text-[#FFD700] transition-colors font-bold tracking-widest"
             >
               📞 {(member as OverallCoordinator).phone}
             </a>
@@ -90,7 +90,7 @@ const TeamSection = ({ title, subtitle, members, id }: TeamSectionProps) => (
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-[#d60000] font-bold text-[32px] text-center mb-4 uppercase"
+        className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFD700] to-[#FFC107] font-bold text-[32px] text-center mb-4 uppercase tracking-widest"
       >
         {title}
       </motion.h2>
@@ -100,7 +100,7 @@ const TeamSection = ({ title, subtitle, members, id }: TeamSectionProps) => (
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="text-gray-600 max-w-2xl mx-auto text-lg italic tracking-wide"
+          className="text-gray-400 max-w-2xl mx-auto text-lg italic tracking-wide"
         >
           {subtitle}
         </motion.p>
@@ -117,7 +117,7 @@ const TeamSection = ({ title, subtitle, members, id }: TeamSectionProps) => (
 
 const Team = () => {
   return (
-    <section id="team" className="py-32 bg-white relative overflow-hidden">
+    <section id="team" className="py-32 bg-[#0B0B0B] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         
         <TeamSection 

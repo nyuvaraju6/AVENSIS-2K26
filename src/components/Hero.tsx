@@ -36,10 +36,13 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="home" className="relative min-h-screen flex flex-col justify-center items-center text-center px-6 overflow-hidden pt-20 bg-white">
+    <section id="home" className="relative min-h-screen flex flex-col justify-center items-center text-center px-6 overflow-hidden pt-20 bg-[#0B0B0B]">
       {/* Background Image with Overlay */}
       <div 
-        className="absolute inset-0 -z-20 opacity-10"
+        className="absolute inset-0 -z-20 bg-[#0B0B0B]"
+      />
+      <div 
+        className="absolute inset-0 -z-10 opacity-20"
         style={{
           backgroundImage: `url('${heroBgImage}')`,
           backgroundPosition: 'center',
@@ -55,7 +58,7 @@ const Hero = () => {
             transition={{ duration: 1.5, ease: "easeOut" }}
             className="relative"
           >
-            <h1 className="text-6xl md:text-8xl font-black tracking-tight mb-6 text-[#d60000] uppercase">
+            <h1 className="text-6xl md:text-8xl font-black tracking-tight mb-6 text-transparent bg-clip-text bg-gradient-to-b from-[#FFD700] to-[#FFC107] uppercase">
               AVENSIS 2K26
             </h1>
           </motion.div>
@@ -65,7 +68,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 0.8 }}
-          className="text-xl md:text-2xl text-gray-600 mb-12 font-medium tracking-wide"
+          className="text-xl md:text-2xl text-gray-400 mb-12 font-medium tracking-wide"
         >
           A Two Day National level Youth Fest
         </motion.p>
@@ -79,11 +82,11 @@ const Hero = () => {
             { label: 'Sec', value: timeLeft.seconds },
           ].map((item, idx) => (
             <div key={idx} className="relative group">
-              <div className="bg-white border border-[#e5e5e5] px-8 py-6 rounded-[10px] shadow-[0_4px_10px_rgba(0,0,0,0.08)] min-w-[130px] relative overflow-hidden">
-                <span className="block text-5xl font-black text-[#d60000] mb-1 tracking-tighter">
+              <div className="bg-[rgba(255,255,255,0.05)] backdrop-blur-md border border-[rgba(255,215,0,0.3)] px-8 py-6 rounded-xl min-w-[130px] relative overflow-hidden transition-all duration-300 hover:border-[#FFD700]">
+                <span className="block text-5xl font-black text-[#FFD700] mb-1 tracking-tighter">
                   {item.value.toString().padStart(2, '0')}
                 </span>
-                <span className="text-gray-500 text-[10px] uppercase tracking-[0.2em] font-bold">
+                <span className="text-gray-300 text-[10px] uppercase tracking-[0.2em] font-bold">
                   {item.label}
                 </span>
               </div>
@@ -94,9 +97,9 @@ const Hero = () => {
         <div className="flex flex-wrap justify-center gap-4 relative">
           <motion.a
             href="#register"
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(255, 215, 0, 0.5)" }}
             whileTap={{ scale: 0.95 }}
-            className="px-12 py-4 rounded-[6px] font-bold tracking-widest bg-[#d60000] text-white hover:bg-[#b30000] transition-all duration-300 uppercase"
+            className="px-12 py-4 rounded-lg font-bold tracking-widest bg-[#FFD700] text-black hover:bg-[#FFC107] transition-all duration-300 uppercase"
           >
             Register Now
           </motion.a>

@@ -180,18 +180,18 @@ const Registration = () => {
   };
 
   return (
-    <section id="register" className="py-24 bg-white relative overflow-hidden">
+    <section id="register" className="py-24 bg-[#0B0B0B] relative overflow-hidden">
       <div className="max-w-4xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-[#d60000] font-bold text-[40px] text-center mb-4 uppercase tracking-wider"
+            className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFD700] to-[#FFC107] font-bold text-[40px] text-center mb-4 uppercase tracking-widest"
           >
             Register for AVENSIS 2K26
           </motion.h2>
-          <p className="text-gray-600">
+          <p className="text-gray-400">
             Join the celebration! Fill out the form below to secure your spot in the most awaited fest of the year.
           </p>
         </div>
@@ -199,16 +199,16 @@ const Registration = () => {
         <form
           id="registration-form"
           onSubmit={handleSubmit}
-          className="bg-white p-8 md:p-12 rounded-xl border-l-4 border-l-[#d60000] shadow-md space-y-8"
+          className="bg-[#141414] p-8 md:p-12 rounded-xl border border-[#2A2A2A] shadow-lg space-y-8"
         >
           {showSuccessPopup && (
-            <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-6">
-              <div className="bg-white p-8 rounded-2xl max-w-sm w-full text-center space-y-4">
-                <div className="text-[#d60000] flex justify-center">
+            <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 p-6">
+              <div className="bg-[#141414] border border-[#2A2A2A] p-8 rounded-2xl max-w-sm w-full text-center space-y-4">
+                <div className="text-[#FFD700] flex justify-center">
                   <CheckCircle2 size={48} />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900">Registration Successful</h3>
-                <p className="text-gray-600">Your response has been recorded.</p>
+                <h3 className="text-2xl font-bold text-white">Registration Successful</h3>
+                <p className="text-gray-400">Your response has been recorded.</p>
                 <button
                   onClick={() => {
                     generateReceipt();
@@ -227,13 +227,13 @@ const Registration = () => {
                       selectedEvents: [] as string[]
                     });
                   }}
-                  className="w-full py-3 bg-[#d60000] text-white font-bold rounded-xl hover:bg-[#b80000] transition-colors"
+                  className="w-full py-3 bg-[#FFD700] text-black font-bold rounded-lg hover:bg-[#FFC107] transition-colors"
                 >
                   Download your receipt
                 </button>
                 <button
                   onClick={handleClosePopup}
-                  className="mt-3 w-full bg-gray-200 text-black py-2 rounded-lg hover:bg-gray-300"
+                  className="mt-3 w-full bg-[#2A2A2A] text-white py-2 rounded-lg hover:bg-[#3A3A3A]"
                 >
                   Close
                 </button>
@@ -243,7 +243,7 @@ const Registration = () => {
           <div className="grid md:grid-cols-2 gap-8">
             {/* Name */}
             <div className="space-y-2">
-              <label className="block text-sm font-bold text-[#d60000] uppercase tracking-widest">Full Name</label>
+              <label className="block text-sm font-bold text-[#FFD700] uppercase tracking-widest">Full Name</label>
               <input
                 required
                 type="text"
@@ -251,13 +251,13 @@ const Registration = () => {
                 value={formData.fullName}
                 onChange={handleInputChange}
                 placeholder="Enter your full name"
-                className="w-full p-4 rounded-xl bg-white border border-gray-200 text-gray-900 focus:border-[#d60000] focus:ring-1 focus:ring-[#d60000] outline-none transition-all placeholder:text-gray-400"
+                className="w-full p-4 rounded-lg bg-[#0B0B0B] border border-[#2A2A2A] text-white focus:border-[#FFD700] focus:ring-1 focus:ring-[#FFD700] outline-none transition-all placeholder:text-gray-600"
               />
             </div>
 
             {/* Roll Number */}
             <div className="space-y-2">
-              <label className="block text-sm font-bold text-[#d60000] uppercase tracking-widest">Roll Number</label>
+              <label className="block text-sm font-bold text-[#FFD700] uppercase tracking-widest">Roll Number</label>
               <input
                 required
                 type="text"
@@ -265,13 +265,13 @@ const Registration = () => {
                 value={formData.rollNumber}
                 onChange={handleInputChange}
                 placeholder="Enter your roll number"
-                className="w-full p-4 rounded-xl bg-white border border-gray-200 text-gray-900 focus:border-[#d60000] focus:ring-1 focus:ring-[#d60000] outline-none transition-all placeholder:text-gray-400"
+                className="w-full p-4 rounded-lg bg-[#0B0B0B] border border-[#2A2A2A] text-white focus:border-[#FFD700] focus:ring-1 focus:ring-[#FFD700] outline-none transition-all placeholder:text-gray-600"
               />
             </div>
 
             {/* Mobile Number */}
             <div className="space-y-2">
-              <label className="block text-sm font-bold text-[#d60000] uppercase tracking-widest">Mobile Number</label>
+              <label className="block text-sm font-bold text-[#FFD700] uppercase tracking-widest">Mobile Number</label>
               <input
                 required
                 type="tel"
@@ -279,13 +279,13 @@ const Registration = () => {
                 value={formData.mobile}
                 onChange={handleInputChange}
                 placeholder="Enter your mobile number"
-                className="w-full p-4 rounded-xl bg-white border border-gray-200 text-gray-900 focus:border-[#d60000] focus:ring-1 focus:ring-[#d60000] outline-none transition-all placeholder:text-gray-400"
+                className="w-full p-4 rounded-lg bg-[#0B0B0B] border border-[#2A2A2A] text-white focus:border-[#FFD700] focus:ring-1 focus:ring-[#FFD700] outline-none transition-all placeholder:text-gray-600"
               />
             </div>
 
             {/* Email ID */}
             <div className="space-y-2">
-              <label className="block text-sm font-bold text-[#d60000] uppercase tracking-widest">Email ID</label>
+              <label className="block text-sm font-bold text-[#FFD700] uppercase tracking-widest">Email ID</label>
               <input
                 required
                 type="email"
@@ -293,19 +293,19 @@ const Registration = () => {
                 value={formData.email}
                 onChange={handleInputChange}
                 placeholder="Enter your email address"
-                className="w-full p-4 rounded-xl bg-white border border-gray-200 text-gray-900 focus:border-[#d60000] focus:ring-1 focus:ring-[#d60000] outline-none transition-all placeholder:text-gray-400"
+                className="w-full p-4 rounded-lg bg-[#0B0B0B] border border-[#2A2A2A] text-white focus:border-[#FFD700] focus:ring-1 focus:ring-[#FFD700] outline-none transition-all placeholder:text-gray-600"
               />
             </div>
 
             {/* Year of Study */}
             <div className="space-y-2">
-              <label className="block text-sm font-bold text-[#d60000] uppercase tracking-widest">Year of Study</label>
+              <label className="block text-sm font-bold text-[#FFD700] uppercase tracking-widest">Year of Study</label>
               <select 
                 required
                 name="entry.835340413"
                 value={formData.year}
                 onChange={handleInputChange}
-                className="w-full p-4 rounded-xl bg-white border border-gray-200 text-gray-900 focus:border-[#d60000] outline-none transition-all appearance-none cursor-pointer"
+                className="w-full p-4 rounded-lg bg-[#0B0B0B] border border-[#2A2A2A] text-white focus:border-[#FFD700] outline-none transition-all appearance-none cursor-pointer"
               >
                 <option value="" disabled>Select Year</option>
                 <option value="1 Year">1 Year</option>
@@ -317,12 +317,12 @@ const Registration = () => {
 
             {/* Department */}
             <div className="space-y-2">
-              <label className="block text-sm font-bold text-[#d60000] uppercase tracking-widest">Department</label>
+              <label className="block text-sm font-bold text-[#FFD700] uppercase tracking-widest">Department</label>
               <select 
                 name="entry.1512251756"
                 value={formData.department}
                 onChange={handleInputChange}
-                className="w-full p-4 rounded-xl bg-white border border-gray-200 text-gray-900 focus:border-[#d60000] outline-none transition-all appearance-none cursor-pointer"
+                className="w-full p-4 rounded-lg bg-[#0B0B0B] border border-[#2A2A2A] text-white focus:border-[#FFD700] outline-none transition-all appearance-none cursor-pointer"
               >
                 <option value="BTECH">BTECH</option>
                 <option value="DIPLOMA">DIPLOMA</option>
@@ -335,12 +335,12 @@ const Registration = () => {
 
             {/* Branch */}
             <div className="space-y-2">
-              <label className="block text-sm font-bold text-[#d60000] uppercase tracking-widest">Branch</label>
+              <label className="block text-sm font-bold text-[#FFD700] uppercase tracking-widest">Branch</label>
               <select 
                 name="entry.1115180722"
                 value={formData.branch}
                 onChange={handleInputChange}
-                className="w-full p-4 rounded-xl bg-white border border-gray-200 text-gray-900 focus:border-[#d60000] outline-none transition-all appearance-none cursor-pointer"
+                className="w-full p-4 rounded-lg bg-[#0B0B0B] border border-[#2A2A2A] text-white focus:border-[#FFD700] outline-none transition-all appearance-none cursor-pointer"
               >
                 <option value="NONE">NONE</option>
                 <option value="CSE">CSE</option>
@@ -356,12 +356,12 @@ const Registration = () => {
 
             {/* Section */}
             <div className="space-y-2 md:col-span-2">
-              <label className="block text-sm font-bold text-[#d60000] uppercase tracking-widest">Section</label>
+              <label className="block text-sm font-bold text-[#FFD700] uppercase tracking-widest">Section</label>
               <select 
                 name="section"
                 value={formData.section}
                 onChange={handleInputChange}
-                className="w-full p-4 rounded-xl bg-white border border-gray-200 text-gray-900 focus:border-[#d60000] outline-none transition-all appearance-none cursor-pointer"
+                className="w-full p-4 rounded-lg bg-[#0B0B0B] border border-[#2A2A2A] text-white focus:border-[#FFD700] outline-none transition-all appearance-none cursor-pointer"
               >
                 <option value="A">A</option>
                 <option value="B">B</option>
@@ -375,12 +375,12 @@ const Registration = () => {
 
           {/* Events Selection */}
           <div className="space-y-6">
-            <label className="block text-sm font-bold text-[#d60000] uppercase tracking-widest">Select Events</label>
+            <label className="block text-sm font-bold text-[#FFD700] uppercase tracking-widest">Select Events</label>
 
-            <div className="grid md:grid-cols-2 gap-8 p-6 bg-gray-50 rounded-xl border border-gray-100">
+            <div className="grid md:grid-cols-2 gap-8 p-6 bg-[#0B0B0B] rounded-xl border border-[#2A2A2A]">
               {/* Spot Events */}
               <div className="space-y-4">
-                <h3 className="text-[#d60000] font-bold text-sm uppercase tracking-widest border-b border-gray-200 pb-2">Spot Events</h3>
+                <h3 className="text-[#FFD700] font-bold text-sm uppercase tracking-widest border-b border-[#2A2A2A] pb-2">Spot Events</h3>
                 <div className="space-y-3">
                   {SPOT_EVENTS.map((event) => (
                     <label key={event.id} className="flex items-center gap-3 group cursor-pointer">
@@ -391,13 +391,13 @@ const Registration = () => {
                           value={event.name}
                           checked={formData.selectedEvents.includes(event.name)}
                           onChange={() => handleEventToggle(event.name)}
-                          className="peer w-5 h-5 appearance-none border border-gray-300 rounded bg-white checked:bg-[#d60000] checked:border-[#d60000] transition-all cursor-pointer"
+                          className="peer w-5 h-5 appearance-none border border-[#2A2A2A] rounded bg-[#0B0B0B] checked:bg-[#FFD700] checked:border-[#FFD700] transition-all cursor-pointer"
                         />
-                        <svg className="absolute w-3 h-3 text-white opacity-0 peer-checked:opacity-100 transition-opacity pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="4">
+                        <svg className="absolute w-3 h-3 text-black opacity-0 peer-checked:opacity-100 transition-opacity pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="4">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                         </svg>
                       </div>
-                      <span className="text-gray-600 group-hover:text-[#d60000] transition-colors text-sm">{event.name}</span>
+                      <span className="text-gray-400 group-hover:text-[#FFD700] transition-colors text-sm">{event.name}</span>
                     </label>
                   ))}
                 </div>
@@ -405,7 +405,7 @@ const Registration = () => {
 
               {/* Cultural Events */}
               <div className="space-y-4">
-                <h3 className="text-[#d60000] font-bold text-sm uppercase tracking-widest border-b border-gray-200 pb-2">Cultural Events</h3>
+                <h3 className="text-[#FFD700] font-bold text-sm uppercase tracking-widest border-b border-[#2A2A2A] pb-2">Cultural Events</h3>
                 <div className="space-y-3">
                   {CULTURAL_EVENTS.map((event) => (
                     <label key={event.id} className="flex items-center gap-3 group cursor-pointer">
@@ -416,13 +416,13 @@ const Registration = () => {
                           value={event.name}
                           checked={formData.selectedEvents.includes(event.name)}
                           onChange={() => handleEventToggle(event.name)}
-                          className="peer w-5 h-5 appearance-none border border-gray-300 rounded bg-white checked:bg-[#d60000] checked:border-[#d60000] transition-all cursor-pointer"
+                          className="peer w-5 h-5 appearance-none border border-[#2A2A2A] rounded bg-[#0B0B0B] checked:bg-[#FFD700] checked:border-[#FFD700] transition-all cursor-pointer"
                         />
-                        <svg className="absolute w-3 h-3 text-white opacity-0 peer-checked:opacity-100 transition-opacity pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="4">
+                        <svg className="absolute w-3 h-3 text-black opacity-0 peer-checked:opacity-100 transition-opacity pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="4">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                         </svg>
                       </div>
-                      <span className="text-gray-600 group-hover:text-[#d60000] transition-colors text-sm">{event.name}</span>
+                      <span className="text-gray-400 group-hover:text-[#FFD700] transition-colors text-sm">{event.name}</span>
                     </label>
                   ))}
                 </div>
@@ -434,11 +434,11 @@ const Registration = () => {
           <div className="text-center pt-8">
             <button
               type="submit"
-              className="px-12 py-4 bg-[#d60000] hover:bg-[#b80000] text-white font-bold uppercase tracking-widest rounded-xl transition-all shadow-md hover:shadow-lg active:scale-95"
+              className="px-12 py-4 bg-[#FFD700] hover:bg-[#FFC107] text-black font-bold uppercase tracking-widest rounded-lg transition-all shadow-[0_0_15px_rgba(255,215,0,0.3)] hover:shadow-[0_0_25px_rgba(255,215,0,0.5)] active:scale-95"
             >
               Submit Registration
             </button>
-            <p className="mt-4 text-gray-400 text-[10px] uppercase font-bold tracking-widest">
+            <p className="mt-4 text-gray-500 text-[10px] uppercase font-bold tracking-widest">
               By submitting, you agree to the fest guidelines and code of conduct.
             </p>
           </div>
