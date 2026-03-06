@@ -37,37 +37,29 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative min-h-screen flex flex-col justify-center items-center text-center px-6 overflow-hidden pt-20 bg-[#0B0B0B]">
-      {/* Background Image with Overlay */}
-      <div 
-        className="absolute inset-0 -z-20 bg-[#0B0B0B]"
-      />
-      <div 
-        className="absolute inset-0 -z-10 opacity-20"
-        style={{
-          backgroundImage: `url('${heroBgImage}')`,
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
-        }}
-      />
+      {/* Animated Background */}
+      <div className="absolute inset-0 -z-20 bg-[#0B0B0B]">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,215,0,0.15),transparent_70%)] animate-pulse"></div>
+      </div>
 
       <div className="relative z-10">
         <div className="perspective-1000">
           <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1.5, ease: "easeOut" }}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
             className="relative"
           >
-            <h1 className="text-6xl md:text-8xl font-black tracking-tight mb-6 text-transparent bg-clip-text bg-gradient-to-b from-[#FFD700] to-[#FFC107] uppercase">
+            <h1 className="text-6xl md:text-9xl font-black tracking-tighter mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[#FFD700] via-[#FFF3B0] to-[#FFD700] animate-shimmer uppercase">
               AVENSIS 2K26
             </h1>
           </motion.div>
         </div>
 
         <motion.p
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1, duration: 0.8 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
           className="text-xl md:text-2xl text-gray-400 mb-12 font-medium tracking-wide"
         >
           A Two Day National level Youth Fest
@@ -81,8 +73,14 @@ const Hero = () => {
             { label: 'Min', value: timeLeft.minutes },
             { label: 'Sec', value: timeLeft.seconds },
           ].map((item, idx) => (
-            <div key={idx} className="relative group">
-              <div className="bg-[rgba(255,255,255,0.05)] backdrop-blur-md border border-[rgba(255,215,0,0.3)] px-8 py-6 rounded-xl min-w-[130px] relative overflow-hidden transition-all duration-300 hover:border-[#FFD700]">
+            <motion.div 
+              key={idx}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.7 + idx * 0.1, duration: 0.5 }}
+              className="relative group"
+            >
+              <div className="bg-[rgba(255,255,255,0.05)] backdrop-blur-md border border-[rgba(255,215,0,0.3)] px-8 py-6 rounded-xl min-w-[130px] relative overflow-hidden transition-all duration-300 hover:border-[#FFD700] hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(255,215,0,0.2)]">
                 <span className="block text-5xl font-black text-[#FFD700] mb-1 tracking-tighter">
                   {item.value.toString().padStart(2, '0')}
                 </span>
@@ -90,16 +88,16 @@ const Hero = () => {
                   {item.label}
                 </span>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
         <div className="flex flex-wrap justify-center gap-4 relative">
           <motion.a
             href="#register"
-            whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(255, 215, 0, 0.5)" }}
+            whileHover={{ scale: 1.05, boxShadow: "0 0 25px rgba(255, 215, 0, 0.4)", y: -5 }}
             whileTap={{ scale: 0.95 }}
-            className="px-12 py-4 rounded-lg font-bold tracking-widest bg-[#FFD700] text-black hover:bg-[#FFC107] transition-all duration-300 uppercase"
+            className="px-12 py-4 rounded-full font-bold tracking-widest bg-gradient-to-r from-[#FFD700] to-[#FFC107] text-black transition-all duration-300 uppercase"
           >
             Register Now
           </motion.a>
