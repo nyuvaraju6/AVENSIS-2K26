@@ -22,8 +22,7 @@ export const SPOT_EVENTS: Event[] = [
     name: 'Stand-Up Comedy',
     description: 'Make the audience roar with laughter with your wit and humor. A platform for the funniest minds.',
     coordinators: [
-      { name: "MD. RIYAN", phone: "9885078279", dept: "CSE" },
-      { name: "T. MAHESH REDDY", phone: "9849699082", dept: "MECH" }
+      { name: "B. HARIKA", phone: "6303393385", dept: "ECE" }
     ],
     category: 'spot'
   },
@@ -32,8 +31,7 @@ export const SPOT_EVENTS: Event[] = [
     name: 'Auto Expo',
     description: 'Showcase modified cars, superbikes and engineering creativity. Witness the engineering marvels.',
     coordinators: [
-      { name: "MD. RIYAN", phone: "9885078279", dept: "CSE" },
-      { name: "R. MADHAN", phone: "7396457282", dept: "MECH" }
+      { name: "MD. RIYAN", phone: "9885078279", dept: "CSE" }
     ],
     category: 'spot'
   },
@@ -42,8 +40,7 @@ export const SPOT_EVENTS: Event[] = [
     name: 'Fashion Show',
     description: 'Walk the ramp and showcase your style. A platform where creativity meets elegance.',
     coordinators: [
-      { name: "P. CHATHURYA", phone: "7386902863", dept: "MCA" },
-      { name: "A. GOWRI", phone: "9381572054", dept: "DIPLOMA" }
+      { name: "P. CHATHURYA", phone: "7386902863", dept: "MCA" }
     ],
     category: 'spot'
   },
@@ -52,8 +49,7 @@ export const SPOT_EVENTS: Event[] = [
     name: 'Ramp Walk',
     description: 'Individual spotlight on the runway. Show off your confidence and charisma.',
     coordinators: [
-      { name: "P. CHATHURYA", phone: "7386902863", dept: "MCA" },
-      { name: "A. GOWRI", phone: "9381572054", dept: "DIPLOMA" }
+      { name: "G. BEAULA", phone: "7842709982", dept: "EEE" }
     ],
     category: 'spot'
   },
@@ -62,8 +58,8 @@ export const SPOT_EVENTS: Event[] = [
     name: 'Treasure Hunt',
     description: 'Solve riddles, decode clues, and race against time to find the hidden treasure.',
     coordinators: [
-      { name: "P. CHANDU", phone: "9652199440", dept: "CSMD" },
-      { name: "N. ESWAR", phone: "9390524975", dept: "EEE" }
+      { name: "CH. SAMANTH", phone: "8712209988", dept: "DIPLOMA" },
+      { name: "B. SOWMYA", phone: "9059045594", dept: "CSE" }
     ],
     category: 'spot'
   },
@@ -72,8 +68,7 @@ export const SPOT_EVENTS: Event[] = [
     name: 'Meme Creation',
     description: 'Unleash your wit and humor. Create the most relatable and viral memes.',
     coordinators: [
-      { name: "B. GEETHIKA", phone: "8341696916", dept: "CSE" },
-      { name: "Y. SAI PRIYA", phone: "7396518452", dept: "PHARM D" }
+      { name: "P. CHANDU", phone: "9652199440", dept: "CSM" }
     ],
     category: 'spot'
   },
@@ -82,8 +77,7 @@ export const SPOT_EVENTS: Event[] = [
     name: 'Reels Making (Instagram Story Challenge)',
     description: 'Create engaging Instagram reels featuring our college theme. Show your editing skills.',
     coordinators: [
-      { name: "B. GEETHIKA", phone: "8341696916", dept: "CSE" },
-      { name: "Y. SAI PRIYA", phone: "7396518452", dept: "PHARM D" }
+      { name: "B. GEETHIKA", phone: "8341696916", dept: "CSE" }
     ],
     category: 'spot'
   },
@@ -92,8 +86,7 @@ export const SPOT_EVENTS: Event[] = [
     name: 'Spot Photography',
     description: 'Capture the essence of Avensis through your lens. Best shots win big.',
     coordinators: [
-      { name: "B. GEETHIKA", phone: "8341696916", dept: "CSE" },
-      { name: "Y. SAI PRIYA", phone: "7396518452", dept: "PHARM D" }
+      { name: "A.KARTHI KRITI KAUSHIK", phone: "8688009867", dept: "CSE" }
     ],
     category: 'spot'
   },
@@ -102,8 +95,8 @@ export const SPOT_EVENTS: Event[] = [
     name: 'Instrumental Music',
     description: 'Showcase your talent on musical instruments. Let the melodies speak.',
     coordinators: [
-      { name: "M. RAVINDRA", phone: "8179133543", dept: "MECH" },
-      { name: "S. GANESH", phone: "7670921130", dept: "CSMD" }
+      { name: "CH. SAMANTH", phone: "8712209988", dept: "DIPLOMA" },
+      { name: "B. SOWMYA", phone: "9059045594", dept: "CSE" }
     ],
     category: 'spot'
   },
@@ -112,8 +105,7 @@ export const SPOT_EVENTS: Event[] = [
     name: 'E-Sports (BGMI / Free Fire)',
     description: 'The ultimate battleground for gamers. Squad up and fight for victory.',
     coordinators: [
-      { name: "B. RAVISANKAR", phone: "9703612177", dept: "DEGREE" },
-      { name: "B. VENKATESH", phone: "7995703042", dept: "DEGREE" }
+      { name: "B. RAVISANKAR", phone: "9703612177", dept: "DEGREE" }
     ],
     category: 'spot'
   },
@@ -122,8 +114,8 @@ export const SPOT_EVENTS: Event[] = [
     name: 'Body Building',
     description: 'Flex those muscles and show your dedication to fitness. Judged on symmetry and mass.',
     coordinators: [
-      { name: "M. RAVINDRA", phone: "8179133543", dept: "MECH" },
-      { name: "S. GANESH", phone: "7670921130", dept: "CSMD" }
+      { name: "T AVINASH", phone: "9182359301", dept: "CSD" },
+      { name: "DIVYESH", phone: "9390473488", dept: "CSM" }
     ],
     category: 'spot'
   },
@@ -132,8 +124,7 @@ export const SPOT_EVENTS: Event[] = [
     name: 'Balloon Burst Game',
     description: 'A fun and energetic game of bursting balloons. Quick reflexes win.',
     coordinators: [
-      { name: "P. CHANDU", phone: "9652199440", dept: "CSMD" },
-      { name: "N. ESWAR", phone: "9390524975", dept: "EEE" }
+      { name: "R BHARATH", phone: "9381149641", dept: "MCA" }
     ],
     category: 'spot'
   },
@@ -142,8 +133,7 @@ export const SPOT_EVENTS: Event[] = [
     name: 'Advertisement Competition',
     description: 'Pitch your ideas and create compelling advertisements for products.',
     coordinators: [
-      { name: "K. NAVYA", phone: "9676083204", dept: "PHARMA D" },
-      { name: "K. SAKETH", phone: "9948046481", dept: "ECE" }
+      { name: "K. NAVYA", phone: "9676083204", dept: "PHARMA D" }
     ],
     category: 'spot'
   },
@@ -152,8 +142,8 @@ export const SPOT_EVENTS: Event[] = [
     name: 'Clay Modelling & Best Out of Waste',
     description: 'Unleash your creativity with clay and recycled materials to create art.',
     coordinators: [
-      { name: "G. BEAULA", phone: "7842709982", dept: "EEE" },
-      { name: "B. SRIJA", phone: "8688963070", dept: "B PHARMA" }
+      { name: "BHAGYA", phone: "6304481865", dept: "B.PHARMA" },
+      { name: "DIVYA JYOTHI", phone: "8309603493", dept: "CSMD" }
     ],
     category: 'spot'
   }
@@ -165,8 +155,7 @@ export const CULTURAL_EVENTS: Event[] = [
     name: 'Solo Singing',
     description: 'Let your voice resonate. Showcase your vocal talent in this solo performance.',
     coordinators: [
-      { name: "M. RAVINDRA", phone: "8179133543", dept: "MECH" },
-      { name: "S. GANESH", phone: "7670921130", dept: "CSMD" }
+      { name: "T. MAHESH REDDY", phone: "7396457282", dept: "MECH" }
     ],
     category: 'cultural'
   },
@@ -175,8 +164,7 @@ export const CULTURAL_EVENTS: Event[] = [
     name: 'Solo Dance',
     description: 'Express through movement. High-energy solo performances in any style.',
     coordinators: [
-      { name: "M. RAVINDRA", phone: "8179133543", dept: "MECH" },
-      { name: "S. GANESH", phone: "7670921130", dept: "CSMD" }
+      { name: "T. MAHESH REDDY", phone: "7396457282", dept: "MECH" }
     ],
     category: 'cultural'
   },
@@ -185,8 +173,7 @@ export const CULTURAL_EVENTS: Event[] = [
     name: 'Group Dance',
     description: 'Synchronized group performances that set the stage on fire.',
     coordinators: [
-      { name: "M. RAVINDRA", phone: "8179133543", dept: "MECH" },
-      { name: "S. GANESH", phone: "7670921130", dept: "CSMD" }
+      { name: "T. MAHESH REDDY", phone: "7396457282", dept: "MECH" }
     ],
     category: 'cultural'
   },
@@ -195,8 +182,7 @@ export const CULTURAL_EVENTS: Event[] = [
     name: 'Duet Dance',
     description: 'A synchronized dance performance by two. Show your chemistry and rhythm.',
     coordinators: [
-      { name: "M. RAVINDRA", phone: "8179133543", dept: "MECH" },
-      { name: "S. GANESH", phone: "7670921130", dept: "CSMD" }
+      { name: "T. MAHESH REDDY", phone: "7396457282", dept: "MECH" }
     ],
     category: 'cultural'
   },
@@ -205,8 +191,7 @@ export const CULTURAL_EVENTS: Event[] = [
     name: 'Flashmob',
     description: 'Surprise the crowd with a spontaneous and energetic group dance.',
     coordinators: [
-      { name: "M. RAVINDRA", phone: "8179133543", dept: "MECH" },
-      { name: "S. GANESH", phone: "7670921130", dept: "CSMD" }
+      { name: "T. MAHESH REDDY", phone: "7396457282", dept: "MECH" }
     ],
     category: 'cultural'
   },
@@ -215,8 +200,7 @@ export const CULTURAL_EVENTS: Event[] = [
     name: 'Group Singing',
     description: 'Harmonious group vocal performances across various genres.',
     coordinators: [
-      { name: "M. RAVINDRA", phone: "8179133543", dept: "MECH" },
-      { name: "S. GANESH", phone: "7670921130", dept: "CSMD" }
+      { name: "T. MAHESH REDDY", phone: "7396457282", dept: "MECH" }
     ],
     category: 'cultural'
   },
@@ -225,8 +209,7 @@ export const CULTURAL_EVENTS: Event[] = [
     name: 'Skits & Drama',
     description: 'Bring stories to life on stage. A platform for theatrical excellence.',
     coordinators: [
-      { name: "M. RAVINDRA", phone: "8179133543", dept: "MECH" },
-      { name: "S. GANESH", phone: "7670921130", dept: "CSMD" }
+      { name: "T. MAHESH REDDY", phone: "7396457282", dept: "MECH" }
     ],
     category: 'cultural'
   }
