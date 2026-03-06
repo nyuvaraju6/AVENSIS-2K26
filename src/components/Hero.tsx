@@ -94,7 +94,9 @@ const Hero = () => {
 
         <div className="flex flex-wrap justify-center gap-4 relative">
           <motion.a
-            href="#register"
+            href="https://forms.gle/ojHDFHX2B11yG1i46"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.05, boxShadow: "0 0 25px rgba(255, 215, 0, 0.4)", y: -5 }}
             whileTap={{ scale: 0.95 }}
             className="px-12 py-4 rounded-full font-bold tracking-widest bg-gradient-to-r from-[#FFD700] to-[#FFC107] text-black transition-all duration-300 uppercase"

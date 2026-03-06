@@ -49,7 +49,9 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="#register"
+            href="https://forms.gle/ojHDFHX2B11yG1i46"
+            target="_blank"
+            rel="noopener noreferrer"
             className="ml-4 px-6 py-2 bg-[#FFD700] text-black font-bold rounded-lg hover:bg-[#FFC107] hover:shadow-[0_0_15px_rgba(255,215,0,0.3)] transition-all"
           >
             Register
@@ -85,7 +87,9 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="#register"
+            href="https://forms.gle/ojHDFHX2B11yG1i46"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setIsMenuOpen(false)}
             className="w-full mt-4 py-3 bg-[#FFD700] text-center text-black font-bold rounded-lg hover:bg-[#FFC107] transition-all"
           >

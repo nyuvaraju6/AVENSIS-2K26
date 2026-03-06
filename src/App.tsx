@@ -8,7 +8,6 @@ import About from './components/About';
 import EventsSection from './components/EventsSection';
 import Schedule from './components/Schedule';
 import SpecialAttractions from './components/SpecialAttractions';
-import Registration from './components/Registration';
 import Team from './components/Team';
 import Location from './components/Location';
 import Footer from './components/Footer';
@@ -41,9 +40,6 @@ const Home = () => (
     </RevealSection>
     <RevealSection>
       <SpecialAttractions />
-    </RevealSection>
-    <RevealSection>
-      <Registration />
     </RevealSection>
     <RevealSection>
       <Team />

@@ -91,46 +91,44 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
                   {/* Coordinator Cards */}
                   <div className="space-y-4">
                     <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-[#FFD700] mb-4">
-                      Event Coordinators
+                      Student Coordinators
                     </h4>
                     
-                    {event.coordinators.map((coordinator, index) => (
-                      <div key={index} className="bg-[#141414] border border-[#2A2A2A] rounded-xl p-6 shadow-md relative overflow-hidden group">
-                        
-                        <div className="flex flex-col sm:flex-row items-center gap-4">
-                          <div className="w-16 h-16 rounded-full border-2 border-[#FFD700] shrink-0 flex items-center justify-center bg-[#0B0B0B]">
-                            <div className="w-full h-full rounded-full overflow-hidden flex items-center justify-center relative">
-                              <User className="w-8 h-8 text-gray-400 absolute" />
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {event.coordinators.map((coordinator, index) => (
+                        <div key={index} className="bg-[#141414] border border-[#2A2A2A] rounded-xl p-4 shadow-md relative overflow-hidden group">
+                          <div className="flex flex-col items-center text-center gap-2">
+                            <div className="w-12 h-12 rounded-full border-2 border-[#FFD700] shrink-0 flex items-center justify-center bg-[#0B0B0B]">
+                              <User className="w-6 h-6 text-gray-400" />
                             </div>
-                          </div>
-                          
-                          <div className="flex-1 text-center sm:text-left">
-                            <div className="text-xl font-bold text-white uppercase tracking-tight">
-                              {coordinator.name}
+                            
+                            <div className="flex-1">
+                              <div className="text-sm font-bold text-white uppercase tracking-tight">
+                                {coordinator.name}
+                              </div>
+                              <div className="text-xs text-[#FFD700] font-bold uppercase tracking-widest mt-1">
+                                Dept: {coordinator.dept}
+                              </div>
                             </div>
-                            <div className="text-sm text-gray-300 font-medium mt-1 tracking-wide">
-                              {coordinator.phone}
-                            </div>
-                            <div className="text-xs text-[#FFD700] font-bold uppercase tracking-widest mt-1">
-                              Dept: {coordinator.dept}
-                            </div>
-                          </div>
 
-                          <a 
-                            href={`tel:${coordinator.phone}`}
-                            className="flex items-center gap-2 bg-[#FFD700] text-black px-4 py-2 rounded-lg font-black text-xs uppercase hover:bg-[#FFC107] transition-colors w-full sm:w-auto justify-center"
-                          >
-                            <Phone className="w-4 h-4" />
-                            Call Now
-                          </a>
+                            <a 
+                              href={`tel:${coordinator.phone}`}
+                              className="flex items-center gap-2 bg-[#FFD700] text-black px-3 py-1.5 rounded-lg font-black text-[10px] uppercase hover:bg-[#FFC107] transition-colors w-full justify-center mt-2"
+                            >
+                              <Phone className="w-3 h-3" />
+                              {coordinator.phone}
+                            </a>
+                          </div>
                         </div>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
 
                   {/* Action Button */}
                   <a 
-                    href="#register"
+                    href="https://forms.gle/ojHDFHX2B11yG1i46"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     onClick={() => setIsModalOpen(false)}
                     className="flex items-center justify-center gap-3 w-full py-3 bg-[#FFD700] text-black font-black uppercase tracking-[0.2em] rounded-lg hover:bg-[#FFC107] transition-all transform hover:-translate-y-1 shadow-[0_0_15px_rgba(255,215,0,0.3)]"
                   >
