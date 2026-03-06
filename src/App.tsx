@@ -17,6 +17,7 @@ import ScrollToTop from './components/ScrollToTop';
 
 const RevealSection = ({ children }: { children: React.ReactNode }) => (
   <motion.section
+    className="w-full bg-[#0B0B0B]"
     initial={{ opacity: 0, y: 100 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.8 }}
@@ -27,7 +28,7 @@ const RevealSection = ({ children }: { children: React.ReactNode }) => (
 );
 
 const Home = () => (
-  <main>
+  <main className="bg-[#0B0B0B]">
     <Hero />
     <RevealSection>
       <About />
@@ -58,7 +59,7 @@ export default function App() {
   const isAdmin = location.pathname === '/admin';
 
   return (
-    <div className="min-h-screen bg-white text-[#222222] selection:bg-[#d60000] selection:text-white overflow-x-hidden">
+    <div className="min-h-screen bg-[#0B0B0B] text-white selection:bg-[#FFD700] selection:text-black overflow-x-hidden">
       <AnimatePresence>
       </AnimatePresence>
 
