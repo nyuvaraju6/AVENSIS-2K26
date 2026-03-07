@@ -33,6 +33,9 @@ const Header = () => {
         <div className="md:hidden flex-1 text-center">
           <h1 className="text-2xl font-bold text-[#FFD700]">AVANTHI</h1>
         </div>
+         <p className="text-sm font-semibold text-white uppercase tracking-tight">
+            INSTITUTE OF ENGINEERING AND TECHNOLOGY (AUTONOMOUS)
+          </p>
 
         {/* Right Logos (Cropped from banner) */}
         <div className="hidden md:flex items-center gap-4">
