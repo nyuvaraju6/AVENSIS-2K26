@@ -1,13 +1,13 @@
 import React from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion } from 'motion/react';
 import { Routes, Route, useLocation } from 'react-router-dom';
+
 import Navbar from './components/Navbar';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
 import EventsSection from './components/EventsSection';
 import Schedule from './components/Schedule';
-import SpecialAttractions from './components/SpecialAttractions';
 import Team from './components/Team';
 import Location from './components/Location';
 import Footer from './components/Footer';
@@ -29,21 +29,23 @@ const RevealSection = ({ children }: { children: React.ReactNode }) => (
 const Home = () => (
   <main className="bg-[#0B0B0B]">
     <Hero />
+
     <RevealSection>
       <About />
     </RevealSection>
+
     <RevealSection>
       <EventsSection />
     </RevealSection>
+
     <RevealSection>
       <Schedule />
     </RevealSection>
-    <RevealSection>
-      <SpecialAttractions />
-    </RevealSection>
+
     <RevealSection>
       <Team />
     </RevealSection>
+
     <RevealSection>
       <Location />
     </RevealSection>
@@ -56,9 +58,6 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#0B0B0B] text-white selection:bg-[#FFD700] selection:text-black overflow-x-hidden">
-      <AnimatePresence>
-      </AnimatePresence>
-
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -67,7 +66,7 @@ export default function App() {
       >
         {!isAdmin && <Header />}
         {!isAdmin && <Navbar />}
-        
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/admin" element={<Admin />} />
