@@ -40,7 +40,7 @@ const Header = () => {
         {/* Right Logos (Cropped from banner) */}
         <div className="hidden md:flex items-center gap-4">
           {/* AICTE/NAAC area */}
-          <div className="h-14 w-14 overflow-hidden flex items-center justify-center">
+          <div className="h-20 w-14 overflow-hidden flex items-center justify-center">
             <img 
               src={bannerUrl} 
               className="max-w-none h-14 object-contain" 
