@@ -12,7 +12,7 @@ const Header = () => {
           <img 
             src="/avanthi-logo.png"
             alt="Avanthi Logo"
-            className="h-20 md:h-20 object-contain"
+            className="h-28 md:h-20 object-contain"
           />
         </div>
 
