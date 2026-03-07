@@ -47,21 +47,20 @@ const Header = () => {
           </p>
         </div>
 
-        {/* Right Logos */}
-        <div className="hidden md:flex items-center gap-4">
-          <div className="h-24 w-24 flex items-center justify-center">
-            <img 
-              src={bannerUrl}
-              alt="Institutional Accreditation"
-              className="h-20 object-contain"
-              referrerPolicy="no-referrer"
-            />
-          </div>
-        </div>
+     {/* Right Logos */}
+<div className="hidden md:flex items-center gap-4">
+  <div className="h-24 w-24 flex items-center justify-center">
+    <img 
+      src="/left-logo.png"
+      alt="Institutional Accreditation"
+      className="h-20 object-contain"
+    />
+  </div>
+</div>
 
-      </div>
-    </header>
-  );
+</div>
+</header>
+);
 };
 
 export default Header;
