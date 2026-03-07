@@ -21,7 +21,6 @@ export const SPOT_EVENTS: Event[] = [
     id: 'stand-up-comedy',
     name: 'Stand-Up Comedy',
     description: 'Make the audience roar with laughter with your wit and humor. A platform for the funniest minds.',
-     banner:https: "//img.freepik.com/premium-vector/vector-stand-up-comedy-microphone-illustration-sunburst-background-stand-up-banner-with-microphone_80590-1103.jpg"
     coordinators: [
       { name: "K. HARIKA", phone: "6303393385", dept: "ECE" },
       { name: "B. BHUVANESWARI", phone: "6304386043", dept: "B. PHARMA" }
