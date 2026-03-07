@@ -6,12 +6,6 @@ export interface Coordinator {
   dept: string;
 }
 
-export interface Coordinator {
-  name: string;
-  phone: string;
-  dept: string;
-}
-
 export interface Event {
   id: string;
   name: string;
@@ -144,6 +138,88 @@ export const SPOT_EVENTS: Event[] = [
     category: 'spot'
   }
 ];
+export const CULTURAL_EVENTS: Event[] = [
+  {
+    id: 'solo-singing',
+    name: 'Solo Singing',
+    description: 'Let your voice resonate. Showcase your vocal talent in this solo performance.',
+    coordinators: [
+      { name: "M. RAVINDRA", phone: "8179133543", dept: "MECH" },
+      { name: "S. GANESH", phone: "7670921130", dept: "CSMD" }
+    ],
+    category: 'cultural'
+  },
+  {
+    id: 'solo-dance',
+    name: 'Solo Dance',
+    description: 'Express through movement. High-energy solo performances in any style.',
+    coordinators: [
+      { name: "M. RAVINDRA", phone: "8179133543", dept: "MECH" },
+      { name: "S. GANESH", phone: "7670921130", dept: "CSMD" }
+    ],
+    category: 'cultural'
+  },
+  {
+    id: 'group-dance',
+    name: 'Group Dance',
+    description: 'Synchronized group performances that set the stage on fire.',
+    coordinators: [
+      { name: "M. RAVINDRA", phone: "8179133543", dept: "MECH" },
+      { name: "S. GANESH", phone: "7670921130", dept: "CSMD" }
+    ],
+    category: 'cultural'
+  },
+  {
+    id: 'duet-dance',
+    name: 'Duet Dance',
+    description: 'A synchronized dance performance by two. Show your chemistry and rhythm.',
+    coordinators: [
+      { name: "M. RAVINDRA", phone: "8179133543", dept: "MECH" },
+      { name: "S. GANESH", phone: "7670921130", dept: "CSMD" }
+    ],
+    category: 'cultural'
+  },
+  {
+    id: 'flashmob',
+    name: 'Flashmob',
+    description: 'Surprise the crowd with a spontaneous and energetic group dance.',
+    coordinators: [
+      { name: "M. RAVINDRA", phone: "8179133543", dept: "MECH" },
+      { name: "S. GANESH", phone: "7670921130", dept: "CSMD" }
+    ],
+    category: 'cultural'
+  },
+  {
+    id: 'group-singing',
+    name: 'Group Singing',
+    description: 'Harmonious group vocal performances across various genres.',
+    coordinators: [
+      { name: "M. RAVINDRA", phone: "8179133543", dept: "MECH" },
+      { name: "S. GANESH", phone: "7670921130", dept: "CSMD" }
+    ],
+    category: 'cultural'
+  },
+  {
+    id: 'skits-drama',
+    name: 'Skits & Drama',
+    description: 'Bring stories to life on stage. A platform for theatrical excellence.',
+    coordinators: [
+      { name: "M. RAVINDRA", phone: "8179133543", dept: "MECH" },
+      { name: "S. GANESH", phone: "7670921130", dept: "CSMD" }
+    ],
+    category: 'cultural'
+  },
+  {
+    id: 'instrumental-music',
+    name: 'Instrumental Music',
+    description: 'Showcase your talent on musical instruments. Let the melodies speak.',
+    coordinators: [
+      { name: "CH. SAMANTH", phone: "8712209988", dept: "DIPLOMA" },
+      { name: "B. SOWMYA", phone: "9059045594", dept: "CSE" }
+    ],
+    category: 'cultural'
+  }
+];
 
 export interface ScheduleItem {
   time: string;
@@ -168,7 +244,7 @@ export const SCHEDULE: DaySchedule[] = [
       { time: '12:00 PM – 01:00 PM', event: 'Culturals Competitions' },
       { time: '01:00 PM – 03:00 PM', event: 'Event Competitions' },
       { time: '03:00 PM – 05:00 PM', event: 'Celebrity / Singer Performance' },
-      { time: '05:00 PM – 06:00 PM', event: 'Fashion Show / Body Building Show' },
+      { time: '05:00 PM – 06:00 PM', event: 'Fashion Show / Body Building Show' }
     ]
   },
   {
@@ -180,7 +256,7 @@ export const SCHEDULE: DaySchedule[] = [
       { time: '03:00 PM – 04:30 PM', event: 'Valedictory Function – Prize Distribution & Felicitation' },
       { time: '04:30 PM – 05:30 PM', event: 'Singer Performance' },
       { time: '05:30 PM – 06:30 PM', event: 'Live Band Performance' },
-      { time: '06:30 PM – 06:45 PM onwards', event: 'Vote of Thanks & Closing Ceremony' },
+      { time: '06:30 PM – 06:45 PM onwards', event: 'Vote of Thanks & Closing Ceremony' }
     ]
   }
 ];
@@ -208,7 +284,7 @@ export interface LeadershipProfile {
 
 export const CHIEF_PATRONS: LeadershipProfile[] = [
   { id: 1, name: "Sri M. Srinivasa Rao", role: "Former State Minister – AP", dept: "Founder Chairman, Avanthi Group of Colleges", image: "/faculty/sri-m-srinivasa-rao.jpeg" },
-  { id: 2, name: "Smt. M. Gnaneswari", role: "President", dept: "Avanthi Educational Society", image: "/faculty/smt-m-gnaneswari.jpeg" }
+  { id: 2, name: "Smt. M. Gnaneswari", role: "President", dept: "Avanthi Educational Society", image: "/faculty/smt-m-gnaneswari.jpeg" },
   { id: 3, name: "Dr. M. L. Priyanka", role: "General Secretary", dept: "Avanthi Group of Colleges", image: "/faculty/dr-m-l-priyanka.jpeg"},
   { id: 4, name: "Sri M. V. S. S. Nandish", role: "Vice President", dept: "Avanthi Group of Colleges", image: "/faculty/sri-m-v-s-s-nandish.jpg"},
   { id: 5, name: "Sri I. Shravan Kumar", role: "Managing Director", dept: "Avanthi Group of Colleges", image: "/faculty/sri-i-shravan-kumar.jpg"}
@@ -238,7 +314,7 @@ export const CO_CONVENORS: LeadershipProfile[] = [
 export const FACULTY_COORDINATORS: LeadershipProfile[] = [
   { id: 1, name: "Mr. S. Kesava Rao", role: "Faculty Coordinator", dept: "CSE", image: "/faculty/mr-s-kesava-rao.jpeg" },
   { id: 2, name: "Mr. V. Pradeep Kumar", role: "Faculty Coordinator", dept: "MECH", image: "/faculty/mr-v-pradeep-kumar.jpeg" },
-  { id: 3, name: "Mr. G. Prasanth", role: "Faculty Coordinator", dept: "EEE", image: "/faculty/mr-g-prasanth.jpeg" }
+  { id: 3, name: "Mr. G. Prasanth", role: "Faculty Coordinator", dept: "EEE", image: "/faculty/mr-g-prasanth.jpeg" },
   { id: 4, name: "Mrs. Soujanya", role: "Faculty Coordinator", dept: "ECE", image: "/faculty/mrs-soujanya.jpeg" },
   { id: 5, name: "Mr. Suman Datta", role: "Faculty Coordinator", dept: "MBA", image: "/faculty/mr-suman-datta.jpeg" },
   { id: 6, name: "Mr. Applaraju", role: "Faculty Coordinator", dept: "MCA", image: "/faculty/mr-applaraju.jpeg" },
@@ -246,7 +322,7 @@ export const FACULTY_COORDINATORS: LeadershipProfile[] = [
   { id: 8, name: "Mrs. Sangeetha", role: "Faculty Coordinator", dept: "CSM", image: "/faculty/mrs-sangeetha.jpeg" },
   { id: 9, name: "Dr. Rushi Naidu", role: "Faculty Coordinator", dept: "Pharmacy", image: "/faculty/dr-rushi-naidu.jpeg" },
   { id: 10, name: "Mr. K. Satyanarayana", role: "Faculty Coordinator", dept: "Degree", image: "/faculty/mr-k-satyanarayana.jpeg" },
-  { id: 11, name: "Mr. K. A. Swamy", role: "Faculty Coordinator", dept: "Diploma", image: "/faculty/mr-k-a-swamy.jpeg" }, 
+  { id: 11, name: "Mr. K. A. Swamy", role: "Faculty Coordinator", dept: "Diploma", image: "/faculty/mr-k-a-swamy.jpeg" }
 ];
 
 export interface OverallCoordinator {
@@ -269,7 +345,5 @@ export const OVERALL_COORDINATORS: OverallCoordinator[] = [
   { id: 8, name: 'L. TILAK KUMAR', phone: '9959349744', dept: 'B. PHARMA', committee: 'Student Overall Co-ordinator', image: "/faculty/l-tilak-kumar.jpeg" },
   { id: 9, name: 'G. SATISH', phone: '8121917925', dept: 'PHARMA D', committee: 'Student Overall Co-ordinator', image: "/faculty/g-satish.jpeg" },
   { id: 10, name: 'M. VENKATESH', phone: '8778829839', dept: 'DEGREE', committee: 'Student Overall Co-ordinator', image: "/faculty/m-venkatesh.jpeg" },
-  { id: 11, name: 'P. BHARATH KALYAN', phone: '6305965291', dept: 'DIPLOMA', committee: 'Student Overall Co-ordinator', image: "/faculty/p-bharath-kalyan.jpeg" },
-];
-
+  { id: 11, name: 'P. BHARATH KALYAN', phone: '6305965291', dept: 'DIPLOMA', committee: 'Student Overall Co-ordinator', image: "/faculty/p-bharath-kalyan.jpeg" }
 ];
