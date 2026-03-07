@@ -30,13 +30,18 @@ const Header = () => {
         </div>
 
         {/* Mobile Title */}
-        <div className="md:hidden flex-1 text-center">
-          <h1 className="text-2xl font-bold text-[#FFD700]">AVANTHI</h1>
-        </div>
-         <p className="text-sm font-semibold text-white uppercase tracking-tight">
-            INSTITUTE OF ENGINEERING AND TECHNOLOGY (AUTONOMOUS)
-          </p>
+        <div className="flex flex-col items-start leading-tight">
+  <h1 className="text-yellow-400 font-bold text-2xl md:text-3xl">
+    AVANTHI
+  </h1>
 
+  <p className="text-white text-xs md:text-sm">
+    INSTITUTE OF ENGINEERING AND TECHNOLOGY
+  </p>
+
+  <p className="text-white text-xs md:text-sm">
+    (AUTONOMOUS)
+  </p>
         {/* Right Logos (Cropped from banner) */}
         <div className="hidden md:flex items-center gap-4">
           {/* AICTE/NAAC area */}
