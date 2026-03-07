@@ -42,6 +42,7 @@ const Header = () => {
   <p className="text-white text-xs md:text-sm">
     (AUTONOMOUS)
   </p>
+</div>
         {/* Right Logos (Cropped from banner) */}
         <div className="hidden md:flex items-center gap-4">
           {/* AICTE/NAAC area */}
