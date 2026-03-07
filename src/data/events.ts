@@ -338,14 +338,14 @@ export const CO_CONVENORS: LeadershipProfile[] = [
 ];
 
 export const FACULTY_COORDINATORS: LeadershipProfile[] = [
-  { id: 1, name: "Mr. S. Kesava Rao", role: "Faculty Coordinator", dept: "B&SH", image: "/faculty/mr-s-kesava-rao.jpeg" },
+  { id: 1, name: "Mr. S. Kesava Rao", role: "Faculty Coordinator", dept: "CSE", image: "/faculty/mr-s-kesava-rao.jpeg" },
   { id: 12, name: "MR. K. ANIL", role: "Faculty Coordinator", dept: "CSE", image: "/faculty/mr-k-anil.jpeg" },
   { id: 2, name: "Mr. Applaraju", role: "Faculty Coordinator", dept: "MCA", image: "/faculty/mr-applaraju.jpeg" },
   { id: 3, name: "Mr. V. Pradeep Kumar", role: "Faculty Coordinator", dept: "MECH", image: "/faculty/mr-v-pradeep-kumar.jpeg" },
   { id: 4, name: "Mrs. Sangeetha", role: "Faculty Coordinator", dept: "CSM", image: "/faculty/mrs-sangeetha.jpeg" },
   { id: 5, name: "Dr. Rushi Naidu", role: "Faculty Coordinator", dept: "Pharmacy", image: "/faculty/dr-rushi-naidu.jpeg" },
   { id: 6, name: "Mr. K. Satyanarayana", role: "Faculty Coordinator", dept: "Degree", image: "/faculty/mr-k-satyanarayana.jpeg" },
-  { id: 7, name: "G. Chinnayya", role: "Faculty Coordinator", dept: "B4&SH", image: "/faculty/g-chinnayya.jpeg" },
+  { id: 7, name: "G. Chinnayya", role: "Faculty Coordinator", dept: "B&SH", image: "/faculty/g-chinnayya.jpeg" },
   { id: 8, name: "Mrs. Soujanya", role: "Faculty Coordinator", dept: "ECE", image: "/faculty/mrs-soujanya.jpeg" },
   { id: 9, name: "Mr. Suman Datta", role: "Faculty Coordinator", dept: "MBA", image: "/faculty/mr-suman-datta.jpeg" },
   { id: 10, name: "Mr. K. A. Swamy", role: "Faculty Coordinator", dept: "Diploma", image: "/faculty/mr-k-a-swamy.jpeg" },
