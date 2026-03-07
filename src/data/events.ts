@@ -6,6 +6,12 @@ export interface Coordinator {
   dept: string;
 }
 
+export interface Coordinator {
+  name: string;
+  phone: string;
+  dept: string;
+}
+
 export interface Event {
   id: string;
   name: string;
@@ -18,22 +24,22 @@ export interface Event {
 
 export const SPOT_EVENTS: Event[] = [
   {
+    id: 'treasure-hunt',
+    name: 'Treasure Hunt',
+    description: 'Solve riddles, decode clues, and race against time to find the hidden treasure.',
+    coordinators: [
+      { name: "CH. SAMANTH", phone: "8712209988", dept: "DIPLOMA" },
+      { name: "B. SOWMYA", phone: "9059045594", dept: "CSE" }
+    ],
+    category: 'spot'
+  },
+  {
     id: 'stand-up-comedy',
     name: 'Stand-Up Comedy',
     description: 'Make the audience roar with laughter with your wit and humor. A platform for the funniest minds.',
     coordinators: [
       { name: "K. HARIKA", phone: "6303393385", dept: "ECE" },
       { name: "B. BHUVANESWARI", phone: "6304386043", dept: "B. PHARMA" }
-    ],
-    category: 'spot'
-  },
-  {
-    id: 'auto-expo',
-    name: 'Auto Expo',
-    description: 'Showcase modified cars, superbikes and engineering creativity. Witness the engineering marvels.',
-    coordinators: [
-      { name: "MD. RIYAN", phone: "9885078279", dept: "CSE" },
-      { name: "T. MAHESH REDDY", phone: "7396457282", dept: "MECH" }
     ],
     category: 'spot'
   },
@@ -54,16 +60,6 @@ export const SPOT_EVENTS: Event[] = [
     coordinators: [
       { name: "G. BEAULA", phone: "7842709982", dept: "EEE" },
       { name: "B. SRIJA", phone: "8688963070", dept: "B. PHARMA" }
-    ],
-    category: 'spot'
-  },
-  {
-    id: 'treasure-hunt',
-    name: 'Treasure Hunt',
-    description: 'Solve riddles, decode clues, and race against time to find the hidden treasure.',
-    coordinators: [
-      { name: "CH. SAMANTH", phone: "8712209988", dept: "DIPLOMA" },
-      { name: "B. SOWMYA", phone: "9059045594", dept: "CSE" }
     ],
     category: 'spot'
   },
@@ -94,16 +90,6 @@ export const SPOT_EVENTS: Event[] = [
     coordinators: [
       { name: "A. KARTHI KIRITI KAUSHIK", phone: "8688009867", dept: "CSE" },
       { name: "V. JYOTHIKA", phone: "8074650235", dept: "CSE" }
-    ],
-    category: 'spot'
-  },
-  {
-    id: 'instrumental-music',
-    name: 'Instrumental Music',
-    description: 'Showcase your talent on musical instruments. Let the melodies speak.',
-    coordinators: [
-      { name: "CH. SAMANTH", phone: "8712209988", dept: "DIPLOMA" },
-      { name: "B. SOWMYA", phone: "9059045594", dept: "CSE" }
     ],
     category: 'spot'
   },
@@ -156,79 +142,6 @@ export const SPOT_EVENTS: Event[] = [
       { name: "DIVYA JYOTHI", phone: "8309603493", dept: "CSMD" }
     ],
     category: 'spot'
-  }
-];
-
-export const CULTURAL_EVENTS: Event[] = [
-  {
-    id: 'solo-singing',
-    name: 'Solo Singing',
-    description: 'Let your voice resonate. Showcase your vocal talent in this solo performance.',
-    coordinators: [
-      { name: "M. RAVINDRA", phone: "8179133543", dept: "MECH" },
-      { name: "S. GANESH", phone: "7670921130", dept: "CSMD" }
-    ],
-    category: 'cultural'
-  },
-  {
-    id: 'solo-dance',
-    name: 'Solo Dance',
-    description: 'Express through movement. High-energy solo performances in any style.',
-    coordinators: [
-      { name: "M. RAVINDRA", phone: "8179133543", dept: "MECH" },
-      { name: "S. GANESH", phone: "7670921130", dept: "CSMD" }
-    ],
-    category: 'cultural'
-  },
-  {
-    id: 'group-dance',
-    name: 'Group Dance',
-    description: 'Synchronized group performances that set the stage on fire.',
-    coordinators: [
-      { name: "M. RAVINDRA", phone: "8179133543", dept: "MECH" },
-      { name: "S. GANESH", phone: "7670921130", dept: "CSMD" }
-    ],
-    category: 'cultural'
-  },
-  {
-    id: 'duet-dance',
-    name: 'Duet Dance',
-    description: 'A synchronized dance performance by two. Show your chemistry and rhythm.',
-    coordinators: [
-      { name: "M. RAVINDRA", phone: "8179133543", dept: "MECH" },
-      { name: "S. GANESH", phone: "7670921130", dept: "CSMD" }
-    ],
-    category: 'cultural'
-  },
-  {
-    id: 'flashmob',
-    name: 'Flashmob',
-    description: 'Surprise the crowd with a spontaneous and energetic group dance.',
-    coordinators: [
-      { name: "M. RAVINDRA", phone: "8179133543", dept: "MECH" },
-      { name: "S. GANESH", phone: "7670921130", dept: "CSMD" }
-    ],
-    category: 'cultural'
-  },
-  {
-    id: 'group-singing',
-    name: 'Group Singing',
-    description: 'Harmonious group vocal performances across various genres.',
-    coordinators: [
-      { name: "M. RAVINDRA", phone: "8179133543", dept: "MECH" },
-      { name: "S. GANESH", phone: "7670921130", dept: "CSMD" }
-    ],
-    category: 'cultural'
-  },
-  {
-    id: 'skits-drama',
-    name: 'Skits & Drama',
-    description: 'Bring stories to life on stage. A platform for theatrical excellence.',
-    coordinators: [
-      { name: "M. RAVINDRA", phone: "8179133543", dept: "MECH" },
-      { name: "S. GANESH", phone: "7670921130", dept: "CSMD" }
-    ],
-    category: 'cultural'
   }
 ];
 
@@ -285,24 +198,6 @@ export interface Attraction {
   image: string;
 }
 
-export const ATTRACTIONS: Attraction[] = [
-  {
-    name: 'Heart Balloons & Decorative Booths',
-    description: 'Beautifully crafted heart-shaped balloon installations and themed decorative booths for the perfect aesthetic vibe.',
-    image: 'https://picsum.photos/seed/balloons/600/400'
-  },
-  {
-    name: 'Photo Booth with Props',
-    description: 'Capture your fest memories with our professionally designed photo booths equipped with fun and quirky props.',
-    image: 'https://picsum.photos/seed/photobooth/600/400'
-  },
-  {
-    name: 'Cartoon Characters (Mascots)',
-    description: 'Meet and greet our friendly Bear and Mickey mascots roaming around the campus to spread joy and cheer.',
-    image: 'https://picsum.photos/seed/mascots/600/400'
-  }
-];
-
 export interface LeadershipProfile {
   id: number;
   name: string;
@@ -314,6 +209,9 @@ export interface LeadershipProfile {
 export const CHIEF_PATRONS: LeadershipProfile[] = [
   { id: 1, name: "Sri M. Srinivasa Rao", role: "Former State Minister – AP", dept: "Founder Chairman, Avanthi Group of Colleges", image: "/faculty/sri-m-srinivasa-rao.jpeg" },
   { id: 2, name: "Smt. M. Gnaneswari", role: "President", dept: "Avanthi Educational Society", image: "/faculty/smt-m-gnaneswari.jpeg" }
+  { id: 3, name: "Dr. M. L. Priyanka", role: "General Secretary", dept: "Avanthi Group of Colleges", image: "/faculty/dr-m-l-priyanka.jpeg"},
+  { id: 4, name: "Sri M. V. S. S. Nandish", role: "Vice President", dept: "Avanthi Group of Colleges", image: "/faculty/sri-m-v-s-s-nandish.jpg"},
+  { id: 5, name: "Sri I. Shravan Kumar", role: "Managing Director", dept: "Avanthi Group of Colleges", image: "/faculty/sri-i-shravan-kumar.jpg"}
 ];
 
 export const CO_PATRONS: LeadershipProfile[] = [
@@ -339,17 +237,16 @@ export const CO_CONVENORS: LeadershipProfile[] = [
 
 export const FACULTY_COORDINATORS: LeadershipProfile[] = [
   { id: 1, name: "Mr. S. Kesava Rao", role: "Faculty Coordinator", dept: "CSE", image: "/faculty/mr-s-kesava-rao.jpeg" },
-  { id: 12, name: "MR. K. ANIL", role: "Faculty Coordinator", dept: "CSE", image: "/faculty/mr-k-anil.jpeg" },
-  { id: 2, name: "Mr. Applaraju", role: "Faculty Coordinator", dept: "MCA", image: "/faculty/mr-applaraju.jpeg" },
-  { id: 3, name: "Mr. V. Pradeep Kumar", role: "Faculty Coordinator", dept: "MECH", image: "/faculty/mr-v-pradeep-kumar.jpeg" },
-  { id: 4, name: "Mrs. Sangeetha", role: "Faculty Coordinator", dept: "CSM", image: "/faculty/mrs-sangeetha.jpeg" },
-  { id: 5, name: "Dr. Rushi Naidu", role: "Faculty Coordinator", dept: "Pharmacy", image: "/faculty/dr-rushi-naidu.jpeg" },
-  { id: 6, name: "Mr. K. Satyanarayana", role: "Faculty Coordinator", dept: "Degree", image: "/faculty/mr-k-satyanarayana.jpeg" },
+  { id: 2, name: "Mr. V. Pradeep Kumar", role: "Faculty Coordinator", dept: "MECH", image: "/faculty/mr-v-pradeep-kumar.jpeg" },
+  { id: 3, name: "Mr. G. Prasanth", role: "Faculty Coordinator", dept: "EEE", image: "/faculty/mr-g-prasanth.jpeg" }
+  { id: 4, name: "Mrs. Soujanya", role: "Faculty Coordinator", dept: "ECE", image: "/faculty/mrs-soujanya.jpeg" },
+  { id: 5, name: "Mr. Suman Datta", role: "Faculty Coordinator", dept: "MBA", image: "/faculty/mr-suman-datta.jpeg" },
+  { id: 6, name: "Mr. Applaraju", role: "Faculty Coordinator", dept: "MCA", image: "/faculty/mr-applaraju.jpeg" },
   { id: 7, name: "G. Chinnayya", role: "Faculty Coordinator", dept: "B&SH", image: "/faculty/g-chinnayya.jpeg" },
-  { id: 8, name: "Mrs. Soujanya", role: "Faculty Coordinator", dept: "ECE", image: "/faculty/mrs-soujanya.jpeg" },
-  { id: 9, name: "Mr. Suman Datta", role: "Faculty Coordinator", dept: "MBA", image: "/faculty/mr-suman-datta.jpeg" },
-  { id: 10, name: "Mr. K. A. Swamy", role: "Faculty Coordinator", dept: "Diploma", image: "/faculty/mr-k-a-swamy.jpeg" },
-  { id: 11, name: "Mr. G. Prasanth", role: "Faculty Coordinator", dept: "EEE", image: "/faculty/mr-g-prasanth.jpeg" }
+  { id: 8, name: "Mrs. Sangeetha", role: "Faculty Coordinator", dept: "CSM", image: "/faculty/mrs-sangeetha.jpeg" },
+  { id: 9, name: "Dr. Rushi Naidu", role: "Faculty Coordinator", dept: "Pharmacy", image: "/faculty/dr-rushi-naidu.jpeg" },
+  { id: 10, name: "Mr. K. Satyanarayana", role: "Faculty Coordinator", dept: "Degree", image: "/faculty/mr-k-satyanarayana.jpeg" },
+  { id: 11, name: "Mr. K. A. Swamy", role: "Faculty Coordinator", dept: "Diploma", image: "/faculty/mr-k-a-swamy.jpeg" }, 
 ];
 
 export interface OverallCoordinator {
@@ -364,7 +261,7 @@ export interface OverallCoordinator {
 export const OVERALL_COORDINATORS: OverallCoordinator[] = [
   { id: 1, name: 'T. MAHESH REDDY', phone: '9849699082', dept: 'MECH', committee: 'Student Overall Co-ordinator', image: "/faculty/t-mahesh-reddy.jpeg" },
   { id: 2, name: 'B. VAMSHI NAIDU', phone: '8897814413', dept: 'CSMD', committee: 'Student Overall Co-ordinator', image: "/faculty/b-vamshi-naidu.jpeg" },
-  { id: 3, name: 'P. TEJ VARDHAN', phone: '9581378269', dept: 'CSE', committee: 'Student Overall Co-ordinator', image: "/faculty/p-tej-vardhan.jpeg" },
+  { id: 3, name: 'A.K.KIRITI KAUSHIK', phone: '8688009867', dept: 'CSE', committee: 'Student Overall Co-ordinator', image: "/faculty/a-k-kiriti-kaushik.jpeg" },
   { id: 4, name: 'K. LAHARI', phone: '6301990861', dept: 'ECE', committee: 'Student Overall Co-ordinator', image: "/faculty/k-lahari.jpeg" },
   { id: 5, name: 'G. LASHMIKANTH', phone: '9100737580', dept: 'MCA', committee: 'Student Overall Co-ordinator', image: "/faculty/g-lashmikanth.jpeg" },
   { id: 6, name: 'K. SURESH', phone: '8790898562', dept: 'EEE', committee: 'Student Overall Co-ordinator', image: "/faculty/k-suresh.jpeg" },
@@ -375,21 +272,4 @@ export const OVERALL_COORDINATORS: OverallCoordinator[] = [
   { id: 11, name: 'P. BHARATH KALYAN', phone: '6305965291', dept: 'DIPLOMA', committee: 'Student Overall Co-ordinator', image: "/faculty/p-bharath-kalyan.jpeg" },
 ];
 
-export const TEAM_MEMBERS: TeamMember[] = [
-  { name: 'T. Mahesh Reddy', role: 'Head Coordinator', dept: 'MECH', image: '/faculty/t-mahesh-reddy.jpeg' },
-  { name: 'B. Sowmya', role: 'Vice Coordinator', dept: 'CSE', image: '/faculty/b-sowmya.jpeg' },
-  { name: 'Md. Riyan', role: 'Vice Coordinator', dept: 'CSE', image: '/faculty/md-riyan.jpeg' },
-  { name: 'P. Tej Vardhan', role: 'Stalls Committee', dept: 'CSE', image: '/faculty/p-tej-vardhan.jpeg' },
-  { name: 'A. Karthi Kiriti Koushik', role: 'Stalls Committee', dept: 'CSE', image: '/faculty/a-karthi-kiriti-koushik.jpeg' },
-  { name: 'S. Ganesh', role: 'Cultural Committee', dept: 'CSMD', image: '/faculty/s-ganesh.jpeg' },
-  { name: 'B. Geethika', role: 'Cultural Committee', dept: 'CSE', image: '/faculty/b-geethika.jpeg' },
-  { name: 'K. Lahari', role: 'Promotions', dept: 'ECE', image: '/faculty/k-lahari.jpeg' },
-  { name: 'L. Tilak', role: 'Special Events', dept: 'B.Pharma', image: '/faculty/l-tilak.jpeg' },
-  { name: 'G. Satish', role: 'Stage & Outdoor Decoration', dept: 'Pharm.D', image: '/faculty/g-satish.jpeg' },
-  { name: 'P. Bharath', role: 'Stage & Outdoor Decoration', dept: 'Diploma', image: '/faculty/p-bharath.jpeg' },
-  { name: 'K. Janardhana', role: 'Sponsors', dept: 'MBA', image: '/faculty/k-janardhana.jpeg' },
-  { name: 'G. Lakshmi Kanth', role: 'Sponsors', dept: 'MCA', image: '/faculty/g-lakshmi-kanth.jpeg' },
-  { name: 'M. Venkatesh', role: 'E-Sports', dept: 'Degree', image: '/facult/m-venkatesh.jpeg' },
-  { name: 'Rohith', role: 'Digital Media', dept: 'CSE', image: '/faculty/rohith.jpeg' },
-  { name: 'Gopal', role: 'Digital Media', dept: 'MECH', image: '/faculty/gopal.jpeg' }
 ];
