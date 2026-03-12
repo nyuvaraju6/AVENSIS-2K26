@@ -28,16 +28,6 @@ export const SPOT_EVENTS: Event[] = [
     category: 'spot'
   },
   {
-    id: 'stand-up-comedy',
-    name: 'Stand-Up Comedy',
-    description: 'Make the audience roar with laughter with your wit and humor. A platform for the funniest minds.',
-    coordinators: [
-      { name: "K. HARIKA", phone: "6303393385", dept: "ECE" },
-      { name: "B. BHUVANESWARI", phone: "6304386043", dept: "B. PHARMA" }
-    ],
-    category: 'spot'
-  },
-  {
     id: 'fashion-show',
     name: 'Fashion Show',
     description: 'Walk the ramp and showcase your style. A platform where creativity meets elegance.',
